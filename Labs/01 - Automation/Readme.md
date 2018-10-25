@@ -36,7 +36,7 @@ For the ARM deployment lab we are going to start with the **Email notification**
 Now that you have explored how to deploy an ARM template to configure an ASC setting, you are going to explore how to deploy a more comprehensive ARM template. <br>
 ASC stores MMA collected data (and more) in a Log Analytics workspace. In a more complex environment, you will often find an existing Log Analytics workspace which needs to be integrated with ASC (aka a Central Workspace).<br><br>
 The following lab assumes that a (Central) Log Analytics workspace already exists (although this can be deployed with an ARM template at the same time) and you are going to configure ASC to use the existing Log Analytics workspace.<br>
-
+![media](./Screenshots/autoProvisioning_custom_ Workspace.png
 
 
 
