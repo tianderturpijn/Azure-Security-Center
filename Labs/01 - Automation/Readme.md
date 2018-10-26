@@ -29,7 +29,11 @@ For the ARM deployment lab we are going to start with configuring the **Email no
 3. Make sure that you have selected your Azure subscription which has been provided to you by using **Select-AzureRmSubscription**<br>
 4. ASC resides at the subscription level, so we are going to target our ARM template deployment at the same level (instead of deploying it at the resource group level)
 5. The syntax is *New-AzureRmDeployment -TemplateFile* `yourArmTemplateFile` (note: we are going to use a prepared ARM template JSON file)
-6. Type the following in your PowerShell session (don't click on the hyperlink) and execute it: **New-AzureRmDeployment -TemplateFile <a href="" target="_blank">'https[]()://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/01%20-%20Automation/Files/configureAscEmailNotifications.json'**</a>
+6. Type the following in your PowerShell session and execute it:
+```powershell
+New-AzureRmDeployment -TemplateFile 'https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/01%20-%20Automation/Files/configureAscEmailNotifications.json'
+```
+
 7. After a successful completion, switch to the Azure portal and refresh the ASC blade and verify that the email settings have been updated
 
 #### 4 - Deploy a more comprehensive ASC configuration ARM template
@@ -51,7 +55,16 @@ Also we will configure ASC policies through the ARM template.
 In the majority of the use cases that we have seen, a Log Analytics workspace is already present and needs to be used by ASC. So your lab will focus on that scenario, although you can create one single ARM template to deploy a new workspace and integrate that with, and configure ASC, however we will not focus on that.<br>
 For our lab to work, we are going to create a Log Analytics workspace. You can either create it through the Azure portal, or leverage an ARM template.
 1. Navigate to the Azure portal and create a Log Analytics workspace **or**:
-2. Use the following PowerShell snippet to deploy an ARM template which will deploy this newOmsWorkspace ARM template: 
+2. Use the following PowerShell snippet to deploy an ARM template which will deploy this <a href="https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/01%20-%20Automation/Files/createNewOmsWorkspace.json" target="_blank">newOmsWorkspace</a> ARM template: <br>
+```powershell
+$myGuid = New-Guid
+New-AzureRmResourceGroup -Name ASClab -Location 'WestEurope'
+
+New-AzureRmResourceGroupDeployment -Name myDeployOMS -ResourceGroupName 'newOMSRG' `
+ -TemplateFile 'https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/01%20-%20Automation/Files/createNewOmsWorkspace.json' `
+ -omsWorkspaceName ("ASC-workspace-$myGuid") -omsWorkspaceLocation "WestEurope" -Verbose
+```
+
 
 
 
