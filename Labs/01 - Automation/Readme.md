@@ -32,10 +32,10 @@ For the ARM deployment lab we are going to start with the **Email notification**
 6. Type the following in your PowerShell session (don't click on the hyperlink) and execute it: **New-AzureRmDeployment -TemplateFile <a href="" target="_blank">'https[]()://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/01%20-%20Automation/Files/configureAscEmailNotifications.json'**</a>
 7. After a successful completion, switch to the Azure portal and refresh the ASC blade and verify that the email settings have been updated
 
-#### 4 - Deploy a full ASC configuration ARM template
+#### 4 - Deploy a more comphrensive ASC configuration ARM template
 Now that you have explored how to deploy an ARM template to configure an ASC setting, you are going to explore how to deploy a more comprehensive ARM template. <br>
 ASC stores MMA collected data (and more) in a Log Analytics workspace. In a more complex environment, you will often find an existing Log Analytics workspace which needs to be integrated with ASC (aka a Central Workspace).<br><br>
-The following lab assumes that a (Central) Log Analytics workspace already exists (although this can be deployed with an ARM template at the same time) and you are going to configure ASC to use the existing Log Analytics workspace.<br>
+The following lab assumes that a (Central) Log Analytics workspace already exists (although this can be deployed with an ARM template at the same time) and you are going to configure ASC to use the existing Log Analytics workspace. In additon we are going to enable "Auto Provision" which will deploy the MMA automatically, as you would configure it in the portal, like this:<br><br>
 ![](./Screenshots/autoProvisioning_custom_%20Workspace.png)
 
 
