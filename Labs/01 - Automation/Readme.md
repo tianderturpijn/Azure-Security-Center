@@ -15,7 +15,7 @@ You will configure ASC with:
 4. On the line where it shows your subscription, click on **Edit settings**
 5. Explore the settings, specifically the email notification settings.
 
-For the ARM deployment lab we are going to start with configuring the **Email notification** settings
+For the first ARM deployment lab we are going to start with configuring the **Email notification** settings
 
 #### 2 - Explore the Email Notifications ARM template
 1. Open the <a href="https://github.com/tianderturpijn/Azure-Security-Center/blob/master/Labs/01%20-%20Automation/Files/configureAscEmailNotifications.json" target="_blank">ARM template</a> for email notifications
@@ -36,10 +36,10 @@ New-AzureRmDeployment -TemplateFile 'https://raw.githubusercontent.com/tiandertu
 
 7. After a successful completion, switch to the Azure portal and refresh the ASC blade and verify that the email settings have been updated
 
-#### 4 - Deploy a more comprehensive ASC configuration ARM template
-Now that you have explored how to deploy an ARM template to configure an ASC setting, you are going to explore how to deploy a more comprehensive ARM template. <br>
-ASC stores MMA collected data (and more) in a Log Analytics workspace. In a more complex environment, you will often find an existing Log Analytics workspace which needs to be integrated with ASC (aka the Central Workspace scenario).<br><br>
-The following lab assumes that a (Central) Log Analytics workspace already exists (although this can be deployed with an ARM template at the same time) and you are going to configure ASC to use the existing Log Analytics workspace. In addition we are going to enable **Auto Provisioning** which will deploy the MMA automatically, as you would configure it in the portal, like this:<br><br>
+#### 4 - Deploy a more complex ASC configuration ARM template
+Now that you have explored how to deploy an ARM template to configure an ASC setting, you are going to explore how to deploy a more complex ARM template. <br>
+ASC stores MMA collected data (and more) in a Log Analytics workspace. In a more complex environment, you often will find an existing Log Analytics workspace which needs to be integrated with ASC (aka the Central Workspace scenario).<br><br>
+The following lab assumes that a (Central) Log Analytics workspace already exists (although this can be deployed with an ARM template at the same time) and you are going to configure ASC to use the existing Log Analytics workspace. In addition we are going to enable **Auto Provisioning** which will deploy the MMA extension automatically, as you would configure it in the portal, like this:<br><br>
 
 ![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/01%20-%20Automation/Screenshots/autoProvisioning_custom_%20Workspace.png)
 
@@ -48,11 +48,11 @@ Also we will configure ASC policies through the ARM template.
 #### 5 - Explore the ASC advanced ARM template
 1. Open the <a href="https://github.com/tianderturpijn/Azure-Security-Center/blob/master/Labs/01%20-%20Automation/Files/configureAscAdvanced.json" target="_blank">ASC Advanced ARM template</a> and explore it.
 2. Look closely at the parameters and their allowed values
-3. Under *resources, Microsoft.Security/policies*, observe the policies for recommendations. You can configure them one by one, but in this lab we will set the value to **On** or **Off** for all of them.
+3. Under *resources*, observe the several settings that we will configure like autoProvisioning, workspace settings, etc. The recommendation policies can be configured one by one, but in this lab we will set the value to **On** or **Off** for all of them.
 4. For ARM templates, it is recommended that you use a parameter file to pass values during a deployment if you don't want to type them in. In this lab we will just type them in and paste some values
 
 #### 6 - Create a Log Analytics workspace
-In the majority of the use cases that we have seen, a Log Analytics workspace is already present and needs to be used by ASC. So your lab will focus on that scenario, although you can create one single ARM template to deploy a new workspace and integrate that with, and configure ASC, however we will not focus on that.<br>
+In the majority of the use cases that we have seen, a Log Analytics workspace is already present and needs to be integrated with ASC. So your lab will focus on that scenario, although you can create one single ARM template to deploy a new workspace and integrate that with, and configure ASC, however we will not focus on that.<br>
 For our lab to work, we are going to create a Log Analytics workspace. You can either create it through the Azure portal, or leverage an ARM template.
 1. Navigate to the Azure portal and create a Log Analytics workspace **or**:
 2. Use the following PowerShell snippet to deploy an ARM template which will deploy this <a href="https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/01%20-%20Automation/Files/createNewOmsWorkspace.json" target="_blank">newOmsWorkspace</a> ARM template: <br>
@@ -64,6 +64,54 @@ New-AzureRmResourceGroupDeployment -Name myDeployOMS -ResourceGroupName 'newOMSR
  -TemplateFile 'https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/01%20-%20Automation/Files/createNewOmsWorkspace.json' `
  -omsWorkspaceName ("ASC-workspace-$myGuid") -omsWorkspaceLocation "WestEurope" -Verbose
 ```
+3. Switch to the Azure portal and verify if the Log Analytics workspace has been created successfully.
+4. Open the properties of the new created workspace, take a note of the **resourceGroup** name, click on **Advanced settings** and also make a note of the **workspaceID** and the **primaryKey**, since you need those 3 values for the next lab
+
+#### 7 - Deploy the ASC advanced ARM Template
+Now that you have created a workspace, we are going to deploy an ARM template which will configure a number of settings and you will connect ASC with the workspace we have created in the previous step.<br>
+1. Switch to the PowerShell session where you are logged into Azure, with the correct subscription selected and enter the following:
+```powershell
+New-AzureRmDeployment -TemplateFile 'https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/01%20-%20Automation/Files/configureAscAdvanced.json' `
+-name 'AscAdvancedDeployment' -Location '<yourLocation>' -autoProvisioning 'On' -workspaceName '<yourWorkspaceName>' `
+-workspaceSubscriptionId '<yourAzuresubscriptionID>' -workspaceResourceGroup '<resourceGroupNameOfTheWorkspace>' `
+-emailSecurityContact 'john@contoso.com' -phoneSecurityContact '12345' -alertNotifications 'On' -alertsToAdmin 'On' `
+-securitySettings 'On'
+```
+*Note: it might take a couple minutes for the Azure portal to catch up and show your updated settings (like autoProvision)*
+
+#### 8 - ASC PowerShell cmdlets
+The ASC PowerShell cmdlets can be downloaded from <a href="https://www.powershellgallery.com/packages/AzureRM.Security/0.2.0-preview" target="_blank">here</a>.<br>
+Install the cmdlets by typing in a PowerShell window:
+```powershell
+Install-Module -Name AzureRM.Security -AllowPrerelease
+```
+1. When you have installed the AzureRm.Security module, explore the cmdlets by executing:
+```powershell
+Get-Command -Module AzureRm.Security
+```
+2. Configure the ASC security contact by executing:
+```powershell
+#Set a security contact for the current scope. For the parameter "-Name", you need to use "default1", "default2", etc.
+
+Set-AzureRmSecurityContact  -Name "default1" -Email "john@johndoe.com" -Phone "12345" -AlertAdmin -NotifyOnAlert
+```
+3. Check the new security contact settings:
+```powershell
+Get-AzureRmSecurityContact
+```
+
+4. Configure Auto Provisioning settings by executing:
+```powershell
+Set-AzureRmSecurityAutoProvisioningSetting -Name "default" -EnableAutoProvision
+```
+5. Check the Auto Provisioning settings:
+```powershell
+Get-AzureRmSecurityAutoProvisioningSetting
+```
+<br>
+
+A sample which contains how to use the AzureRm.Security module can be found <a href="https://github.com/tianderturpijn/ASC/blob/master/PowerShell/Samples/ASC-Samples.ps1" target="_blank">here</a>. <br><br>
+*In a later lab we will test drive how to configure Just-In-Time (JIT) with PowerShell.*
 
 
 
