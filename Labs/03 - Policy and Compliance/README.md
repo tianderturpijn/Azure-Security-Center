@@ -7,9 +7,11 @@ This lab covers ASC Policy and Regulatory Compliance and guides you through some
 
 ### 1 - Regulatory Compliance (Preview)
 Open a new browser tab/window and copy and paste the following URL in your browser to get access to the Regulatory Compliance preview:
-```powershell
+
+```html
 https://aka.ms/AscRegulatoryCompliance
 ```
+
 1. Explore the different regulations (like Azure CIS)
 2. Click on the different assessments
 

@@ -4,7 +4,7 @@ In this lab you will protect your VMs with Just-In-Time (JIT) access. JIT has be
 
 ### 1 - Enable JIT on a VM in ASC
 1. Open the Azure portal using this <a href="https://ms.portal.azure.com/?feature.canmodifystamps=true&feature.jitconnect=true" target="_blank">link </a>, or copy and paste this URL:
-```powershell
+```html
 https://ms.portal.azure.com/?feature.canmodifystamps=true&feature.jitconnect=true
 ```
 
