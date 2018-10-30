@@ -24,5 +24,10 @@ https://ms.portal.azure.com/?feature.canmodifystamps=true&feature.jitconnect=tru
 1. In the same browser session, navigate to the **Virtual Machine** blade
 2. Select a VM for which you have not enabled JIT
 3. Click on **Connect** in the Overview blade
-4. Notice the banner saying "*To improve security, enable just-in-time access*"
-5. 
+4. Notice the banner saying "*To improve security, enable just-in-time access*"<br><br>
+![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/05%20-%20VM%20Protection%20with%20JIT/Screenshots/EnableJITfromVMblade.png
+)
+5. Click on the arrow pointing to the right (as shown in the previous image)<br><br>
+![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/05%20-%20VM%20Protection%20with%20JIT/Screenshots/EnableJITbutton.png
+)
+
