@@ -60,5 +60,14 @@ https://dev12345.service-now.com
 
 5. Click on **Run playbook**<br><br>
 ![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/06%20-%20Logic%20App%20integration/Screenshots/run_playbook.png)
-6. Switch to the playbook history
+6. Switch to the playbook history and notice the status, but you can also click on the playbook to see details and even runtime information <br><br>
+![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/06%20-%20Logic%20App%20integration/Screenshots/playbook_history.png) <br><br>
+![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/06%20-%20Logic%20App%20integration/Screenshots/playbook_history_details.png)<br><br>
+
+
+
+
+7. Switch to your ServiceNow developer instance and check for a new created incident record<br><br>
+![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/06%20-%20Logic%20App%20integration/Screenshots/snow_record.png)
+
 
