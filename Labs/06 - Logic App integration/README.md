@@ -27,4 +27,7 @@ https://dev12345.service-now.com
 ![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/06%20-%20Logic%20App%20integration/Screenshots/asc_trigger.png)
 7. Click on **+ New Step**
 8. In the **Seach connectors and triggers field** search for **ServiceNow**
-9. Under **Actions**, select **Create Record**
+9. Under **Actions**, select **Create Record**<br><br>
+![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/06%20-%20Logic%20App%20integration/Screenshots/ServiceNowConnection.png)
+10. Provide a **Connection Name** and fill in the ServiceNow **Instance Name**, **Username** and **Password** that you have captured in the previous steps and click on **Create**
+11. Click on Show advanced options
