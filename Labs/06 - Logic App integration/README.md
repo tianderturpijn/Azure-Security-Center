@@ -20,6 +20,7 @@ https://dev12345.service-now.com
 
 1. Navigate to **Security Center>Playbooks** (under Automation & Orchestration)
 2. Click on **Add Playbook**
-3. Give your playbook a name like "ASC-Alert-To-ServiceNow"
-4. When the playbook has been created, click on **Edit** in the overview blade
-5. 
+3. Give your playbook a name like "ASC-Alert-To-ServiceNow", choose your **subscription**, create or choose your **resource group**, select a location and click on **Create**
+4. When the playbook has been created, select the playbook. This should bring you to the **Logic Apps Designer** (if that does not happen, click on your playbook and click on **Edit**)
+5. Under Templates, select the **Blank Logic App**
+6. In the Seach connectors and triggers field, type in security center and select When a response to an Azure Security Center alert is triggered
