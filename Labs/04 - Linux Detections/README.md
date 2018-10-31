@@ -18,7 +18,7 @@ sudo adduser <userName>
 #### 4 - Excuting a brute force attack
 1. Connect to the Kali Linux VM with SSH
 2. Navigate to the folder **/usr/share/wordlists**
-3. Upload the **lab_users.txt** and **lab_pass.txt** files to this folder
+3. Upload the **<a href="https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/04%20-%20Linux%20Detections/Files/lab_users.txt" target="_blank">lab_users.txt</a>** and **<a href="https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/04%20-%20Linux%20Detections/Files/lab_pass.txt" target="_blank">lab_pass.txt</a>** files to this folder
 4. Copy the IP address from the Linux VM that you have deployed earlier. We are going to brute force attack this VM
 5.  Type the command below in your Kali VM, and replace "IP" for the VM2 public IP address
 ```powershell
