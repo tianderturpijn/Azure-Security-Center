@@ -52,4 +52,8 @@ https://dev12345.service-now.com
 
 #### 4 - Invoke the ServiceNow playbook from an ASC alert
 1. Navigate to **Security Center>Security Alerts**
-2. 
+2. Look for the Azure Security Center test alert and click on it<br><br>
+![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/06%20-%20Logic%20App%20integration/Screenshots/test_alert.png)
+3. Under Attacked Resource, click on your VM
+4. On the bottom of the alert properties, click on **View playbooks**<br><br>
+![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/06%20-%20Logic%20App%20integration/Screenshots/view_playbooks_button.png)
