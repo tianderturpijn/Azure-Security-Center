@@ -21,17 +21,17 @@ For the first ARM deployment lab we are going to start with configuring the **Em
 
 #### 2 - Explore the Email Notifications ARM template
 1. Open the <a href="https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/01%20-%20Automation/Files/configureAscEmailNotifications.json" target="_blank">ARM template</a> for email notifications
-2. Notice the ARM template parameter allowed values. These values are case sensitive and are mandatory.
+2. Notice the ARM template **parameter** allowed values. These values are case sensitive and are mandatory.
 3. Under the ARM resources (securityContacts), use "default1", "default2", etc. as the name. These are mandatory fields and can only be used in this format
 
 #### 3 - Deploy the Email Notifications ARM template
-**Assumptions**: You have installed the AzureRm PowerShell modules on your system.<br> If not, install those using *Install-Module -Name AzureRM*
+**Assumptions**: You have installed the AzureRm PowerShell modules on your system.<br> If not, install those using ***Install-Module -Name AzureRM***
 1. Open your favorite PowerShell editor
 2. Login to the Azure Portal by using **Login-AzureRmAccount**
 3. Make sure that you have selected your Azure subscription which has been provided to you by using **Select-AzureRmSubscription**<br>
 4. ASC resides at the subscription level, so we are going to target our ARM template deployment at the same level (instead of deploying it at the resource group level)
 5. The syntax is *New-AzureRmDeployment -TemplateFile* `yourArmTemplateFile` (note: we are going to use a prepared ARM template JSON file)
-6. Type the following in your PowerShell session and execute it:
+6. Copy and paste the following in your PowerShell session and execute it:
 ```powershell
 New-AzureRmDeployment -TemplateFile 'https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/01%20-%20Automation/Files/configureAscEmailNotifications.json'
 ```
