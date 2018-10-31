@@ -22,7 +22,33 @@ az group create --name <myResourceGroup> --location eastus
 az container create --resource-group <yourResourceGroupName> --name <yourContainerName> --image microsoft/aci-helloworld --dns-name-label <yourDnsLabel> --ports 80
 ```
 5. Wait for the container to be deployed
+![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs//07%20-%20Preview%20Features/Screenshots/container_create.png
+)<br><br>
+![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs//07%20-%20Preview%20Features/Screenshots/container_created.png
 
+) <br><br>
+6. Verify that the container has been created under your resource group in the Azure portal: <br><br>
+![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs//07%20-%20Preview%20Features/Screenshots/resourcegroup.png
+) <br><br>
+***Note**: It takes some time for the container to become visible in Security Center* <br>
 
+#### 2 - Explore the new Container tab under Compute & Apps
+1. The new container view in Security Center is accessible through a feature flag. Copy and paste the following URL in your Azure portal session:
+```text
+https:/aka.ms/asc_containers_preview
+```
+<br>
+
+**This shows the container in Security Center:** <br><br>
+
+![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs//07%20-%20Preview%20Features/Screenshots/container_in_asc.png
+)
+<br><br>
+
+**Clicking on the container shows more details:**
+![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs//07%20-%20Preview%20Features/Screenshots/docker_details.png
+)
+
+![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs//07%20-%20Preview%20Features/Screenshots/docker_details2.png
 
 
