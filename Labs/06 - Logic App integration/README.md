@@ -58,6 +58,7 @@ https://dev12345.service-now.com
 4. On the bottom of the alert properties, click on **View playbooks**<br>
 ![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/06%20-%20Logic%20App%20integration/Screenshots/view_playbooks_button.png)
 
-5. Click on **Run playbook**
-6. 
+5. Click on **Run playbook**<br><br>
+![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/06%20-%20Logic%20App%20integration/Screenshots/run_playbook.png)
+6. Switch to the playbook history
 
