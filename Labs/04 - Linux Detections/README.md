@@ -66,4 +66,6 @@ wget http://XXX.XXX.XXX.XXX/download/eicar.com
 1. Navigate to the **Security Center>Security Alerts** blade (under Threat Protection)
 2.  Organize the alerts by date by clicking on the Date column, and review the alerts that were generated during this lab, it should look similar like this:
 
+![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/04%20-%20Linux%20Detections/Screenshots/Security_incident_detected_Linux.png)
 
+![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/04%20-%20Linux%20Detections/Screenshots/Security_incident_detected_Linux2.png)
