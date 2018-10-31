@@ -13,12 +13,14 @@ You will configure ASC with:
 2. Click on **Security Center**
 3. Click on **Security Policy**
 4. On the line where it shows your subscription, click on **Edit settings**
-5. Explore the settings, specifically the email notification settings.
+5. Explore the settings, specifically the email notification settings.<br><br>
+![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs//01%20-%20Automation/Screenshots/asc_emailsettings.png
+)
 
 For the first ARM deployment lab we are going to start with configuring the **Email notification** settings
 
 #### 2 - Explore the Email Notifications ARM template
-1. Open the <a href="https://github.com/tianderturpijn/Azure-Security-Center/blob/master/Labs/01%20-%20Automation/Files/configureAscEmailNotifications.json" target="_blank">ARM template</a> for email notifications
+1. Open the <a href="https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/01%20-%20Automation/Files/configureAscEmailNotifications.json" target="_blank">ARM template</a> for email notifications
 2. Notice the ARM template parameter allowed values. These values are case sensitive and are mandatory.
 3. Under the ARM resources (securityContacts), use "default1", "default2", etc. as the name. These are mandatory fields and can only be used in this format
 
