@@ -42,13 +42,13 @@ https:/aka.ms/asc_containers_preview
 **This shows the container in Security Center:** <br><br>
 
 ![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs//07%20-%20Preview%20Features/Screenshots/container_in_asc.png
-)
-<br><br>
+) <br><br>
 
 **Clicking on the container shows more details:**
 ![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs//07%20-%20Preview%20Features/Screenshots/docker_details.png
-)
+) <br><br>
 
 ![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs//07%20-%20Preview%20Features/Screenshots/docker_details2.png
+)
 
 
