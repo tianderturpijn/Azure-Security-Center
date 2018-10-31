@@ -10,10 +10,9 @@ Skip the following steps if you already have a ServiceNow instance
 2. Go through all the steps until you have a developer instance which is active and running
 3. Take a note of the following information, because you will need that in the following steps:
 - The URL of your developer instance, similar to
-```powershell
+```txt
 https://dev12345.service-now.com
 ```
-
 - admin account name & password <br><br>
 
 #### 2 - Create the ServiceNow playbook
