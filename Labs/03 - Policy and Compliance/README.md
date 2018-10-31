@@ -30,5 +30,7 @@ This exercise guides you through the current Security Center policies and is int
 5. Notice the different icons as shown below, they represent a **Policy** and an **Initiative** (group of policies): <br>
 
 ![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/03%20-%20Policy%20and%20Compliance/Screenshots/initiative.png
-)
+) <br><br>
+
+6. Click on each of those to explore the difference
 
