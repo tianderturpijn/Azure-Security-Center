@@ -17,4 +17,6 @@ https://aka.ms/AscRegulatoryCompliance
 
 ### 2 - Policy Management
 
+### 3 - Secure Score
+
 
