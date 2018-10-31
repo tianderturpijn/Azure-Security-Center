@@ -49,8 +49,8 @@ Also we will configure ASC policies through the ARM template.
 
 #### 5 - Explore the ASC advanced ARM template
 1. Open the <a href="https://github.com/tianderturpijn/Azure-Security-Center/blob/master/Labs/01%20-%20Automation/Files/configureAscAdvanced.json" target="_blank">ASC Advanced ARM template</a> and explore it.
-2. Look closely at the parameters and their allowed values
-3. Under *resources*, observe the several settings that we will configure like autoProvisioning, workspace settings, etc. The recommendation policies can be configured one by one, but in this lab we will set the value to **On** or **Off** for all of them.
+2. Look closely at the **parameters** and their allowed values
+3. Under **resources**, observe the several settings that we will configure like autoProvisioning, workspace settings, etc. The recommendation policies can be configured one by one, but in this lab we will set the value to **On** or **Off** for all of them.
 4. For ARM templates, it is recommended that you use a parameter file to pass values during a deployment if you don't want to type them in. In this lab we will just type them in and paste some values
 
 #### 6 - Create a Log Analytics workspace
@@ -71,7 +71,7 @@ New-AzureRmResourceGroupDeployment -Name myDeployOMS -ResourceGroupName 'newOMSR
 
 #### 7 - Deploy the ASC advanced ARM Template
 Now that you have created a workspace, we are going to deploy an ARM template which will configure a number of settings and you will connect ASC with the workspace we have created in the previous step.<br>
-1. Switch to the PowerShell session where you are logged into Azure, with the correct subscription selected and enter the following:
+1. Switch to the PowerShell session where you are logged into Azure, with the correct subscription selected and copy & paste the following:
 ```powershell
 New-AzureRmDeployment -TemplateFile 'https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/01%20-%20Automation/Files/configureAscAdvanced.json' `
 -name 'AscAdvancedDeployment' -Location '<yourLocation>' -autoProvisioning 'On' -workspaceName '<yourWorkspaceName>' `
