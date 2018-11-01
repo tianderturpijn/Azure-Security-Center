@@ -12,8 +12,9 @@ Open a new browser tab/window and copy and paste the following URL in your brows
 ```html
 https://aka.ms/AscRegulatoryCompliance
 ```
-select only **Security Center** <br><br>
-![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/03%20-%20Policy%20and%20Compliance/Screenshots/asc_policies.png
+<br>
+
+![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/03%20-%20Policy%20and%20Compliance/Screenshots/regulatoryblade.png
 )<br>
 
 1. Explore the different regulations (like Azure CIS)
