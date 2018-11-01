@@ -74,19 +74,23 @@ New-AzureRmResourceGroupDeployment -Name myWorkspaceDeploy -ResourceGroupName $R
 
 #### 7 - Change the Pricing tier and data collection settings of your workspace 
 Since you can set the pricing tier and data collection settings per workspace, which is often not clear to customers, we are going to set it in the portal instead of through automation (although you can automate it)
-1. In the Policy Management view where your workspace is listed, click on Edit settings
+1. In the **Policy Management** view where your workspace is listed, click on **Edit settings** <br><br>
+![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/01%20-%20Automation/Screenshots/pricing_workspace1.png
+)<br>
 2. Click on **Pricing tier** and note that by default it is set to **Free**
 3. Click on **Standard** and click on **Save**
-4. Click on Data collection
-5. Under Windows security events, select All events
-6. Click on Save
+4. Click on **Data collection**
+5. Under **Windows security events**, select **All events**
+6. Click on **Save**
 
-#### Bla
-6. Since you can now use ASC free or standard at the workspace level
-4. Switch to the Azure portal and verify if the Log Analytics workspace has been created successfully.
-4. Open the properties of the new created workspace, take a note of the **resourceGroup** name, click on **Advanced settings** and also make a note of the **workspaceID** and the **primaryKey**, since you need those 3 values for the next lab
+#### 8 - Collect the WorkspaceID and WorkspaceKey
+For the next exercise where we deploy a more advanced ASC ARM template, we are going to need the workspace details.
+1. In the Azure portal, navigate to Log Analytics
+2. Click on your **workspace**
+3. On the Overview blade, make a note of the **Resource group name** and the **Subscription ID**
+4. Click on **Advanced settings** and also make a note of the **workspaceID** and the **primaryKey**, since you need those  values for the next exercise
 
-#### 7 - Deploy the ASC advanced ARM Template
+#### 9 - Deploy the ASC advanced ARM Template
 Now that you have created a workspace, we are going to deploy an ARM template which will configure a number of settings and you will connect ASC with the workspace we have created in the previous step.<br>
 1. Switch to the PowerShell session where you are logged into Azure, with the correct subscription selected and copy & paste the following:
 ```powershell
