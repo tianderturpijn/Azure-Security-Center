@@ -20,11 +20,11 @@ sudo adduser <userName>
 1. Connect to the Kali Linux VM with SSH
 2. Navigate to the folder **/usr/share/wordlists**
 3. Upload the **<a href="https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/04%20-%20Linux%20Detections/Files/lab_users.txt" target="_blank">lab_users.txt</a>** and **<a href="https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/04%20-%20Linux%20Detections/Files/lab_pass.txt" target="_blank">lab_pass.txt</a>** files to this folder by executing:
-```powershell
+```text
 sudo wget https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/04%20-%20Linux%20Detections/Files/lab_users.txt
 ```
 and
-```powershell
+```text
 sudo wget https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/04%20-%20Linux%20Detections/Files/lab_pass.txt
 ```
 4. Copy the IP address from the Linux VM that you have deployed earlier. We are going to brute force attack this VM
@@ -36,7 +36,7 @@ hydra -I -L lab_users.txt -P lab_pass.txt <IP> -t 4 ssh
 
 #### 5 - Simulate capturing credentials and other useful information
 1.  Run the command below to simulate an attacker that is trying to start logkeys to set up the system to capture credentials and other useful information: 
-```powershell
+```text
 logkeys --start
 ```
 ***Note**:<br> Ignore the error message if you don't have logkeys installed. Security Center will detect this attack anyway*
@@ -44,7 +44,7 @@ logkeys --start
 #### 6 - Simulate an attack against a web server
 Assuming that the attacker has already performed some internal recon using nmap, you are going to simulate an attack against a web server
 1. Run the command below:
-```powershell
+```text
 perl slowloris.pl -dns server.contoso.com
 ```
 ***Note**:<br> Ignore the error message if you don't have this script on your system. Security Center will detect this attack anyway*
@@ -54,11 +54,11 @@ Attackers usually will communicate with command and control (C2) to transfer dat
 For this example, you will download the EICAR malware test file using WGET for the IP address.  The commands that follows must be executed in VM2 (Ubuntu VM):<br><br>
 
 1. First, obtain the IP address of the target:
-```powershell
+```text
 nslookup eicar.com 
 ```
 2. Now replace the XXX.XXX.XXX.XXX on the command below with the IP obtained from nslookup: 
-```powershell
+```text
 wget http://XXX.XXX.XXX.XXX/download/eicar.com
 ```
 ***Note**:<br>  if you have issues download eicar.com, try download eicar.txt (same command line, just change the extension).*
