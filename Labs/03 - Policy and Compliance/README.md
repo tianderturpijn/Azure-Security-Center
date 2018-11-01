@@ -1,7 +1,7 @@
 ﻿# 03 - Policy and Compliance
 ##### Estimated lab time: 
 ***Note**:*<br>
-*Make sure before continuing with this lab that the VM's that you have deployed in the previous labs are showing as "Monitored by Azure Security Center". You can find this setting under **Security Center>Compute & Apps***
+*Make sure before continuing with this lab that the VM's that you have deployed earlier are showing as "Monitored by Azure Security Center". You can find this setting under **Security Center>Compute & Apps***
 
 
 This lab covers ASC Policy and Regulatory Compliance and guides you through some preview features.<br>
@@ -17,13 +17,13 @@ https://aka.ms/AscRegulatoryCompliance
 2. Click on the different assessments
 
 ### 2 - Policy Management
-This exercise guides you through the current Security Center policies and is intended for exploration only. <br>
+This exercise guides you through the current Security Center policies and is intended for exploration purposes only. <br>
 
 ***Note**: at this time we only support out-of-the-box Security Center policies. Support for custom policies is coming in the near future*
 
 1. Within the Azure portal, navigate to the **Policy** blade
 2. Click on **Definitions** (under Authoring)
-3. Under Categories, deselect all the categories and select only Security Center <br><br>
+3. Under **Categories**, deselect all the categories and select only **Security Center** <br><br>
 ![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/03%20-%20Policy%20and%20Compliance/Screenshots/asc_policies.png
 )<br>
 
