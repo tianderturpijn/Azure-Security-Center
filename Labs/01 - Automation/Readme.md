@@ -26,31 +26,31 @@ For the first ARM deployment exercise we are going to start with configuring the
 3. Under the ARM resources section  (**Microsoft.Security/securityContacts**), use "default1", "default2", etc. as value for the field name. These are mandatory fields and can only be used in this format
 
 #### 3 - Deploy the Email Notifications ARM template
-**Assumptions**: You have installed the AzureRm PowerShell modules on your system.<br> If not, install those in a PowerShell session using ***Install-Module -Name AzureRM***
+**Assumptions**: You have installed the **AzureRm** PowerShell modules on your system.<br> If not, install those in a PowerShell session using ***Install-Module -Name AzureRM***
 1. Open your favorite PowerShell editor
 2. Login to the Azure Portal by using **Login-AzureRmAccount**
-3. Make sure that you have selected your Azure subscription which has been provided to you by using **Select-AzureRmSubscription**<br>
+3. Make sure that you have selected your Azure subscription which has been provided to you by using **Select-AzureRmSubscription** (only necessary if you have multiple subscriptions)<br>
 4. ASC resides at the subscription level, so we are going to target our ARM template deployment at the same level (instead of deploying it at the resource group level)
 5. The syntax is *New-AzureRmDeployment -TemplateFile* `yourArmTemplateFile` (note: we are going to use a prepared ARM template JSON file)
 6. Copy and paste the following in your PowerShell session and execute it:<br>
-**Note:**
+```powershell
+New-AzureRmDeployment -TemplateFile 'https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/01%20-%20Automation/Files/configureAscEmailNotifications.json'
+```
+Note:
 - Use **eastus** as your location (since we are going to use this location through out the labs)
 - Use a proper email format like johndoe@johndoe.com
 - Use only numbers (no spaces) as a phone number
 - Fill in **On** or **Off** for alerts<br>
 
-```powershell
-New-AzureRmDeployment -TemplateFile 'https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/01%20-%20Automation/Files/configureAscEmailNotifications.json'
-```
 7. After a successful completion, switch to the Azure portal and refresh the ASC blade and verify that the email settings have been updated according to the values in the template.
-8. Optional exercise: you can copy the template and use your own values
+8. [Optional exercise] You can copy the template and use your own values
 
 ## Workspace creation
-Security Centers stores MMA collected information (and more) in a Log Analytics workspace. Not many customers like or use a default workspace created by ASC (when auto provisioning is enabled).<br>
+Security Centers stores MMA collected information (and more) in a Log Analytics workspace. Not many customers like or use a default workspace created by ASC.<br>
 In the next exercise we will create a new workspace which will be used as your default ASC workspace.
 
 #### 1 - Create a Log Analytics workspace
-You can either create a workspace through the Azure portal, or leverage an ARM template.
+You can either create a workspace through the Azure portal, leverage an ARM template, or use PowerShell.
 1. Navigate to the Azure portal and create a Log Analytics workspace **OR**:
 2. Copy, paste and run the following PowerShell script "as is" to deploy an ARM template which will deploy the <a href="https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/01%20-%20Automation/Files/createNewOmsWorkspace.json" target="_blank">newOmsWorkspace</a> ARM template: (optionally you can use your own values in the script below) <br>
 ```powershell
@@ -66,7 +66,7 @@ New-AzureRmResourceGroupDeployment -Name myWorkspaceDeploy -ResourceGroupName $R
 5. Your new created workspace should be listed under the **Policy Management** view <br><br>
  
 #### 2 - Change the Pricing tier and data collection settings of your workspace 
-Since you can set the pricing tier and data collection settings per workspace, which is often not clear to customers, therefore we are going to set it in the portal instead of through automation (although you can automate it)
+You can set the pricing tier and data collection settings per workspace, which is often not clear to customers, therefore we are going to set it in the portal instead of through automation (although you can automate it)
 1. In the **Policy Management** view where your workspace is listed, click on **Edit settings** <br><br>
 ![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/01%20-%20Automation/Screenshots/pricing_workspace1.png
 )<br>
@@ -77,7 +77,7 @@ Since you can set the pricing tier and data collection settings per workspace, w
 6. Click on **Save**
 
 #### 3 - Collect the WorkspaceID and WorkspaceKey
-For the next exercise where we deploy a more advanced ASC ARM template, we are going to need the workspace details.
+For the next (optional) exercise where we deploy a more advanced ASC ARM template, we are going to need the workspace details.
 1. In the Azure portal, navigate to Log Analytics
 2. Click on your **workspace**
 3. On the Overview blade, make a note of the **Resource group name** and the **Subscription ID**
@@ -101,7 +101,7 @@ When you have installed the AzureRm.Security module, explore the cmdlets by exec
 Get-Command -Module AzureRm.Security
 ```
 #### 3 - Configuring email settings
-***Note**: make sure that in your favorite PowerShell editor, you are logged into Azure (using Login-AzureRmAccount)*<br><br>
+***Note**: make sure that in your favorite PowerShell editor, you are logged into Azure (using Login-AzureRmAccount)*<br>
 
 In the previous exercise we have configured the email notifications through ARM, let's now explore how to configure email settings through PowerShell.<br>
 Copy and paste the following script in your PowerShell editor:
@@ -116,19 +116,29 @@ Run the following command:
 Get-AzureRmSecurityContact
 ```
 
-#### 5 - Configure Auto Provisioning settings
-ASC's Auto Provisioning settings set to On will install the MMA VM extension automatically. Some customers prefer that to happen automatically, some customers like to control that.<br><br>
-Configure Auto Provisioning settings by running:
-```powershell
-Set-AzureRmSecurityAutoProvisioningSetting -Name "default" -EnableAutoProvision
-```
+### Auto Provisioning settings
+ASC's Auto Provisioning settings set to On will install the MMA VM extension automatically. Some customers prefer that to happen automatically, some customers like to control that.<br>
 
-#### 6 - Get the current Auto Provisioning settings
+#### 1 - Get the current Auto Provisioning settings
 To retrieve the current Auto Provisioning settings, run the following:
 ```powershell
 Get-AzureRmSecurityAutoProvisioningSetting
 ```
 <br>
+
+#### 2 - Set Auto Provisioning to On
+
+Enable automatic MMA VM extension installation:
+```powershell
+Set-AzureRmSecurityAutoProvisioningSetting -Name "default" -EnableAutoProvision
+```
+
+#### 3 - Set Auto Provisioning to Off
+
+Disable automatic MMA VM extension installation:
+```powershell
+Set-AzureRmSecurityAutoProvisioningSetting -Name "default"
+```
 
 A sample which contains how to use the AzureRm.Security module can be found <a href="https://github.com/tianderturpijn/ASC/blob/master/PowerShell/Samples/ASC-Samples.ps1" target="_blank">here</a>. <br><br>
 *In a later lab we will test drive how to configure Just-In-Time (JIT) with PowerShell.* <br><br>
