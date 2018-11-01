@@ -1,5 +1,6 @@
 ﻿# ASC Automation & Configuration
 
+##### Estimated lab time: 
 In this lab you are going to explore what the ASC automation and deployment options are.
 
 You will configure ASC with:

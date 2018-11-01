@@ -1,5 +1,6 @@
 ﻿# 06 - Preview Features
-This optional lab points you to a number of preview features for you to explore
+##### Estimated lab time: 
+This optional lab points you to a number of preview features for you to explore.
 
 #### 1 - Container Security Monitoring
 *Note: This exercise also shows you how to use Azure CLI straight from the Azure portal*
