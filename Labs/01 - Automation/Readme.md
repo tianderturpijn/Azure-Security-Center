@@ -68,7 +68,22 @@ New-AzureRmResourceGroupDeployment -Name myWorkspaceDeploy -ResourceGroupName $R
  -TemplateFile 'https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/01%20-%20Automation/Files/createNewOmsWorkspace.json' `
  -omsWorkspaceName ("ASC-workspace-$myGuid") -omsWorkspaceLocation "eastus" -Verbose
 ```
-3. Switch to the Azure portal and verify if the Log Analytics workspace has been created successfully.
+3. Switch to the Azure portal and open the **Security Center** blade
+4. Click on **Security policy**
+5. Your new created workspace should be listed under the **Policy Management** view <br><br>
+
+#### 7 - Change the Pricing tier and data collection settings of your workspace 
+Since you can set the pricing tier and data collection settings per workspace, which is often not clear to customers, we are going to set it in the portal instead of through automation (although you can automate it)
+1. In the Policy Management view where your workspace is listed, click on Edit settings
+2. Click on **Pricing tier** and note that by default it is set to **Free**
+3. Click on **Standard** and click on **Save**
+4. Click on Data collection
+5. Under Windows security events, select All events
+6. Click on Save
+
+#### Bla
+6. Since you can now use ASC free or standard at the workspace level
+4. Switch to the Azure portal and verify if the Log Analytics workspace has been created successfully.
 4. Open the properties of the new created workspace, take a note of the **resourceGroup** name, click on **Advanced settings** and also make a note of the **workspaceID** and the **primaryKey**, since you need those 3 values for the next lab
 
 #### 7 - Deploy the ASC advanced ARM Template
