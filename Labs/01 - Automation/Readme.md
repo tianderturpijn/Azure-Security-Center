@@ -8,7 +8,7 @@ You will configure ASC with:
 2. PowerShell
 
  
-###  ARM Template deployment
+##  ARM Template deployment
 #### 1 - Explore the ASC settings in the portal
 1. Open a browser and login to the  <a href="https://portal.azure.com" target="_blank">Azure Portal</a>
 2. Click on **Security Center** (click on **skip** if you're prompted for a trial)
@@ -45,7 +45,7 @@ New-AzureRmDeployment -TemplateFile 'https://raw.githubusercontent.com/tiandertu
 7. After a successful completion, switch to the Azure portal and refresh the ASC blade and verify that the email settings have been updated according to the values in the template.
 8. Optional exercise: you can copy the template and use your own values
 
-### Workspace creation
+## Workspace creation
 Security Centers stores MMA collected information (and more) in a Log Analytics workspace. Not many customers like or use a default workspace created by ASC (when auto provisioning is enabled).<br>
 In the next exercise we will create a new workspace which will be used as your default ASC workspace.
 
@@ -66,7 +66,7 @@ New-AzureRmResourceGroupDeployment -Name myWorkspaceDeploy -ResourceGroupName $R
 5. Your new created workspace should be listed under the **Policy Management** view <br><br>
  
 #### 2 - Change the Pricing tier and data collection settings of your workspace 
-Since you can set the pricing tier and data collection settings per workspace, which is often not clear to customers, we are going to set it in the portal instead of through automation (although you can automate it)
+Since you can set the pricing tier and data collection settings per workspace, which is often not clear to customers, therefore we are going to set it in the portal instead of through automation (although you can automate it)
 1. In the **Policy Management** view where your workspace is listed, click on **Edit settings** <br><br>
 ![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/01%20-%20Automation/Screenshots/pricing_workspace1.png
 )<br>
@@ -83,7 +83,7 @@ For the next exercise where we deploy a more advanced ASC ARM template, we are g
 3. On the Overview blade, make a note of the **Resource group name** and the **Subscription ID**
 4. Click on **Advanced settings** and also make a note of the **workspaceID** and the **primaryKey**, since you need those  values for the next exercise
 
-### More complex ARM template deployment
+### [Optional Lab] More complex ARM template deployment
 
 #### 1 - Deploy a more complex ASC configuration ARM template
 Now that you have explored how to deploy an ARM template to configure an ASC setting, you are going to explore how to deploy a more complex ARM template. <br>
@@ -94,19 +94,13 @@ The following lab assumes that a (Central) Log Analytics workspace already exist
 
 Also we will configure ASC policies through the ARM template.
 
-#### 5 - Explore the ASC advanced ARM template
+#### 2 - Explore the ASC advanced ARM template
 1. Open the <a href="https://github.com/tianderturpijn/Azure-Security-Center/blob/master/Labs/01%20-%20Automation/Files/configureAscAdvanced.json" target="_blank">ASC Advanced ARM template</a> in a new browser window and explore it.
 2. Look closely at the **parameters** and their allowed values
 3. Under **resources**, observe the several settings that we will configure like autoProvisioning, workspace settings, etc. The recommendation policies can be configured one by one, but in this lab we will set the value to **On** or **Off** for all of them.
 4. For ARM templates, it is recommended that you use a parameter file to pass values during a deployment if you don't want to type them in. In this lab we will just type them in and paste some values
 
-#### 6 - Create a Log Analytics workspace
-In the majority of the use cases that we have seen, a Log Analytics workspace is already present and needs to be integrated with ASC. So your lab will focus on that scenario, although you can create one single ARM template to deploy a new workspace and integrate and configure ASC in one deployment. In this lab we will not focus on that.<br>
-For our lab to work, we are going to create a Log Analytics workspace. 
-
-
-
-#### 9 - Deploy the ASC advanced ARM Template
+#### 3 - Deploy the ASC advanced ARM Template
 Now that you have created a workspace, we are going to deploy an ARM template which will configure a number of settings and you will connect ASC with your workspace.<br>
 1. Switch to the PowerShell session where you are logged into Azure, with the correct subscription selected and copy & paste the following script. Make sure to update all values with the information you have collected in the previous exercise:
 ```powershell
@@ -118,17 +112,25 @@ New-AzureRmDeployment -TemplateFile 'https://raw.githubusercontent.com/tiandertu
 ```
 *Note: it might take a couple minutes for the Azure portal to catch up and show your updated settings (like autoProvision)*
 
-#### 8 - ASC PowerShell cmdlets
+## ASC PowerShell cmdlets
+Security Center provides automation support through PowerShell as well.<br>
 The ASC PowerShell cmdlets can be downloaded from <a href="https://www.powershellgallery.com/packages/AzureRM.Security/0.2.0-preview" target="_blank">here</a>.<br>
+
+#### 1 - Installing the cmdlets
+
 Install the cmdlets by typing in a PowerShell window:
 ```powershell
 Install-Module -Name AzureRM.Security -AllowPrerelease
 ```
-1. When you have installed the AzureRm.Security module, explore the cmdlets by executing:
+#### 2 - Exploring the cmdlets
+When you have installed the AzureRm.Security module, explore the cmdlets by executing:
 ```powershell
 Get-Command -Module AzureRm.Security
 ```
-2. Configure the ASC security contact by executing:
+#### 3 - Configuring email settings
+***Note**: make sure that in your favorite PowerShell editor, you are logged into Azure (using Login-AzureRmAccount)*<br><br>
+In the previous exercise we have configured the email notifications through ARM, let's now explore how to configure email settings through PowerShell.<br>
+Copy and paste the following script in your PowerShell editor:
 ```powershell
 #Set a security contact for the current scope. For the parameter "-Name", you need to use "default1", "default2", etc.
 
