@@ -11,7 +11,7 @@ You will configure ASC with:
 ### ARM Template deployment
 #### 1 - Explore the ASC settings in the portal
 1. Open a browser and login to the  <a href="https://portal.azure.com" target="_blank">Azure Portal</a>
-2. Click on **Security Center**
+2. Click on **Security Center** (click on **skip** if you're prompted for a trial)
 3. Click on **Security Policy**
 4. On the line where it shows your subscription, click on **Edit settings**
 5. Explore the settings, specifically the **email notification settings**.<br><br>
@@ -91,11 +91,11 @@ For the next exercise where we deploy a more advanced ASC ARM template, we are g
 4. Click on **Advanced settings** and also make a note of the **workspaceID** and the **primaryKey**, since you need those  values for the next exercise
 
 #### 9 - Deploy the ASC advanced ARM Template
-Now that you have created a workspace, we are going to deploy an ARM template which will configure a number of settings and you will connect ASC with the workspace we have created in the previous step.<br>
-1. Switch to the PowerShell session where you are logged into Azure, with the correct subscription selected and copy & paste the following:
+Now that you have created a workspace, we are going to deploy an ARM template which will configure a number of settings and you will connect ASC with your workspace.<br>
+1. Switch to the PowerShell session where you are logged into Azure, with the correct subscription selected and copy & paste the following script. Make sure to update all values with the information you have collected in the previous exercise:
 ```powershell
 New-AzureRmDeployment -TemplateFile 'https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/01%20-%20Automation/Files/configureAscAdvanced.json' `
--name 'AscAdvancedDeployment' -Location '<yourLocation>' -autoProvisioning 'On' -workspaceName '<yourWorkspaceName>' `
+-name 'AscAdvancedDeployment' -Location 'eastus' -autoProvisioning 'On' -workspaceName '<yourWorkspaceName>' `
 -workspaceSubscriptionId '<yourAzuresubscriptionID>' -workspaceResourceGroup '<resourceGroupNameOfTheWorkspace>' `
 -emailSecurityContact 'john@contoso.com' -phoneSecurityContact '12345' -alertNotifications 'On' -alertsToAdmin 'On' `
 -securitySettings 'On'
