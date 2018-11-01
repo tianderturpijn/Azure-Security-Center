@@ -8,7 +8,7 @@ You will configure ASC with:
 2. PowerShell
 
  
-### ARM Template deployment
+###  ARM Template deployment
 #### 1 - Explore the ASC settings in the portal
 1. Open a browser and login to the  <a href="https://portal.azure.com" target="_blank">Azure Portal</a>
 2. Click on **Security Center** (click on **skip** if you're prompted for a trial)
@@ -45,7 +45,47 @@ New-AzureRmDeployment -TemplateFile 'https://raw.githubusercontent.com/tiandertu
 7. After a successful completion, switch to the Azure portal and refresh the ASC blade and verify that the email settings have been updated according to the values in the template.
 8. Optional exercise: you can copy the template and use your own values
 
-#### 4 - Deploy a more complex ASC configuration ARM template
+### Workspace creation
+Security Centers stores MMA collected information (and more) in a Log Analytics workspace. Not many customers like or use a default workspace created by ASC (when auto provisioning is enabled).<br>
+In the next exercise we will create a new workspace which will be used as your default ASC workspace.
+
+#### 1 - Create a Log Analytics workspace
+You can either create a workspace through the Azure portal, or leverage an ARM template.
+1. Navigate to the Azure portal and create a Log Analytics workspace **OR**:
+2. Copy, paste and run the following PowerShell script "as is" to deploy an ARM template which will deploy the <a href="https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/01%20-%20Automation/Files/createNewOmsWorkspace.json" target="_blank">newOmsWorkspace</a> ARM template: (optionally you can use your own values in the script below) <br>
+```powershell
+$myGuid = New-Guid
+$RG = New-AzureRmResourceGroup -Name 'ASC-Lab' -Location 'eastus'
+
+New-AzureRmResourceGroupDeployment -Name myWorkspaceDeploy -ResourceGroupName $RG.ResourceGroupName `
+ -TemplateFile 'https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/01%20-%20Automation/Files/createNewOmsWorkspace.json' `
+ -omsWorkspaceName ("ASC-workspace-$myGuid") -omsWorkspaceLocation "eastus" -Verbose
+```
+3. Switch to the Azure portal and open the **Security Center** blade
+4. Click on **Security policy**
+5. Your new created workspace should be listed under the **Policy Management** view <br><br>
+ 
+#### 2 - Change the Pricing tier and data collection settings of your workspace 
+Since you can set the pricing tier and data collection settings per workspace, which is often not clear to customers, we are going to set it in the portal instead of through automation (although you can automate it)
+1. In the **Policy Management** view where your workspace is listed, click on **Edit settings** <br><br>
+![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/01%20-%20Automation/Screenshots/pricing_workspace1.png
+)<br>
+2. Click on **Pricing tier** and note that by default it is set to **Free**
+3. Click on **Standard** and click on **Save**
+4. Click on **Data collection**
+5. Under **Windows security events**, select **All events**
+6. Click on **Save**
+
+#### 3 - Collect the WorkspaceID and WorkspaceKey
+For the next exercise where we deploy a more advanced ASC ARM template, we are going to need the workspace details.
+1. In the Azure portal, navigate to Log Analytics
+2. Click on your **workspace**
+3. On the Overview blade, make a note of the **Resource group name** and the **Subscription ID**
+4. Click on **Advanced settings** and also make a note of the **workspaceID** and the **primaryKey**, since you need those  values for the next exercise
+
+### More complex ARM template deployment
+
+#### 1 - Deploy a more complex ASC configuration ARM template
 Now that you have explored how to deploy an ARM template to configure an ASC setting, you are going to explore how to deploy a more complex ARM template. <br>
 ASC stores MMA collected data (and more) in a Log Analytics workspace. In a more complex environment, you often will find an existing Log Analytics workspace which needs to be integrated with ASC (aka the Central Workspace scenario).<br><br>
 The following lab assumes that a (Central) Log Analytics workspace already exists (although this can be deployed with an ARM template at the same time) and you are going to configure ASC to use the existing Log Analytics workspace. In addition we are going to enable **Auto Provisioning** which will deploy the MMA extension automatically, as you would configure it in the portal, like this:<br><br>
@@ -62,38 +102,9 @@ Also we will configure ASC policies through the ARM template.
 
 #### 6 - Create a Log Analytics workspace
 In the majority of the use cases that we have seen, a Log Analytics workspace is already present and needs to be integrated with ASC. So your lab will focus on that scenario, although you can create one single ARM template to deploy a new workspace and integrate and configure ASC in one deployment. In this lab we will not focus on that.<br>
-For our lab to work, we are going to create a Log Analytics workspace. You can either create it through the Azure portal, or leverage an ARM template.
-1. Navigate to the Azure portal and create a Log Analytics workspace **or**:
-2. Copy, paste and run the following PowerShell script to deploy an ARM template which will deploy the <a href="https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/01%20-%20Automation/Files/createNewOmsWorkspace.json" target="_blank">newOmsWorkspace</a> ARM template: (optionally you can use your own values in the script below) <br>
-```powershell
-$myGuid = New-Guid
-$RG = New-AzureRmResourceGroup -Name 'ASC-Lab' -Location 'eastus'
+For our lab to work, we are going to create a Log Analytics workspace. 
 
-New-AzureRmResourceGroupDeployment -Name myWorkspaceDeploy -ResourceGroupName $RG.ResourceGroupName `
- -TemplateFile 'https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/01%20-%20Automation/Files/createNewOmsWorkspace.json' `
- -omsWorkspaceName ("ASC-workspace-$myGuid") -omsWorkspaceLocation "eastus" -Verbose
-```
-3. Switch to the Azure portal and open the **Security Center** blade
-4. Click on **Security policy**
-5. Your new created workspace should be listed under the **Policy Management** view <br><br>
 
-#### 7 - Change the Pricing tier and data collection settings of your workspace 
-Since you can set the pricing tier and data collection settings per workspace, which is often not clear to customers, we are going to set it in the portal instead of through automation (although you can automate it)
-1. In the **Policy Management** view where your workspace is listed, click on **Edit settings** <br><br>
-![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/01%20-%20Automation/Screenshots/pricing_workspace1.png
-)<br>
-2. Click on **Pricing tier** and note that by default it is set to **Free**
-3. Click on **Standard** and click on **Save**
-4. Click on **Data collection**
-5. Under **Windows security events**, select **All events**
-6. Click on **Save**
-
-#### 8 - Collect the WorkspaceID and WorkspaceKey
-For the next exercise where we deploy a more advanced ASC ARM template, we are going to need the workspace details.
-1. In the Azure portal, navigate to Log Analytics
-2. Click on your **workspace**
-3. On the Overview blade, make a note of the **Resource group name** and the **Subscription ID**
-4. Click on **Advanced settings** and also make a note of the **workspaceID** and the **primaryKey**, since you need those  values for the next exercise
 
 #### 9 - Deploy the ASC advanced ARM Template
 Now that you have created a workspace, we are going to deploy an ARM template which will configure a number of settings and you will connect ASC with your workspace.<br>
