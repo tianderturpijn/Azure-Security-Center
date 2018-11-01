@@ -34,7 +34,7 @@ For the first ARM deployment exercise we are going to start with configuring the
 5. The syntax is *New-AzureRmDeployment -TemplateFile* `yourArmTemplateFile` (note: we are going to use a prepared ARM template JSON file)
 6. Copy and paste the below in your PowerShell session and execute it:<br>
 **Note**:
-- Use **eastus** as your location (since we are going to use this location through out the labs)
+
 - Use a proper email format like johndoe@johndoe.com
 - Use only numbers (no spaces) as a phone number
 - Fill in **On** or **Off** for alerts (case sensitive)<br>
