@@ -14,7 +14,7 @@ Because we are deploying the Security Center solution in the workspace, the VM's
     <img src="http://azuredeploy.net/deploybutton.png"/>
 </a>
 
-<br><br>
+<br>
 
 ### Configure the data collection settings in ASC
 As soon as the the workspace has been deployed (you don't have to wait for all the resources to be deployed), navigate to the **Security Center** blade and select your workspace under **Use another workspace**. Select **All Events** under **Windows security events** and click on **Save**.
