@@ -16,7 +16,7 @@ https://ms.portal.azure.com/?feature.canmodifystamps=true&feature.jitconnect=tru
 6. In the Azure portal (using the same session), navigate to **Virtual Machines**
 7. Select the VM you have enabled for JIT and in the Overview blade, click on Connect
 8. On the opened blade at the right, notice the banner saying "*This VM has a just-in-time access policy*..."<br><br>
-![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/05%20-%20VM%20Protection%20with%20JIT/Screenshots/ConnectVM_JIT_Enabled.png
+![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/04%20-%20VM%20Protection%20with%20JIT/Screenshots/ConnectVM_JIT_Enabled.png
 )
 9. Click on the button **Request access**
 10. When you have the proper permission, access will be granted and you can now connect to the VM
@@ -26,14 +26,14 @@ https://ms.portal.azure.com/?feature.canmodifystamps=true&feature.jitconnect=tru
 2. Select a VM for which you have not enabled JIT
 3. Click on **Connect** in the Overview blade
 4. Notice the banner saying "*To improve security, enable just-in-time access*"<br><br>
-![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/05%20-%20VM%20Protection%20with%20JIT/Screenshots/EnableJITfromVMblade.png
+![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/04%20-%20VM%20Protection%20with%20JIT/Screenshots/EnableJITfromVMblade.png
 )
 5. Click on the arrow pointing to the right (as shown in the previous image) and click on the button **Enable just-in-time policy**<br><br>
-![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/05%20-%20VM%20Protection%20with%20JIT/Screenshots/EnableJITbutton.png
+![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/04%20-%20VM%20Protection%20with%20JIT/Screenshots/EnableJITbutton.png
 )
 6. You have now enabled JIT for this VM. You can click on the link **Open Azure Security Center** to edit or disable the policy
 7. When you have clicked on the link in the previous step, notice the column last access. That should say Active now, since we just enable JIT access to a VM in the previous steps
-![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/05%20-%20VM%20Protection%20with%20JIT/Screenshots/JitActiveNow.png
+![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/04%20-%20VM%20Protection%20with%20JIT/Screenshots/JitActiveNow.png
 )
 
 ### 3 - Enable custom JIT ports with PowerShell

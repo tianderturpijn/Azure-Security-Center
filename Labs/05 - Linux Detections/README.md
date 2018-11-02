@@ -18,13 +18,13 @@ sudo adduser <userName>
 #### 4 - Executing a brute force attack
 1. Connect to the Kali Linux VM with SSH (ensure that your VM deployment in step 1 was successful)
 2. Navigate to the folder **/usr/share/wordlists**
-3. Upload the **<a href="https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/04%20-%20Linux%20Detections/Files/lab_users.txt" target="_blank">lab_users.txt</a>** and **<a href="https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/04%20-%20Linux%20Detections/Files/lab_pass.txt" target="_blank">lab_pass.txt</a>** files to this folder by executing:
+3. Upload the **<a href="https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/05%20-%20Linux%20Detections/Files/lab_users.txt" target="_blank">lab_users.txt</a>** and **<a href="https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/05%20-%20Linux%20Detections/Files/lab_pass.txt" target="_blank">lab_pass.txt</a>** files to this folder by executing:
 ```text
-sudo wget https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/04%20-%20Linux%20Detections/Files/lab_users.txt
+sudo wget https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/05%20-%20Linux%20Detections/Files/lab_users.txt
 ```
 and
 ```text
-sudo wget https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/04%20-%20Linux%20Detections/Files/lab_pass.txt
+sudo wget https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/05%20-%20Linux%20Detections/Files/lab_pass.txt
 ```
 4. Copy the IP address from the Linux Victim VM that you have deployed earlier. We are going to brute force attack this VM
 5.  Type the command below in your Kali VM, and replace "**IP**" with **yourLinuxVM** public IP address
@@ -66,6 +66,6 @@ wget http://XXX.XXX.XXX.XXX/download/eicar.com
 1. Navigate to the **Security Center>Security Alerts** blade (under Threat Protection)
 2.  Organize the alerts by date by clicking on the Date column, and review the alerts that were generated during this lab, it should look similar like this:
 
-![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/04%20-%20Linux%20Detections/Screenshots/Security_incident_detected_Linux.png)
+![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/05%20-%20Linux%20Detections/Screenshots/Security_incident_detected_Linux.png)
 
-![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/04%20-%20Linux%20Detections/Screenshots/Security_incident_detected_Linux2.png)
+![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/05%20-%20Linux%20Detections/Screenshots/Security_incident_detected_Linux2.png)

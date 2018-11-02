@@ -9,7 +9,7 @@ This optional lab points you to a number of preview features for you to explore.
 ![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs//01%20-%20Automation/Screenshots/Azure_cli.png
 ) <br><br>
 2. This creates a cloud shell session: <br><br>
-![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs//01%20-%20Automation/Screenshots/bash_cloudshell.png
+![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs//02%20-%20Automation/Screenshots/bash_cloudshell.png
 ) <br><br>
 
 3. Create a new resource group for your container by typing in the following (replace **myResourceGroup** with your name of choice)
