@@ -15,7 +15,7 @@ You will configure ASC with:
 3. Click on **Security Policy**
 4. On the line where it shows your subscription, click on **Edit settings**
 5. Explore the settings, specifically the **email notification settings**.<br><br>
-![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs//01%20-%20Automation/Screenshots/asc_emailsettings.png
+![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs//02%20-%20Automation/Screenshots/asc_emailsettings.png
 )
 
 For the first ARM deployment exercise we are going to start with configuring the **Email notification** settings
@@ -69,7 +69,7 @@ New-AzureRmResourceGroupDeployment -Name myWorkspaceDeploy -ResourceGroupName $R
 #### 2 - Change the Pricing tier and data collection settings of your workspace 
 You can set the pricing tier and data collection settings per workspace, which is often not clear to customers, therefore we are going to set it in the portal instead of through automation (although you can automate it)
 1. In the **Policy Management** view where your workspace is listed, click on **Edit settings** <br><br>
-![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/01%20-%20Automation/Screenshots/pricing_workspace1.png
+![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/02%20-%20Automation/Screenshots/pricing_workspace1.png
 )<br>
 2. Click on **Pricing tier** and note that by default it is set to **Free**
 3. Click on **Standard** and click on **Save**
@@ -151,7 +151,7 @@ Now that you have explored how to deploy an ARM template to configure an ASC set
 ASC stores MMA collected data (and more) in a Log Analytics workspace. In a more complex environment, you often will find an existing Log Analytics workspace which needs to be integrated with ASC (aka the Central Workspace scenario).<br><br>
 The following lab assumes that a (Central) Log Analytics workspace already exists (although this can be deployed with an ARM template at the same time) and you are going to configure ASC to use the existing Log Analytics workspace. In addition we are going to enable **Auto Provisioning** which will deploy the MMA extension automatically, as you would configure it in the portal, like this:<br><br>
 
-![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/01%20-%20Automation/Screenshots/autoProvisioning_custom_%20Workspace.png)
+![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/02%20-%20Automation/Screenshots/autoProvisioning_custom_%20Workspace.png)
 
 Also we will configure ASC policies through the ARM template.
 

@@ -1,4 +1,4 @@
-﻿# Fast Track
+﻿# Fast Track - VM and Workspace Deployment
 This section is intended to deploy dependency Azure resources in an automated way in case you need to re-provision your environment or in case you are skipping some labs.
 
 #### Deploy VMs and Create a Workspace
@@ -19,7 +19,7 @@ The deployment takes about 13 minutes and some change. A good moment to get some
 ### Configure the data collection settings in ASC
 As soon as the the workspace has been deployed (you don't have to wait for all the resources to be deployed), navigate to the **Security Center** blade and select your workspace under **Use another workspace**. Select **All Events** under **Windows security events** and click on **Save**.
 
-![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/Fast%20Track/Screenshots/datacollection_settings.png
+![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/01%20-%20VM%20and%20Workspace%20Deployment/Screenshots/datacollection_settings.png
 )<br>
 
 
