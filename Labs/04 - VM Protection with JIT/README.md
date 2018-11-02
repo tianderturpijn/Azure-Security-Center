@@ -1,7 +1,7 @@
 ﻿# VM Protection with Just in Time (JIT) access
 ##### Estimated lab time: 
 In this lab you will protect your VMs with Just-In-Time (JIT) access. JIT has been released, but in this lab we will show you an additional JIT feature, showcasing the JIT integration with Azure<br>
-*Note: the steps below are showcasing a preview feature which needs to be executed using a feature flag*
+***Note: the steps below are showcasing a preview feature which needs to be executed using a feature flag***
 
 ### 1 - Enable JIT on a VM in ASC
 1. Open the Azure portal using this <a href="https://ms.portal.azure.com/?feature.canmodifystamps=true&feature.jitconnect=true" target="_blank">link </a>, or copy and paste this URL:
@@ -43,7 +43,7 @@ $myVM = Get-AzureRmVM -Name <VMname> -ResourceGroupName <resourceGroupName>
 Set-AzureRmJitNetworkAccessPolicy -ResourceGroupName "<rescourceGroupName>" -Location "<location>" -Name "default" -VirtualMachine $myVM -Kind "Basic"
 ```
 **In the following excercise you are going to enable JIT for a specific VM, configuring custom ports.**
-1. Copy this <a href="https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/05%20-%20VM%20Protection%20with%20JIT/Files/Enable-Custom-JIT-Ports.ps1" target="_blank">JIT sample script</a> and paste it in your favorite PowerShell editor
+1. Copy this <a href="https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/04%20-%20VM%20Protection%20with%20JIT/Files/Enable-Custom-JIT-Ports.ps1" target="_blank">JIT sample script</a> and paste it in your favorite PowerShell editor
 2. Make sure you replace all the variables in "<>" and update the script with your required ports
 3. Make sure that you are logged into Azure and that you have selected the Azure subscription which has been given to you
 4. Excute the script. Make sure that you refresh the Azure portal after executing the script

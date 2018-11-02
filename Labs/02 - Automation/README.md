@@ -51,6 +51,8 @@ Security Centers stores MMA collected information (and more) in a Log Analytics 
 In the next exercise we will create a new workspace which will be used as your default ASC workspace.
 
 #### 1 - Create a Log Analytics workspace
+***Note**: if you already have deployed a Log Analytics workspace you can skip this step, or create a second one.*<br>
+
 You can either create a workspace through the Azure portal, leverage an ARM template, or use PowerShell.
 1. Navigate to the Azure portal and create a Log Analytics workspace **OR**:
 2. Copy, paste and run the following PowerShell script "as is" to deploy an ARM template which will deploy the <a href="https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/02%20-%20Automation/Files/createNewOmsWorkspace.json" target="_blank">newOmsWorkspace</a> ARM template: (optionally you can use your own values in the script below) <br>
