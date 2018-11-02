@@ -92,11 +92,27 @@ For the next (optional) exercise where we deploy a more advanced ASC ARM templat
 Security Center provides automation support through PowerShell as well.<br>
 The ASC PowerShell cmdlets can be downloaded from <a href="https://www.powershellgallery.com/packages/AzureRM.Security/0.2.0-preview" target="_blank">here</a>.<br>
 
-#### 1 - Installing the cmdlets
+**Recommendation:**<br>
+The ASC cmdlets are in preview. It is recommended to install the ASC cmdlets in the Windows VM that you have deployed earlier in your lab environment to avoid conflicts which might occur on your system.
 
-Install the cmdlets by typing in a PowerShell window:
+#### 1 - Installing the ASC cmdlets
+
+Install the ASC cmdlets by typing the following commands in an administrator PowerShell window and confirm all with "yes" if prompted:
 ```powershell
-Install-Module -Name AzureRM.Security -AllowPrerelease
+#Install NuGet
+Install-Module -Name PowerShellGet -Force -Verbose 
+
+#Install AzureRm.Profile
+Install-Module -name AzureRM.Profile -Force -Verbose 
+
+#Update the modules to ensure you have the latest versions
+Update-Module PowerShellGet -Force -Verbose
+Update-Module AzureRM.Profile -Force -Verbose
+
+#Important: close your PowerShell session and open a new one
+
+# Install the AzureRm.Security module
+Install-Module -Name AzureRM.Security -AllowPrerelease -Verbose
 ```
 #### 2 - Exploring the cmdlets
 When you have installed the AzureRm.Security module, explore the cmdlets by executing:
