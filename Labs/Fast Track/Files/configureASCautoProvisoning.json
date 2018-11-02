@@ -1,0 +1,29 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "autoProvision": {
+            "type": "string",
+            "defaultValue": "On",
+            "allowedValues": [
+                "On",
+                "Off"
+            ],
+            "metadata": {
+                "description": "Specify the subscriptionId where the Log Analytics workspace is deployed."
+            }
+        }
+    },
+    "variables": {},
+    "resources": [
+        {
+            "type": "Microsoft.Security/autoProvisioningSettings",
+            "name": "default",
+            "apiVersion": "2017-08-01-preview",
+            "properties":{
+                "autoProvision": "[parameters('autoProvision')]"
+            }
+        }
+    ],
+    "outputs": {}
+}
