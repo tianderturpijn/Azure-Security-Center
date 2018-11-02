@@ -1,0 +1,14 @@
+﻿# Fast Track
+This section is intended to deploy dependency Azure resources in an automated way in case you need to re-provision your environment or in case you are skipping some labs
+
+#### Deploy VMs and Create a Workspace
+Use the button below to deploy the following:
+- 2 Windows VM's
+- 2 Linux Ubuntu VM's
+- A Log Analytics workspace
+- Security Center OMS solution
+
+
+
+
+
