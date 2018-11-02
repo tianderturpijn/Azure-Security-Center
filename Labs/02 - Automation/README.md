@@ -156,7 +156,7 @@ The following lab assumes that a (Central) Log Analytics workspace already exist
 Also we will configure ASC policies through the ARM template.
 
 #### 2 - Explore the ASC advanced ARM template
-1. Open the <a href="https://github.com/tianderturpijn/Azure-Security-Center/blob/master/Labs/02%20-%20Automation/Files/configureAscAdvanced.json" target="_blank">ASC Advanced ARM template</a> in a new browser window and explore it.
+1. Open the <a href="https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/02%20-%20Automation/Files/configureAscAdvanced.json" target="_blank">ASC Advanced ARM template</a> in a new browser window and explore it.
 2. Look closely at the **parameters** and their allowed values
 3. Under **resources**, observe the several settings that we will configure like autoProvisioning, workspace settings, etc. The recommendation policies can be configured one by one, but in this lab we will set the value to **On** or **Off** for all of them.
 4. For ARM templates, it is recommended that you use a parameter file to pass values during a deployment if you don't want to type them in. In this lab we will just type them in and paste some values
