@@ -93,7 +93,7 @@ Security Center provides automation support through PowerShell as well.<br>
 The ASC PowerShell cmdlets can be downloaded from <a href="https://www.powershellgallery.com/packages/AzureRM.Security/0.2.0-preview" target="_blank">here</a>.<br>
 
 **Recommendation:**<br>
-The ASC cmdlets are in preview. It is recommended to install the ASC cmdlets in the Windows VM that you have deployed earlier in your lab environment to avoid conflicts which might occur on your system.
+*The ASC cmdlets are in preview. It is recommended to install the ASC cmdlets in the Windows VM that you have deployed earlier in your lab environment to avoid conflicts which might occur on your system.*
 
 #### 1 - Installing the ASC cmdlets
 
