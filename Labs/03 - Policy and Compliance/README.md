@@ -28,6 +28,9 @@ This exercise remediates a failed assessment for PCI DSS 3.2
 1. Click on the **PCI DSS 3.2** tab
 2. Under the **Assessment** column, notice that you have a **Enable Network Security Groups on subnets** failed assessment
 
+![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/03%20-%20Policy%20and%20Compliance/Screenshots/nsg_assessment.png
+)<br>
+
 ### 2 - Policy Management
 This exercise guides you through the current Security Center policies and is intended for exploration purposes only. <br>
 
