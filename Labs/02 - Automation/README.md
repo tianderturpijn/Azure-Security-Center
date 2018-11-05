@@ -1,6 +1,8 @@
 ﻿# ASC Automation & Configuration
 
 ##### Estimated lab time: 
+**Assumptions**: You have installed the **AzureRm** PowerShell modules on your system.<br> If not, install those in a PowerShell session using ***Install-Module -Name AzureRM***
+
 In this lab you are going to explore what the ASC automation and deployment options are.
 
 You will configure ASC with:
@@ -11,7 +13,7 @@ You will configure ASC with:
 ##  ARM Template deployment
 #### 1 - Explore the ASC settings in the portal
 1. Open a browser and login to the  <a href="https://portal.azure.com" target="_blank">Azure Portal</a>
-2. Click on **Security Center** (click on **skip** if you're prompted for a trial)
+2. Click on **Security Center**
 3. Click on **Security Policy**
 4. On the line where it shows your subscription, click on **Edit settings**
 5. Explore the settings, specifically the **email notification settings**.<br><br>
@@ -26,16 +28,16 @@ For the first ARM deployment exercise we are going to start with configuring the
 3. Under the ARM resources section  (**Microsoft.Security/securityContacts**), use "default1", "default2", etc. as value for the field name. These are mandatory fields and can only be used in this format
 
 #### 3 - Deploy the Email Notifications ARM template
-**Assumptions**: You have installed the **AzureRm** PowerShell modules on your system.<br> If not, install those in a PowerShell session using ***Install-Module -Name AzureRM***
+
 1. Open your favorite PowerShell editor
 2. Login to the Azure Portal by using **Login-AzureRmAccount**
 3. Make sure that you have selected your Azure subscription which has been provided to you by using **Select-AzureRmSubscription** (only necessary if you have multiple subscriptions)<br>
 4. ASC resides at the subscription level, so we are going to target our ARM template deployment at the same level (instead of deploying it at the resource group level)
 5. The syntax is *New-AzureRmDeployment -TemplateFile* `yourArmTemplateFile` (note: we are going to use a prepared ARM template JSON file)
-6. Copy and paste the below in your PowerShell session and execute it:<br>
+6. Copy and paste the below in your PowerShell session and execute it:<br><br>
 **Note**:
 
-- Use a proper email format like johndoe@johndoe.com
+- Use a proper email format like luke@skywalker.com
 - Use only numbers (no spaces) as a phone number
 - Fill in **On** or **Off** for alerts (case sensitive)<br>
 ```powershell
@@ -43,22 +45,22 @@ New-AzureRmDeployment -TemplateFile 'https://raw.githubusercontent.com/tiandertu
 ```
 
 
-7. After a successful completion, switch to the Azure portal and refresh the ASC blade and verify that the email settings have been updated according to the values in the template.
-8. [Optional exercise] You can copy the template and use your own values
+7. After a successful completion, switch to the Azure portal and **refresh** (Ctrl+F5) the ASC blade and verify that the email settings have been updated according to the values in the template.
+8. **[Optional exercise]** You can copy the template and use your own values
 
 ## Workspace creation
-Security Centers stores MMA collected information (and more) in a Log Analytics workspace. Not many customers like or use a default workspace created by ASC.<br>
+Security Centers stores MMA collected information (and more) in a Log Analytics workspace. ASC can create a default workspace automatically. This exercise is focused on using a custom workspace.<br><br>
 In the next exercise we will create a new workspace which will be used as your default ASC workspace.
 
 #### 1 - Create a Log Analytics workspace
-***Note**: if you already have deployed a Log Analytics workspace you can skip this step, or create a second one.*<br>
+***Note**: if you already have deployed a Log Analytics workspace you can skip this exercise, or create a second one to test drive multiple custom workspaces reporting up to ASC.*<br>
 
 You can either create a workspace through the Azure portal, leverage an ARM template, or use PowerShell.
 1. Navigate to the Azure portal and create a Log Analytics workspace **OR**:
-2. Copy, paste and run the following PowerShell script "as is" to deploy an ARM template which will deploy the <a href="https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/02%20-%20Automation/Files/createNewOmsWorkspace.json" target="_blank">newOmsWorkspace</a> ARM template: (optionally you can use your own values in the script below) <br>
+2. Copy, paste and run the following PowerShell script "as is" to deploy an ARM template which will deploy the <a href="https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/02%20-%20Automation/Files/createNewOmsWorkspace.json" target="_blank">newOmsWorkspace</a> ARM template: (optionally you can use your own values in the script below, like location, etc.) <br>
 ```powershell
 $myGuid = New-Guid
-$RG = New-AzureRmResourceGroup -Name 'ASC-Lab' -Location 'eastus'
+$RG = New-AzureRmResourceGroup -Name 'ASC-Lab-2' -Location 'eastus'
 
 New-AzureRmResourceGroupDeployment -Name myWorkspaceDeploy -ResourceGroupName $RG.ResourceGroupName `
  -TemplateFile 'https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/02%20-%20Automation/Files/createNewOmsWorkspace.json' `
