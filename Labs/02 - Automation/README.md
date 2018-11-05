@@ -1,6 +1,6 @@
 ﻿# ASC Automation & Configuration
 
-##### Estimated lab time: 
+##### Estimated lab time: 25 minutes
 **Assumptions**: You have installed the **AzureRm** PowerShell modules on your system.<br> If not, install those in a PowerShell session using ***Install-Module -Name AzureRM***
 
 In this lab you are going to explore what the ASC automation and deployment options are.
@@ -69,6 +69,8 @@ New-AzureRmResourceGroupDeployment -Name myWorkspaceDeploy -ResourceGroupName $R
 3. Switch to the Azure portal and open the **Security Center** blade
 4. Click on **Security policy**
 5. Your new created workspace should be listed under the **Policy Management** view <br><br>
+
+***Note**: the ARM template deploys a new workspace with concatenating the workspace name with a GUID to ensure uniqueness.*
  
 #### 2 - Change the Pricing tier and data collection settings of your workspace 
 You can set the pricing tier and data collection settings per workspace, which is often not clear to customers, therefore we are going to set it in the portal instead of through automation (although you can automate it)
@@ -78,28 +80,30 @@ You can set the pricing tier and data collection settings per workspace, which i
 2. Click on **Pricing tier** and note that by default it is set to **Free**
 3. Click on **Standard** and click on **Save**
 4. Click on **Data collection**
-5. Under **Windows security events**, select **All events**
+5. Under **Windows security events**, select **All events** (by default it is set to none)
 6. Click on **Save**
 
 #### 3 - Collect the WorkspaceID and WorkspaceKey
-For the next (optional) exercise where we deploy a more advanced ASC ARM template, we are going to need the workspace details.
+For the next (**optional**) exercise where we deploy a more advanced ASC ARM template, we are going to need the workspace details.
 1. In the Azure portal, navigate to Log Analytics
 2. Click on your **workspace**
 3. On the Overview blade, make a note of the **Resource group name** and the **Subscription ID**
 4. Click on **Advanced settings** and also make a note of the **workspaceID** and the **primaryKey**, since you need those  values for the next exercise
-
-
 
 ## ASC PowerShell cmdlets
 Security Center provides automation support through PowerShell as well.<br>
 The ASC PowerShell cmdlets can be downloaded from <a href="https://www.powershellgallery.com/packages/AzureRM.Security/0.2.0-preview" target="_blank">here</a>.<br>
 
 **Recommendation:**<br>
-*The ASC cmdlets are in preview. It is recommended to install the ASC cmdlets in the Windows VM that you have deployed earlier in your lab environment to avoid conflicts which might occur on your system.*
+*The ASC cmdlets are in preview. It is recommended to install the ASC cmdlets in the Windows VM (like VM-0) that you have deployed earlier in your lab environment to avoid conflicts which might occur on your system.*
 
 #### 1 - Installing the ASC cmdlets
+***Note**: the default username of your deployed VM's (either admin or root) is **azureadmin***
 
-Install the ASC cmdlets by typing the following commands in an administrator PowerShell window and confirm all with "yes" if prompted:
+Install the ASC cmdlets by typing the following commands in an administrator PowerShell window and confirm all with "yes" if prompted:<br><br>
+
+***Tip**: copy and paste the script below in a PowerShell ISE administrator session*
+
 ```powershell
 #Install NuGet
 Install-Module -Name PowerShellGet -Force -Verbose 
@@ -129,7 +133,7 @@ Copy and paste the following script in your PowerShell editor:
 ```powershell
 #Set a security contact for the current scope. For the parameter "-Name", you need to use "default1", "default2", etc.
 
-Set-AzureRmSecurityContact  -Name "default1" -Email "john@johndoe.com" -Phone "12345" -AlertAdmin -NotifyOnAlert
+Set-AzureRmSecurityContact  -Name "default1" -Email "vader@empire.com" -Phone "12345" -AlertAdmin -NotifyOnAlert
 ```
 #### 4 - Check the new email settings:
 Run the following command:
