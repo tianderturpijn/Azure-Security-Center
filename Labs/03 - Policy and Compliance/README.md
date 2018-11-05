@@ -1,5 +1,5 @@
 ﻿# Policy and Compliance
-##### Estimated lab time: 
+##### Estimated lab time: minutes
 ***Note**:*<br>
 *Make sure before continuing with this lab that the VM's that you have deployed earlier are showing as "Monitored by Azure Security Center". You can find this setting under **Security Center>Compute & Apps***
 
@@ -14,11 +14,19 @@ https://aka.ms/AscRegulatoryCompliance
 ```
 <br>
 
+1. Navigate to the **Security Center** blade
+2. Click on **Regulatory Compliance**
+
 ![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/03%20-%20Policy%20and%20Compliance/Screenshots/regulatoryblade.png
 )<br>
 
-1. Explore the different regulations (like Azure CIS)
-2. Click on the different assessments
+3. Explore the different regulations (like Azure CIS)
+4. Click on the different assessments
+
+#### Remediate PCI DSS 3.2
+This exercise remediates a failed assessment for PCI DSS 3.2
+1. Click on the **PCI DSS 3.2** tab
+2. Under the **Assessment** column, notice that you have a **Enable Network Security Groups on subnets** failed assessment
 
 ### 2 - Policy Management
 This exercise guides you through the current Security Center policies and is intended for exploration purposes only. <br>

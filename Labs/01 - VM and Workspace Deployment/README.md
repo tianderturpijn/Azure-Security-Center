@@ -1,5 +1,5 @@
 ﻿# VM and Workspace Deployment
-#### Estimated lab time: 15 min
+#### Estimated lab time: 15 minutes
 This section is intended to deploy dependency Azure resources in an automated way to get you started quickly or in case you need to re-provision your environment.
 
 #### Assumptions
