@@ -7,17 +7,17 @@ You have received an Azure pass or you have a test environment available. Please
 *Additional notes:*
 - Close the Azure Advisor recommendations if that opens for you.
 - When deploying the template below, a number of fields are locked to ensure that the references in the labs are accurate. You are free to choose your location for deployment
-- Create a new resource group for your deployment
+- Create a new resource group for your deployment (like ASC-Labs)
 - After the deployment of the template, you can check the progress of your deployment if you click on your created resource group details, then click on **Deployments** (1 deploying)
 - As soon as the workspace has been created, you can continue with the lab exercise
 - Click on **Start Trial**, if you are prompted for a Security Center trial
 
 #### Deploy VMs and Create a Workspace
 Use the **Deploy to Azure** button below to deploy the following:
-- A Log Analytics workspace
+- A Log Analytics workspace (ASC-Workspace-xxxx)
 - Security Center OMS solution
-- 2 Windows VM's (connected to the workspace)
-- 2 Linux Ubuntu VM's (connected to the workspace) <br><br>
+- 2 Windows VM's (*Win-x*, connected to the workspace)
+- 2 Linux Ubuntu VM's (*Linux-x*, connected to the workspace) <br><br>
 
 Because we are deploying the Security Center solution in the workspace, the VM's will become security managed by Security Center.
 
