@@ -31,6 +31,12 @@ This exercise remediates a failed assessment for PCI DSS 3.2
 ![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/03%20-%20Policy%20and%20Compliance/Screenshots/nsg_assessment.png
 )<br>
 
+1. Click on the Assessment
+2. This shows you which subnet is at risk (subnet01), click on the subnet
+3. Remediate the failed assessment by clicking on **Create new**
+4. Give your new Network Security Group (NSG) a name and click on **OK** This adds a new NSG
+5. This will resolve your failed assessment on the next scan
+
 ### 2 - Policy Management
 This exercise guides you through the current Security Center policies and is intended for exploration purposes only. <br>
 
