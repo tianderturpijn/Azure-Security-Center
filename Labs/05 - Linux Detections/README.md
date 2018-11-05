@@ -5,6 +5,7 @@
 In this lab we will explore the new Linux detection's in ASC by executing attacks in a Kali Linux VM that you are going to deploy. You will connect to your deployed Linux VM (Linux-0) leveraging SSH. In case you don't have a SSH client installed, you can install the free edition of MobaXterm <a href="https://mobaxterm.mobatek.net/download.html" target="_blank">here</a>.<br>
 
 #### 1 - Create a Kali Linux VM
+***Note**: time to create the Kali Linux VM is approx 3 minutes. Make sure to add a port that enables you to connect.*
 1. In the Azure portal, click on **Create a resource** and search for **Kali Linux** and **create** the VM
 
 ![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/05%20-%20Linux%20Detections/Screenshots/kali_marketplace.png)
@@ -12,7 +13,7 @@ In this lab we will explore the new Linux detection's in ASC by executing attack
 ***Note**: you don't have to wait until the deployment is complete. Proceed with the next exercise*
 
 #### 2 - Create Linux users 
-1. Connect to the Linux Victim VM that you have deployed earlier (note: not the Kali VM), using your favorite SSH tool
+1. Connect to your Linux VM (Linux-0) that you have deployed earlier (note: not the Kali VM), using your favorite SSH tool
 2. Create 5 users with the names user1, user2, user3, user4, user5, by leveraging the following Linux command:
 ```powershell
 sudo adduser <userName>
