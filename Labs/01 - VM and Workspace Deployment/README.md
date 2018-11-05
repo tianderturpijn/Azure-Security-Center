@@ -1,4 +1,5 @@
 ﻿# VM and Workspace Deployment
+#### Estimated lab time: 15 min
 This section is intended to deploy dependency Azure resources in an automated way to get you started quickly or in case you need to re-provision your environment.
 
 #### Assumptions
@@ -36,7 +37,7 @@ As soon as the the workspace has been deployed (you don't have to wait for all t
 5. Your subscription (Azure pass) should appear 
 6. On the line where it lists your Azure subscription (Azure pass), click on **Edit settings**
 7. Set **Auto Provisioning** to **On** (if it's not already set to On)
-8. Select your workspace (which has been created by the template) under **Use another workspace**.
+8. Select your workspace **ASC-Workspace-xxxx** (which has been created by the template) under **Use another workspace**.
 9. Select **All Events** under **Windows security events** and click on **Save**. <br><br>
 
 ![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/01%20-%20VM%20and%20Workspace%20Deployment/Screenshots/datacollection_settings.png
@@ -45,6 +46,7 @@ As soon as the the workspace has been deployed (you don't have to wait for all t
 
 10. Click on **Yes** on **Would you like to reconfigure monitored VMs?**
 
+*Note: It can take some time for the VM's to become visible in Security Center*
 
 
 
