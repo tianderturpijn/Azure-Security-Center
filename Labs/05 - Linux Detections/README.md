@@ -14,11 +14,13 @@ In this lab we will explore the new Linux detection's in ASC by executing attack
 
 #### 2 - Create Linux users 
 1. Connect to your Linux VM (Linux-0) that you have deployed earlier (note: not the Kali VM), using your favorite SSH tool
-2. Create 5 users with the names user1, user2, user3, user4, user5, by leveraging the following Linux command (replace the **userName** value):
+2. Create 5 users with the names user1, user2, user3, user4, user5, by leveraging the following Linux command <br>
+***Note**: Replace "userName" by user1, user2, etc.<br> Set the password to "mypassword1" for user1, "mypassword2" for user2, etc.*
+
 ```powershell
 sudo adduser <userName>
 ```
-3. Replace "userName" by user1, user2, etc.<br> Set the password to "mypassword1" for user1, "mypassword2" for user2, etc.
+
 
 #### 4 - Executing a brute force attack
 1. Connect to the Kali Linux VM with SSH (ensure that your VM deployment in step 1 was successful)
