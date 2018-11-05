@@ -1,5 +1,11 @@
 ﻿# Fast Track - VM and Workspace Deployment
-This section is intended to deploy dependency Azure resources in an automated way in case you need to re-provision your environment or in case you are skipping some labs.
+This section is intended to deploy dependency Azure resources in an automated way to get you started quickly or in case you need to re-provision your environment.
+
+#### Assumptions
+You have received an Azure pass or you have a test environment available. Please don't use these labs in a production environment (or at your own risk) <br><br>
+
+*Additional notes:*
+Close the Azure Advisor recommendations if that opens for you.
 
 #### Deploy VMs and Create a Workspace
 Use the **Deploy to Azure** button below to deploy the following:
@@ -10,7 +16,7 @@ Use the **Deploy to Azure** button below to deploy the following:
 
 Because we are deploying the Security Center solution in the workspace, the VM's will become security managed by Security Center.
 
-<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Ftianderturpijn%2FAzure-Security-Center%2Fmaster%2FLabs%2FFast%2520Track%2FFiles%2FdeployAscManagedVmsWithLA.json" target="_blank">
+<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Ftianderturpijn%2FAzure-Security-Center%2Fmaster%2FLabs%2F01%2520-%2520VM%2520and%2520Workspace%2520Deployment%2FFiles%2FdeployAscManagedVmsWithLA.json" target="_blank">
     <img src="http://azuredeploy.net/deploybutton.png"/>
 </a>
 <br><br>
