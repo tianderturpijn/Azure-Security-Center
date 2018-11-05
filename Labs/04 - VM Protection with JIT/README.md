@@ -44,7 +44,7 @@ Set-AzureRmJitNetworkAccessPolicy -ResourceGroupName "<rescourceGroupName>" -Loc
 ```
 **In the following excercise you are going to enable JIT for a specific VM, configuring custom ports.**
 1. Copy this <a href="https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/04%20-%20VM%20Protection%20with%20JIT/Files/Enable-Custom-JIT-Ports.ps1" target="_blank">JIT sample script</a> and paste it in your favorite PowerShell editor
-2. Make sure you replace all the variables in "<>" and update the script with your required ports
+2. Make sure you replace all the variables within "<>" and update the script with your required ports
 3. Make sure that you are logged into Azure and that you have selected the Azure subscription which has been given to you
 4. Excute the script. Make sure that you refresh the Azure portal after executing the script
 5. Explore in ASC that the custom ports have been added to your JIT enabled VM

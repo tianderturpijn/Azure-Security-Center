@@ -2,7 +2,7 @@
 ##### Estimated lab time: 
 *The following lab is based on the* <a href="https://gallery.technet.microsoft.com/Azure-Security-Center-0ac8a5ef" target="_blank">Linux Detections playbook</a> *written by Yuri Diogenes. This playbook provides a more comphrensive explanation than is covered in this lab*<br>
 
-In this lab we will explore the new Linux detection's in ASC by executing steps in a Kali Linux VM that you are going to deploy. You will connect to your Linux VM(s) leveraging SSH. In case you don't have a SSH client installed, you can install the free edition of MobaXterm <a href="https://mobaxterm.mobatek.net/download.html" target="_blank">here</a>.<br>
+In this lab we will explore the new Linux detection's in ASC by executing attacks in a Kali Linux VM that you are going to deploy. You will connect to your deployed Linux VM (Linux-0) leveraging SSH. In case you don't have a SSH client installed, you can install the free edition of MobaXterm <a href="https://mobaxterm.mobatek.net/download.html" target="_blank">here</a>.<br>
 
 #### 1 - Create a Kali Linux VM
 1. In the Azure portal, click on **Create a resource** and search for **Kali Linux** and **create** the VM
