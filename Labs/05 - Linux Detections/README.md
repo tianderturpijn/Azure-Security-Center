@@ -14,7 +14,7 @@ In this lab we will explore the new Linux detection's in ASC by executing attack
 
 #### 2 - Create Linux users 
 1. Connect to your Linux VM (Linux-0) that you have deployed earlier (note: not the Kali VM), using your favorite SSH tool
-2. Create 5 users with the names user1, user2, user3, user4, user5, by leveraging the following Linux command:
+2. Create 5 users with the names user1, user2, user3, user4, user5, by leveraging the following Linux command (replace the **userName** value):
 ```powershell
 sudo adduser <userName>
 ```
