@@ -20,6 +20,8 @@ Use the **Deploy to Azure** button below to deploy the following:
 - 2 Windows VM's (*Win-x*, connected to the workspace)
 - 2 Linux Ubuntu VM's (*Linux-x*, connected to the workspace) <br><br>
 
+***Note**: after clicking on the Deploy to Azure button and filling in fields, scroll down, check the box with **Accept**... and click on **Purchase** to start the deployment.*
+
 Because we are deploying the Security Center solution in the workspace, the VM's will become security managed by Security Center.
 
 <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Ftianderturpijn%2FAzure-Security-Center%2Fmaster%2FLabs%2F01%2520-%2520VM%2520and%2520Workspace%2520Deployment%2FFiles%2FdeployAscManagedVmsWithLA.json" target="_blank">
