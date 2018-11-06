@@ -28,7 +28,7 @@ Because we are deploying the Security Center solution in the workspace, the VM's
     <img src="http://azuredeploy.net/deploybutton.png"/>
 </a>
 <br><br>
-The deployment takes about 13 minutes. Continue with the exercise below as soon as your workspace has been created.
+The deployment takes about 13 minutes. Continue with the exercise below as soon as your workspace has been created. You don't have to wait until the deployment has completed.
 
 ### Configure the data collection settings in ASC
 As soon as the the workspace has been deployed (you don't have to wait for all the resources to be deployed), do the following:
