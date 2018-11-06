@@ -38,7 +38,7 @@
           },
         "instanceCountWindows": {
             "type": "int",
-            "defaultValue": 2,
+            "defaultValue": 1,
             "maxValue": 2,
             "metadata": {
                 "description": "Specify the number of Windows VMs to create"
@@ -46,7 +46,7 @@
         },
         "instanceCountLinux": {
             "type": "int",
-            "defaultValue": 2,
+            "defaultValue": 1,
             "maxValue": 2,
             "metadata": {
                 "description": "Specify the number of Linux VMs to create"
@@ -178,6 +178,35 @@
                 "kind": "LinuxSyslog",
                 "properties": {
                     "syslogName": "kern",
+                    "syslogSeverities": [
+                        {
+                            "severity": "emerg"
+                        },
+                        {
+                            "severity": "alert"
+                        },
+                        {
+                            "severity": "crit"
+                        },
+                        {
+                            "severity": "err"
+                        },
+                        {
+                            "severity": "warning"
+                        }
+                    ]
+                }
+            },
+            {
+                "apiVersion": "2015-11-01-preview",
+                "type": "datasources",
+                "name": "Syslog",
+                "dependsOn": [
+                    "[concat(parameters('omsWorkspaceName'),uniqueString(subscription().subscriptionId))]"
+                ],
+                "kind": "LinuxSyslog",
+                "properties": {
+                    "syslogName": "syslog",
                     "syslogSeverities": [
                         {
                             "severity": "emerg"
