@@ -12,13 +12,6 @@
               "Description": "Assign a name for the Log Analytic Workspace Name"
             }
           },
-          "omsResourceGroup": {
-              "type": "string",
-              "defaultValue": "OMSworkspaceRG",
-              "metadata": {
-                  "Description": "The resource group name for the OMS workspace"
-              }
-          },
           "omsWorkspaceLocation": {
             "type": "string",
             "defaultValue": "eastus",
@@ -117,8 +110,8 @@
         "platformLinux": "Linux",
         "omsSolutions": {
             "Security": {
-                "name": "Security",
-                "solutionName": "[concat('Security', '(', variables('omsWorkspaceName'), ')')]",
+                "name": "SecurityCenterFree",
+                "solutionName": "[concat('SecurityCenterFree', '(', variables('omsWorkspaceName'), ')')]",
                 "publisher": "Microsoft"
             }
         }
@@ -133,8 +126,91 @@
               "sku": {
                 "name": "[parameters('OMSSKU')]"
               }
-            }
           },
+          "resources": [
+            {
+                "apiVersion": "2015-11-01-preview",
+                "type": "datasources",
+                "name": "System",
+                "dependsOn": [
+                    "[concat(parameters('omsWorkspaceName'),uniqueString(subscription().subscriptionId))]"
+                ],
+                "kind": "WindowsEvent",
+                "properties": {
+                    "eventLogName": "System",
+                    "eventTypes": [
+                        {
+                            "eventType": "Error"
+                        },
+                        {
+                            "eventType": "Warning"
+                        }
+                    ]
+                }
+            },
+            {
+                "apiVersion": "2015-11-01-preview",
+                "type": "datasources",
+                "name": "Application",
+                "dependsOn": [
+                    "[concat(parameters('omsWorkspaceName'),uniqueString(subscription().subscriptionId))]"
+                ],
+                "kind": "WindowsEvent",
+                "properties": {
+                    "eventLogName": "Application",
+                    "eventTypes": [
+                        {
+                            "eventType": "Error"
+                        },
+                        {
+                            "eventType": "Warning"
+                        }
+                    ]
+                }
+            },
+            {
+                "apiVersion": "2015-11-01-preview",
+                "type": "datasources",
+                "name": "Syslog",
+                "dependsOn": [
+                    "[concat(parameters('omsWorkspaceName'),uniqueString(subscription().subscriptionId))]"
+                ],
+                "kind": "LinuxSyslog",
+                "properties": {
+                    "syslogName": "kern",
+                    "syslogSeverities": [
+                        {
+                            "severity": "emerg"
+                        },
+                        {
+                            "severity": "alert"
+                        },
+                        {
+                            "severity": "crit"
+                        },
+                        {
+                            "severity": "err"
+                        },
+                        {
+                            "severity": "warning"
+                        }
+                    ]
+                }
+            },
+            {
+                "apiVersion": "2015-11-01-preview",
+                "type": "datasources",
+                "name": "SyslogCollection",
+                "dependsOn": [
+                    "[concat(parameters('omsWorkspaceName'),uniqueString(subscription().subscriptionId))]"
+                ],
+                "kind": "LinuxSyslogCollection",
+                "properties": {
+                    "state": "Enabled"
+                }
+            }
+        ]
+    },
         {
             "apiVersion": "2018-08-01",
             "type": "Microsoft.Network/publicIPAddresses",
@@ -433,6 +509,7 @@
                 "workspaceResourceId": "[resourceId('Microsoft.OperationalInsights/workspaces/', variables('omsWorkspaceName'))]"
             }
         }
+    
      ],
     "outputs": {}
-}
+    }
