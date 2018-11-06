@@ -46,7 +46,7 @@ As soon as the the workspace has been deployed (you don't have to wait for all t
 )<br>
 
 
-10. Click on **Yes** on **Would you like to reconfigure monitored VMs?**
+10. Click on **No** on **Would you like to reconfigure monitored VMs?**
 
 *Note: It can take some time for the VM's to become visible in Security Center*
 
