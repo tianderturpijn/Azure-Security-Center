@@ -61,7 +61,10 @@ https://dev12345.service-now.com
 11. Click on **Show advanced options**, as shown below:<br><br>
 ![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/06%20-%20Logic%20App%20integration/Screenshots/snow_advanced_options.png)<br><br>
 12. Under **Record Type** dropdown box, select **Incident** (this collapses the incident options)
-13. In the **Record fields**, scroll down, click once in the fields highlighted below and select the values as shown below:<br><br> 
+13. In the **Record fields**, scroll down, click once in the fields highlighted below and select the values as shown below:<br>
+*Note: if you are using a shared ServiceNow environment, put your name in the Short description field as well*<br>
+
+
 ![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/06%20-%20Logic%20App%20integration/Screenshots/incident_fields.png)<br><br>
 14. Click on **Save**
 
