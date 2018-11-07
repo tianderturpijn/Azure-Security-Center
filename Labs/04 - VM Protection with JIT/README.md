@@ -1,5 +1,9 @@
 ﻿# VM Protection with Just in Time (JIT) access
 ##### Estimated lab time: 15 minutes
+
+***Note**:*<br>
+*Make sure before continuing with this lab that the VM's that you have deployed earlier are showing as "Monitored by Azure Security Center". You can find this setting under **Security Center>Compute & Apps***
+
 In this lab you will protect your VMs with Just-In-Time (JIT) access. JIT has been released, but in this lab we will show you an additional JIT feature, showcasing the JIT integration with Azure<br>
 ***Note: the steps below are showcasing a preview feature which needs to be executed using a feature flag***
 

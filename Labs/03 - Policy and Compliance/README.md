@@ -1,8 +1,5 @@
 ﻿# Policy and Compliance
 ##### Estimated lab time: 10 minutes
-***Note**:*<br>
-*Make sure before continuing with this lab that the VM's that you have deployed earlier are showing as "Monitored by Azure Security Center". You can find this setting under **Security Center>Compute & Apps***
-
 
 This lab covers ASC Policy and Regulatory Compliance and guides you through some preview features.<br>
 
