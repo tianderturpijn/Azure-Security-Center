@@ -20,8 +20,20 @@ ASC_AlertTest_662jfi039N.exe -foo
 
 6. Close the calculator window
 
+### ServiceNow integration
+Skip the following steps if you already have a ServiceNow instance <br>
+
+If you don't want to create an instance of your own and want to leverage a shared environment, make a note of the following:
+```txt
+URL of the shared instance:
+https://dev48415.service-now.com/?_ga=2.224634970.1165086583.1541588934-2079037971.1541588934
+
+username: asc-labs
+password: ASCrocks!
+```
+<br>
+
 #### 2 - Create a ServiceNow developer instance
-Skip the following steps if you already have a ServiceNow instance
 1. Navigate to the <a href="https://signon.service-now.com/ssoregister.do?redirectUri=https://developer.servicenow.com" target="_blank">ServiceNow developer website</a> and create a developer instance
 2. Go through all the steps until you have a developer instance which is active and running
 3. Take a note of the following information, because you will need that in the following steps:
