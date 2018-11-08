@@ -4,7 +4,7 @@
     "parameters": {
         "omsWorkspaceName": {
             "type": "string",
-            "defaultValue": "ASC-Workspace-Yaniv",
+            "defaultValue": "ASC-Workspace-",
             "metadata": {
               "Description": "Assign a name for the Log Analytic Workspace Name"
             }
