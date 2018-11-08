@@ -4,10 +4,7 @@
     "parameters": {
         "omsWorkspaceName": {
             "type": "string",
-            "defaultValue": "ASC-Workspace-",
-            "allowedValues": [
-                "ASC-Workspace-"
-            ],
+            "defaultValue": "ASC-Workspace-Yaniv",
             "metadata": {
               "Description": "Assign a name for the Log Analytic Workspace Name"
             }
@@ -87,7 +84,6 @@
         }
     },
     "variables": {
-        "subscriptionID": "[subscription().subscriptionId]",
         "omsWorkspaceName": "[concat(parameters('omsWorkspaceName'),uniqueString(subscription().subscriptionId))]",
         "availabilitySetName": "vmAvSet",
         "vNetName": "managedVnet",
@@ -457,7 +453,7 @@
                 "autoUpgradeMinorVersion": true,
                 "settings": {
                     "workspaceId": "[reference(resourceId(resourceGroup().name, 'Microsoft.OperationalInsights/workspaces/', variables('omsWorkspaceName')), '2015-11-01-preview').customerId]",
-                    "azureResourceId": "[resourceId('Microsoft.Compute/virtualMachines/', concat(parameters('vmNameWindowsPrefix'), variables('platformWindows'), copyIndex()))]"
+                    "azureResourceId": "[resourceId('Microsoft.Compute/virtualMachines/', concat(parameters('vmNameWindowsPrefix'), copyIndex()))]"
                 },
                 "protectedSettings": {
                     "workspaceKey": "[listKeys(resourceId(resourceGroup().name,'Microsoft.OperationalInsights/workspaces/', variables('omsWorkspaceName')), '2015-11-01-preview').primarySharedKey]"
@@ -484,7 +480,7 @@
                 "autoUpgradeMinorVersion": true,
                 "settings": {
                     "workspaceId": "[reference(resourceId(resourceGroup().name, 'Microsoft.OperationalInsights/workspaces/', variables('omsWorkspaceName')), '2015-11-01-preview').customerId]",
-                    "azureResourceId": "[resourceId('Microsoft.Compute/virtualMachines/', concat(parameters('vmNameLinuxPrefix'), variables('platformLinux'), copyIndex()))]"
+                    "azureResourceId": "[resourceId('Microsoft.Compute/virtualMachines/', concat(parameters('vmNameLinuxPrefix'), copyIndex()))]"
                 },
                 "protectedSettings": {
                     "workspaceKey": "[listKeys(resourceId(resourceGroup().name,'Microsoft.OperationalInsights/workspaces/', variables('omsWorkspaceName')), '2015-11-01-preview').primarySharedKey]"
