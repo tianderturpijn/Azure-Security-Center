@@ -8,6 +8,11 @@ In this lab you are going to explore what the ASC automation and deployment opti
 You will configure ASC with:
 1. ARM Templates
 2. PowerShell
+ 
+#### Assumptions
+You have received an Azure pass or you have a test environment available. Please don't use these lab exercises in a production environment (or at your own risk) <br>
+
+For using these labs in combination with Labs On Demand (LOD), open an incognito/inprivate browser session on your laptop and login to the Azure portal leveraging the LOD account (like for example admin@ems123456.onmicrosoft.com)<br><br>
 
  
 ##  ARM Template deployment

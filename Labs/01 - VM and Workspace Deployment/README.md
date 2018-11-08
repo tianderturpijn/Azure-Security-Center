@@ -3,9 +3,11 @@
 This section is intended to deploy dependency Azure resources in an automated way to get you started quickly or in case you need to re-provision your environment.
 
 #### Assumptions
-You have received an Azure pass or you have a test environment available. Please don't use these lab exercises in a production environment (or at your own risk) <br><br>
+You have received an Azure pass or you have a test environment available. Please don't use these lab exercises in a production environment (or at your own risk) <br>
 
-*Additional notes:*
+For using these labs in combination with Labs On Demand (LOD), open an incognito/inprivate browser session on your laptop and login to the Azure portal leveraging the LOD account (like for example admin@ems123456.onmicrosoft.com)<br><br>
+
+***Additional notes**:*
 - Close the Azure Advisor recommendations if that opens for you.
 - When deploying the template below, a number of fields are locked to ensure that the references in the labs are accurate. You are free to choose your location for deployment
 - Create a new resource group for your deployment (like ASC-Labs)
