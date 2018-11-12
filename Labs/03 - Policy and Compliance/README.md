@@ -6,8 +6,8 @@ This lab covers ASC Policy and Regulatory Compliance and guides you through some
 ### 1 - Regulatory Compliance (Preview)
 Open a new browser tab/window and copy and paste the following URL in your browser to get access to the Regulatory Compliance preview:
 
-```html
-https://aka.ms/AscRegulatoryCompliance
+```txt
+Ask your instructor for the link
 ```
 <br>
 
