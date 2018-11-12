@@ -25,11 +25,7 @@ Skip the following steps if you already have a ServiceNow instance <br>
 
 If you don't want to create an instance of your own and want to leverage a shared environment, make a note of the following:
 ```txt
-URL of the shared instance:
-https://dev48415.service-now.com/?_ga=2.224634970.1165086583.1541588934-2079037971.1541588934
-
-username: asc-labs
-password: ASCrocks!
+Please ask your instructor for the shared ServiceNow URL, username and password
 ```
 <br>
 
