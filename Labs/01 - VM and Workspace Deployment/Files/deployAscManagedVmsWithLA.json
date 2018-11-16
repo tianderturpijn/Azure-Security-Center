@@ -2,73 +2,6 @@
     "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-        "omsWorkspaceName": {
-            "type": "string",
-            "defaultValue": "ASC-Workspace-",
-            "metadata": {
-              "Description": "Assign a name for the Log Analytic Workspace Name"
-            }
-          },
-          "omsWorkspaceLocation": {
-            "type": "string",
-            "defaultValue": "eastus",
-            "allowedValues": [
-                "eastus",
-                "westeurope"
-            ],
-            "metadata": {
-                "Description": "Location for your workspace"
-            }
-           },
-          "omsSKU": {
-            "type": "string",
-            "defaultValue": "PerGB2018",
-            "allowedValues": [
-              "Standalone",
-              "PerNode",
-                "PerGB2018",
-                "Standard"
-            ],
-            "metadata": {
-              "Description": "Specify the SKU for your OMS Resources"
-            }
-          },
-        "instanceCountWindows": {
-            "type": "int",
-            "defaultValue": 1,
-            "maxValue": 2,
-            "metadata": {
-                "description": "Specify the number of Windows VMs to create"
-            }
-        },
-        "instanceCountLinux": {
-            "type": "int",
-            "defaultValue": 1,
-            "maxValue": 2,
-            "metadata": {
-                "description": "Specify the number of Linux VMs to create"
-            }
-        },
-        "vmNameWindowsPrefix": {
-            "type": "string",
-            "defaultValue": "Win-",
-            "allowedValues": [
-                "Win-"
-            ],
-            "metadata": {
-                "description": "Assing a prefix for the VMs you will create"
-            }
-        },
-        "vmNameLinuxPrefix": {
-            "type": "string",
-            "defaultValue": "Linux-",
-            "allowedValues": [
-                "Linux-"
-            ],
-            "metadata": {
-                "description": "Assing a prefix for the VMs you will create"
-            }
-        },
         "username": {
             "type": "string",
             "defaultValue": "azureadmin",
@@ -84,7 +17,14 @@
         }
     },
     "variables": {
-        "omsWorkspaceName": "[concat(parameters('omsWorkspaceName'),uniqueString(subscription().subscriptionId))]",
+        "resourceLocation": "westus2",
+        "omsWorkspaceName": "[concat('ASC-Workspace-',uniqueString(subscription().subscriptionId))]",
+        "omsWorkspaceLocation": "eastus",
+        "omsSKU": "PerGB2018",
+        "instanceCountWindows": 1,
+        "instanceCountLinux": 1,
+        "vmNameWindowsPrefix": "Win-",
+        "vmNameLinuxPrefix": "Linux-",
         "availabilitySetName": "vmAvSet",
         "vNetName": "managedVnet",
         "vNetAddressPrefix": "192.168.0.0/16",
@@ -115,21 +55,21 @@
     "resources": [
         {
             "apiVersion": "2015-11-01-preview",
-            "location": "[concat(parameters('omsWorkspaceLocation'))]",
-            "name": "[concat(parameters('omsWorkspaceName'), uniqueString(subscription().subscriptionId))]",
+            "location": "[concat(variables('omsWorkspaceLocation'))]",
+            "name": "[variables('omsWorkspaceName')]",
             "type": "Microsoft.OperationalInsights/workspaces",
             "properties": {
               "sku": {
-                "name": "[parameters('OMSSKU')]"
+                "name": "[variables('omsSKU')]"
               }
           },
           "resources": [
             {
                 "apiVersion": "2015-11-01-preview",
-                "type": "datasources",
+                "type": "dataSources",
                 "name": "System",
                 "dependsOn": [
-                    "[concat(parameters('omsWorkspaceName'),uniqueString(subscription().subscriptionId))]"
+                    "[variables('omsWorkspaceName')]"
                 ],
                 "kind": "WindowsEvent",
                 "properties": {
@@ -146,10 +86,10 @@
             },
             {
                 "apiVersion": "2015-11-01-preview",
-                "type": "datasources",
+                "type": "dataSources",
                 "name": "Application",
                 "dependsOn": [
-                    "[concat(parameters('omsWorkspaceName'),uniqueString(subscription().subscriptionId))]"
+                    "[variables('omsWorkspaceName')]"
                 ],
                 "kind": "WindowsEvent",
                 "properties": {
@@ -169,7 +109,7 @@
                 "type": "datasources",
                 "name": "Syslog",
                 "dependsOn": [
-                    "[concat(parameters('omsWorkspaceName'),uniqueString(subscription().subscriptionId))]"
+                    "[variables('omsWorkspaceName')]"
                 ],
                 "kind": "LinuxSyslog",
                 "properties": {
@@ -195,10 +135,10 @@
             },
             {
                 "apiVersion": "2015-11-01-preview",
-                "type": "datasources",
+                "type": "dataSources",
                 "name": "SyslogCollection",
                 "dependsOn": [
-                    "[concat(parameters('omsWorkspaceName'),uniqueString(subscription().subscriptionId))]"
+                    "[variables('omsWorkspaceName')]"
                 ],
                 "kind": "LinuxSyslogCollection",
                 "properties": {
@@ -210,32 +150,32 @@
         {
             "apiVersion": "2018-08-01",
             "type": "Microsoft.Network/publicIPAddresses",
-            "name": "[concat(parameters('vmNameWindowsPrefix'), 'IP',copyIndex())]",
-            "location": "[resourceGroup().location]",
+            "name": "[concat(variables('vmNameWindowsPrefix'), 'IP',copyIndex())]",
+            "location": "[variables('resourceLocation')]",
             "copy": {
-                "name": "[concat(parameters('vmNameWindowsPrefix'), 'IP')]",
-                "count": "[parameters('instanceCountWindows')]"
+                "name": "[concat(variables('vmNameWindowsPrefix'), 'IP')]",
+                "count": "[variables('instanceCountWindows')]"
             },
             "properties": {
                 "publicIPAllocationMethod": "Dynamic",
                 "dnsSettings": {
-                    "domainNameLabel": "[toLower(concat(parameters('vmNameWindowsPrefix'), uniqueString(subscription().subscriptionId), '-', copyIndex()))]"
+                    "domainNameLabel": "[toLower(concat(variables('vmNameWindowsPrefix'), uniqueString(subscription().subscriptionId), '-', copyIndex()))]"
                 }
             }
         },
         {
             "apiVersion": "2018-08-01",
             "type": "Microsoft.Network/publicIPAddresses",
-            "name": "[concat(parameters('vmNameLinuxPrefix'), 'IP', copyIndex())]",
-            "location": "[resourceGroup().location]",
+            "name": "[concat(variables('vmNameLinuxPrefix'), 'IP', copyIndex())]",
+            "location": "[variables('resourceLocation')]",
             "copy": {
-                "name": "[concat(parameters('vmNameLinuxPrefix'), 'IP')]",
-                "count": "[parameters('instancecountLinux')]"
+                "name": "[concat(variables('vmNameLinuxPrefix'), 'IP')]",
+                "count": "[variables('instancecountLinux')]"
             },
             "properties": {
                 "publicIPAllocationMethod": "Dynamic",
                 "dnsSettings": {
-                    "domainNameLabel": "[toLower(concat(parameters('vmNameLinuxPrefix'), uniqueString(subscription().subscriptionId), '-', copyIndex()))]"
+                    "domainNameLabel": "[toLower(concat(variables('vmNameLinuxPrefix'), uniqueString(subscription().subscriptionId), '-', copyIndex()))]"
                 }
             }
         },
@@ -243,7 +183,7 @@
             "apiVersion": "2018-08-01",
             "type": "Microsoft.Network/virtualNetworks",
             "name": "[variables('vNetName')]",
-            "location": "[resourceGroup().location]",
+            "location": "[variables('resourceLocation')]",
             "properties": {
                 "addressSpace": {
                     "addressPrefixes": [
@@ -263,14 +203,14 @@
         {
             "apiVersion": "2018-04-01",
             "type": "Microsoft.Network/networkInterfaces",
-            "name": "[concat(parameters('vmNameWindowsPrefix'), 'nic', copyIndex())]",
-            "location": "[resourceGroup().location]",
+            "name": "[concat(variables('vmNameWindowsPrefix'), 'nic', copyIndex())]",
+            "location": "[variables('resourceLocation')]",
             "copy": {
-                "name": "[concat(parameters('vmNameWindowsPrefix'), 'nic')]",
-                "count": "[parameters('instanceCountWindows')]"
+                "name": "[concat(variables('vmNameWindowsPrefix'), 'nic')]",
+                "count": "[variables('instanceCountWindows')]"
             },
             "dependsOn": [
-                "[concat('Microsoft.Network/publicIPAddresses/', parameters('vmNameWindowsPrefix'), 'IP', copyIndex())]",
+                "[concat('Microsoft.Network/publicIPAddresses/', variables('vmNameWindowsPrefix'), 'IP', copyIndex())]",
                 "[concat('Microsoft.Network/virtualNetworks/', variables('vNetName'))]"
             ],
             "properties": {
@@ -280,7 +220,7 @@
                         "properties": {
                             "privateIPAllocationMethod": "Dynamic",
                             "publicIPAddress": {
-                                "id": "[resourceId('Microsoft.Network/publicIPAddresses', concat(parameters('vmNameWindowsPrefix'), 'IP', copyIndex()))]"
+                                "id": "[resourceId('Microsoft.Network/publicIPAddresses', concat(variables('vmNameWindowsPrefix'), 'IP', copyIndex()))]"
                             },
                             "subnet": {
                                 "id": "[variables('subnetRef')]"
@@ -293,14 +233,14 @@
         {
             "apiVersion": "2018-04-01",
             "type": "Microsoft.Network/networkInterfaces",
-            "name": "[concat(parameters('vmNameLinuxPrefix'), 'nic', copyIndex())]",
-            "location": "[resourceGroup().location]",
+            "name": "[concat(variables('vmNameLinuxPrefix'), 'nic', copyIndex())]",
+            "location": "[variables('resourceLocation')]",
             "copy": {
-                "name": "[concat(parameters('vmNameLinuxPrefix'), 'nic')]",
-                "count": "[parameters('instanceCountLinux')]"
+                "name": "[concat(variables('vmNameLinuxPrefix'), 'nic')]",
+                "count": "[variables('instanceCountLinux')]"
             },
             "dependsOn": [
-                "[concat('Microsoft.Network/publicIPAddresses/', parameters('vmNameLinuxPrefix'), 'IP', copyIndex())]",
+                "[concat('Microsoft.Network/publicIPAddresses/', variables('vmNameLinuxPrefix'), 'IP', copyIndex())]",
                 "[concat('Microsoft.Network/virtualNetworks/', variables('vNetName'))]"
             ],
             "properties": {
@@ -310,7 +250,7 @@
                         "properties": {
                             "privateIPAllocationMethod": "Dynamic",
                             "publicIPAddress": {
-                                "id": "[resourceId('Microsoft.Network/publicIPAddresses', concat(parameters('vmNameLinuxPrefix'), 'IP', copyIndex()))]"
+                                "id": "[resourceId('Microsoft.Network/publicIPAddresses', concat(variables('vmNameLinuxPrefix'), 'IP', copyIndex()))]"
                             },
                             "subnet": {
                                 "id": "[variables('subnetRef')]"
@@ -324,7 +264,7 @@
             "type": "Microsoft.Compute/availabilitySets",
             "apiVersion": "2018-10-01",
             "name": "[variables('availabilitySetName')]",
-            "location": "[resourceGroup().location]",
+            "location": "[variables('resourceLocation')]",
             "properties": {
                 "platformFaultDomainCount": 2,
                 "platformUpdateDomainCount": 3
@@ -336,14 +276,14 @@
         {
             "apiVersion": "2018-10-01",
             "type": "Microsoft.Compute/virtualMachines",
-            "name": "[concat(parameters('vmNameWindowsPrefix'), copyIndex())]",
-            "location": "[resourceGroup().location]",
+            "name": "[concat(variables('vmNameWindowsPrefix'), copyIndex())]",
+            "location": "[variables('resourceLocation')]",
             "copy": {
-                "name": "[concat(parameters('vmNameWindowsPrefix'))]",
-                "count": "[parameters('instanceCountWindows')]"
+                "name": "[concat(variables('vmNameWindowsPrefix'))]",
+                "count": "[variables('instanceCountWindows')]"
             },
             "dependsOn": [
-                "[concat('Microsoft.Network/networkinterfaces/', parameters('vmNameWindowsPrefix'), 'nic', copyIndex())]",
+                "[concat('Microsoft.Network/networkinterfaces/', variables('vmNameWindowsPrefix'), 'nic', copyIndex())]",
                 "[resourceId('Microsoft.Compute/availabilitySets/', variables('availabilitySetName'))]"
             ],
             "properties": {
@@ -354,7 +294,7 @@
                     "vmsize": "Standard_DS1_v2"
                 },
                 "osProfile": {
-                    "computerName": "[concat(parameters('vmNameWindowsPrefix'), copyIndex())]",
+                    "computerName": "[concat(variables('vmNameWindowsPrefix'), copyIndex())]",
                     "adminusername": "[parameters('username')]",
                     "adminpassword": "[parameters('pwdOrSsh')]"
                 },
@@ -377,7 +317,7 @@
                 "networkprofile": {
                     "networkinterfaces": [
                         {
-                            "id": "[resourceId('Microsoft.Network/networkinterfaces', concat(parameters('vmNameWindowsPrefix'),'nic', copyIndex()))]"
+                            "id": "[resourceId('Microsoft.Network/networkinterfaces', concat(variables('vmNameWindowsPrefix'),'nic', copyIndex()))]"
                         }
                     ]
                 }
@@ -386,14 +326,14 @@
         {
             "apiVersion": "2018-10-01",
             "type": "Microsoft.Compute/virtualMachines",
-            "name": "[concat(parameters('vmNameLinuxPrefix'), copyIndex())]",
-            "location": "[resourceGroup().location]",
+            "name": "[concat(variables('vmNameLinuxPrefix'), copyIndex())]",
+            "location": "[variables('resourceLocation')]",
             "copy": {
-                "name": "[concat(parameters('vmNameLinuxPrefix'))]",
-                "count": "[parameters('instanceCountWindows')]"
+                "name": "[concat(variables('vmNameLinuxPrefix'))]",
+                "count": "[variables('instanceCountWindows')]"
             },
             "dependsOn": [
-                "[concat('Microsoft.Network/networkinterfaces/', parameters('vmNameLinuxPrefix'), 'nic', copyIndex())]",
+                "[concat('Microsoft.Network/networkinterfaces/', variables('vmNameLinuxPrefix'), 'nic', copyIndex())]",
                 "[resourceId('Microsoft.Compute/availabilitySets/', variables('availabilitySetName'))]"
             ],
             "properties": {
@@ -404,7 +344,7 @@
                     "vmsize": "Standard_DS1_v2"
                 },
                 "osProfile": {
-                    "computerName": "[concat(parameters('vmNameLinuxPrefix'), copyIndex())]",
+                    "computerName": "[concat(variables('vmNameLinuxPrefix'), copyIndex())]",
                     "adminusername": "[parameters('username')]",
                     "adminpassword": "[parameters('pwdOrSsh')]"
                 },
@@ -427,7 +367,7 @@
                 "networkprofile": {
                     "networkinterfaces": [
                         {
-                            "id": "[resourceId('Microsoft.Network/networkinterfaces', concat(parameters('vmNameLinuxPrefix'),'nic', copyIndex()))]"
+                            "id": "[resourceId('Microsoft.Network/networkinterfaces', concat(variables('vmNameLinuxPrefix'),'nic', copyIndex()))]"
                         }
                     ]
                 }
@@ -436,15 +376,15 @@
         {
             "type": "Microsoft.Compute/virtualMachines/extensions",
             "apiVersion": "2017-03-30",
-            "name": "[concat(parameters('vmNameWindowsPrefix'), copyIndex(), '/OMS')]",
-            "location": "[resourceGroup().location]",
+            "name": "[concat(variables('vmNameWindowsPrefix'), copyIndex(), '/OMS')]",
+            "location": "[variables('resourceLocation')]",
             "copy": {
-                "name": "[concat(parameters('vmNameWindowsPrefix'), 'OMS')]",
-                "count": "[parameters('instanceCountWindows')]"
+                "name": "[concat(variables('vmNameWindowsPrefix'), 'OMS')]",
+                "count": "[variables('instanceCountWindows')]"
             },
             "dependsOn": [
-                "[concat('Microsoft.Compute/virtualMachines/', parameters('vmNameWindowsPrefix'), copyIndex())]",
-                "[concat(parameters('omsWorkspaceName'),uniqueString(subscription().subscriptionId))]"
+                "[concat('Microsoft.Compute/virtualMachines/', variables('vmNameWindowsPrefix'), copyIndex())]",
+                "[variables('omsWorkspaceName')]"
             ],
             "properties": {
                 "publisher": "Microsoft.EnterpriseCloud.Monitoring",
@@ -453,7 +393,7 @@
                 "autoUpgradeMinorVersion": true,
                 "settings": {
                     "workspaceId": "[reference(resourceId(resourceGroup().name, 'Microsoft.OperationalInsights/workspaces/', variables('omsWorkspaceName')), '2015-11-01-preview').customerId]",
-                    "azureResourceId": "[resourceId('Microsoft.Compute/virtualMachines/', concat(parameters('vmNameWindowsPrefix'), copyIndex()))]"
+                    "azureResourceId": "[resourceId('Microsoft.Compute/virtualMachines/', concat(variables('vmNameWindowsPrefix'), copyIndex()))]"
                 },
                 "protectedSettings": {
                     "workspaceKey": "[listKeys(resourceId(resourceGroup().name,'Microsoft.OperationalInsights/workspaces/', variables('omsWorkspaceName')), '2015-11-01-preview').primarySharedKey]"
@@ -463,15 +403,15 @@
         {
             "type": "Microsoft.Compute/virtualMachines/extensions",
             "apiVersion": "2017-03-30",
-            "name": "[concat(parameters('vmNameLinuxPrefix'), copyIndex(), '/OMS')]",
-            "location": "[resourceGroup().location]",
+            "name": "[concat(variables('vmNameLinuxPrefix'), copyIndex(), '/OMS')]",
+            "location": "[variables('resourceLocation')]",
             "copy": {
-                "name": "[concat(parameters('vmNameLinuxPrefix'), 'OMS')]",
-                "count": "[parameters('instanceCountLinux')]"
+                "name": "[concat(variables('vmNameLinuxPrefix'), 'OMS')]",
+                "count": "[variables('instanceCountLinux')]"
             },
             "dependsOn": [
-                "[concat('Microsoft.Compute/virtualMachines/', parameters('vmNameLinuxPrefix'), copyIndex())]",
-                "[concat(parameters('omsWorkspaceName'),uniqueString(subscription().subscriptionId))]"
+                "[concat('Microsoft.Compute/virtualMachines/', variables('vmNameLinuxPrefix'), copyIndex())]",
+                "[variables('omsWorkspaceName')]"
             ],
             "properties": {
                 "publisher": "Microsoft.EnterpriseCloud.Monitoring",
@@ -480,7 +420,7 @@
                 "autoUpgradeMinorVersion": true,
                 "settings": {
                     "workspaceId": "[reference(resourceId(resourceGroup().name, 'Microsoft.OperationalInsights/workspaces/', variables('omsWorkspaceName')), '2015-11-01-preview').customerId]",
-                    "azureResourceId": "[resourceId('Microsoft.Compute/virtualMachines/', concat(parameters('vmNameLinuxPrefix'), copyIndex()))]"
+                    "azureResourceId": "[resourceId('Microsoft.Compute/virtualMachines/', concat(variables('vmNameLinuxPrefix'), copyIndex()))]"
                 },
                 "protectedSettings": {
                     "workspaceKey": "[listKeys(resourceId(resourceGroup().name,'Microsoft.OperationalInsights/workspaces/', variables('omsWorkspaceName')), '2015-11-01-preview').primarySharedKey]"
@@ -491,9 +431,9 @@
             "name": "[variables('omsSolutions').Security.solutionName]",
             "type": "Microsoft.OperationsManagement/solutions",
             "apiVersion": "2015-11-01-preview",
-            "location": "[parameters('omsWorkspaceLocation')]",
+            "location": "[variables('omsWorkspaceLocation')]",
             "dependsOn": [
-                "[concat('Microsoft.OperationalInsights/workspaces/', variables('omsWorkspaceName'))]"
+                "[variables('omsWorkspaceName')]"
             ],
             "plan": {
                 "name": "[variables('omsSolutions').Security.solutionName]",
@@ -507,5 +447,18 @@
         }
     
      ],
-    "outputs": {}
+    "outputs": {
+        "workspaceName":{
+            "type": "string",
+            "value": "[variables('omsWorkspaceName')]"
+        },
+        "vmNameWindowsPrefix":{
+            "type": "string",
+            "value": "[variables('vmNameWindowsPrefix')]"
+        },
+        "vmNameLinuxPrefix":{
+            "type": "string",
+            "value": "[variables('vmNameLinuxPrefix')]"
+        }
+    }
     }
