@@ -15,6 +15,11 @@ The labs are intended to make you familiar with the different blades and Securit
 ![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/A%20-%20Beginner%20Track/Screenshots/policy_compliance.png
 )<br>
 7. Click on the **Policy compliance** tile
-8. 
+![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/A%20-%20Beginner%20Track/Screenshots/policy_management_details.png
+)<br>
+8. Notice the following columns:<br>
+**Policy Initiative Assignment** – Security Center built-in policies and initiatives that are assigned to a subscription or management group.<br>
+**Compliance** – Overall compliance score for a management group, subscription, or workspace. The score is the weighted average of the assignments. The weighted average factors in the number of policies in a single assignment and the number of resources the assignment applies to.<br><br>
+**For example**, if your subscription has two VMs and an initiative with five policies assigned to it, then you have 10 assessments in your subscription. If one of the VMs doesn't comply to two of the policies, then the overall compliance score of your subscription’s assignment is 80%.
 
 ## Work in progress...
