@@ -24,7 +24,19 @@ The labs are intended to make you familiar with the different Security Center's 
 **Calculation example**, if your subscription has two VMs and an initiative with five policies assigned to it, then you have 10 assessments in your subscription. If one of the VMs doesn't comply to two of the policies, then the overall compliance score of your subscription’s assignment is 80%.
 
 ### Security Center Policies
-While still in the Policy Management blade, click on your subscription (Azure Pass):
+While still in the **Policy Management** blade, click on your subscription (Azure Pass):
+![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/A%20-%20Beginner%20Track/Screenshots/policy_setting1.png
+)<br><br>
+This brings you to the **Security policy settings** for your subscription:
+![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/A%20-%20Beginner%20Track/Screenshots/policy_setting2.png
+)<br>
+Notice that you can turn on/off the different policies per subscription.<br>
+In the near future this will be fully aligned with **Azure Policy**
 
+### Edit Subscription settings
+1. Go back to the **Security Policy** blade and under **Policy Management** click on **Edit settings:**
+![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/A%20-%20Beginner%20Track/Screenshots/subscription_settings.png
+)<br>
+2. 
 
 ## Work in progress...
