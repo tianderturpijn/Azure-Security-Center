@@ -9,8 +9,9 @@ For using these labs in combination with Labs On Demand (LOD), open an incognito
 
 ***Additional notes**:*
 - Close the Azure Advisor recommendations if that opens for you.
-- When deploying the template below, a number of fields are locked to ensure that the references in the labs are accurate. You are free to choose your location for deployment
-- Create a new resource group for your deployment (like ASC-Labs)
+- When deploying the template below, a number of fields are locked to ensure that the references in the labs are accurate.<br>
+- **Create a new resource group for your deployment** (like ASC-Labs)
+- Provide one single password for your administrator and root account (same account name is used for both, default is azureadmin)
 - As soon as the workspace has been created, you can continue with the lab exercise
 - Click on **Start Trial**, if you are prompted for a Security Center trial
 
@@ -31,7 +32,7 @@ Because we are deploying the Security Center solution in the workspace, the VM's
 <br><br>
 
 The deployment takes about 13 minutes.<br><br>
-After the deployment of the template, you can check the progress of your deployment if you click on your created resource group details, then click on **Deployments** (1 deploying). <br>
+After the deployment of the template, you can check the progress of your deployment if you click on your created resource group details, then click on **Deployments** (*1 deploying*). <br>
 Continue with the exercise below as soon as your workspace has been created. You don't have to wait until the deployment has completed.
 
 ### Configure the data collection settings in ASC

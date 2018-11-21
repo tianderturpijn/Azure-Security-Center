@@ -1,8 +1,6 @@
 ﻿# ASC Automation & Configuration
 
 ##### Estimated lab time: 25 minutes
-**Assumptions**: You have installed the **AzureRm** PowerShell modules on your system.<br> If not, install those in a PowerShell session using ***Install-Module -Name AzureRM***
-
 In this lab you are going to explore what the ASC automation and deployment options are.
 
 You will configure ASC with:
@@ -12,9 +10,44 @@ You will configure ASC with:
 #### Assumptions
 You have received an Azure pass or you have a test environment available. Please don't use these lab exercises in a production environment (or at your own risk) <br>
 
-For using these labs in combination with Labs On Demand (LOD), open an incognito/inprivate browser session on your laptop and login to the Azure portal leveraging the LOD account (like for example admin@ems123456.onmicrosoft.com)<br><br>
+For using these labs in combination with Labs On Demand (LOD), open an incognito/in-private browser session on your laptop and login to the Azure portal leveraging the LOD account (like for example admin@ems123456.onmicrosoft.com)<br>
 
- 
+## AzureRm PowerShell cmdlets installation
+1. Navigate to the Azure portal and click on **Virtual machines**
+2. Click on your Windows virtual machine (Win-0)
+3. Under **Overview** copy the **Public IP address** of your VM
+4. Start a remote desktop session (RDP) and login to your VM, your default administrator account is is **azureadmin**
+5. Open an administrator PowerShell session
+5. Install the AzureRm modules by typing in ***Install-Module -Name AzureRM -Verbose***
+
+## Security Center PowerShell cmdlets installation
+Security Center provides automation support through PowerShell as well.<br>
+The ASC PowerShell cmdlets can be downloaded from <a href="https://www.powershellgallery.com/packages/AzureRM.Security/0.2.0-preview" target="_blank">here</a>.<br>
+
+**Install the Security Center cmdlets in the Azure VM Win-0**<br>
+*The ASC cmdlets are in preview. It is recommended to install the ASC cmdlets in the Windows VM (like Win-0) that you have deployed earlier in your lab environment to avoid conflicts which might occur on your system.*
+
+In the same administrator PowerShell session which you have already open on the Win-0 VM, install the ASC cmdlets by typing in the following commands and confirm all with "yes" if prompted:<br>
+
+***Tip**: copy and paste the script below in a PowerShell ISE administrator session*
+
+```powershell
+#Install NuGet
+Install-Module -Name PowerShellGet -Force -Verbose 
+
+#Install AzureRm.Profile
+Install-Module -name AzureRM.Profile -Force -Verbose 
+
+#Update the modules to ensure you have the latest versions
+Update-Module PowerShellGet -Force -Verbose
+Update-Module AzureRM.Profile -Force -Verbose
+
+#Important: close your PowerShell session and open a new one
+
+# Install the AzureRm.Security module
+Install-Module -Name AzureRM.Security -AllowPrerelease -Verbose
+```
+
 ##  ARM Template deployment
 #### 1 - Explore the ASC settings in the portal
 1. Open a browser and login to the  <a href="https://portal.azure.com" target="_blank">Azure Portal</a>
@@ -95,42 +128,17 @@ For the next (**optional**) exercise where we deploy a more advanced ASC ARM tem
 3. On the Overview blade, make a note of the **Resource group name** and the **Subscription ID**
 4. Click on **Advanced settings** and also make a note of the **workspaceID** and the **primaryKey**, since you need those  values for the next exercise
 
-## ASC PowerShell cmdlets
-Security Center provides automation support through PowerShell as well.<br>
-The ASC PowerShell cmdlets can be downloaded from <a href="https://www.powershellgallery.com/packages/AzureRM.Security/0.2.0-preview" target="_blank">here</a>.<br>
 
-**Install the Security Center cmdlets in the Azure VM**<br>
-*The ASC cmdlets are in preview. It is recommended to install the ASC cmdlets in the Windows VM (like Win-0) that you have deployed earlier in your lab environment to avoid conflicts which might occur on your system.*
+### Exploring the Security Center cmdlets
+***Assumptions**:<br>
+You have installed the AzureRm and Security Center PowerShell cmdlets, as mentioned in the beginning of this lab* <br><br>
 
-#### 1 - Installing the ASC cmdlets
-***Note**: the default username of your deployed VM's (either admin or root) is **azureadmin***
-
-Install the ASC cmdlets by typing the following commands in an **administrator** PowerShell session and confirm all with "yes" if prompted:<br><br>
-
-***Tip**: copy and paste the script below in a PowerShell ISE administrator session*
-
-```powershell
-#Install NuGet
-Install-Module -Name PowerShellGet -Force -Verbose 
-
-#Install AzureRm.Profile
-Install-Module -name AzureRM.Profile -Force -Verbose 
-
-#Update the modules to ensure you have the latest versions
-Update-Module PowerShellGet -Force -Verbose
-Update-Module AzureRM.Profile -Force -Verbose
-
-#Important: close your PowerShell session and open a new one
-
-# Install the AzureRm.Security module
-Install-Module -Name AzureRM.Security -AllowPrerelease -Verbose
-```
-#### 2 - Exploring the cmdlets
-When you have installed the AzureRm.Security module, explore the cmdlets by executing:
+Open on the **Win-0** VM an administrator PowerShell session.<br>
+Explore the Security Center cmdlets by executing:
 ```powershell
 Get-Command -Module AzureRm.Security
 ```
-#### 3 - Configuring email settings
+#### 1 - Configuring email settings
 ***Note**: make sure that in your favorite PowerShell editor, you are logged into Azure (using Login-AzureRmAccount)*<br>
 
 In the previous exercise we have configured the email notifications through ARM, let's now explore how to configure email settings through PowerShell.<br>
@@ -140,7 +148,7 @@ Copy and paste the following script in your PowerShell editor:
 
 Set-AzureRmSecurityContact  -Name "default1" -Email "vader@empire.com" -Phone "12345" -AlertAdmin -NotifyOnAlert
 ```
-#### 4 - Check the new email settings:
+#### 2 - Check the new email settings:
 Run the following command:
 ```powershell
 Get-AzureRmSecurityContact
