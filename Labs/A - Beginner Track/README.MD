@@ -57,6 +57,14 @@ Notice that there are different pricing plans for **VM's, SQL servers** and **Ap
 
 ### Edit workspace settings (Including Data Collection settings)
 1. Go back one more time to the **Security policy** blade, but this time click on **Edit settings** on the line where your **workspace** is listed:
+![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/A%20-%20Beginner%20Track/Screenshots/policy_setting7.png
+)<br><br>
+This allows you to configure the Windows security events collection settings for your workspace.<br>
+Notice that the options are potentially grayed out.<br>
+If so, you first need to set the workspace Pricing tier to Standard.
+2. Click on **Pricing tier** and set the pricing tier to **Standard** and click on **Save**
+3. Click on **Data collection**, you should now be able to configure the Windows security events collection
+4. Set the collection to **All Events** and click on **Save**
 
 
 ## Work in progress...
