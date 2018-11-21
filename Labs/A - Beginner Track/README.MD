@@ -36,8 +36,13 @@ In the near future this will be fully aligned with **Azure Policy**
 ### Edit Subscription settings (including Data Collection settings)
 1. Go back to the **Security Policy** blade and under **Policy Management** click on **Edit settings:**
 ![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/A%20-%20Beginner%20Track/Screenshots/subscription_settings.png
-)<br>
+)<br><br>
 2. Notice the 4 options:
-3. 
+![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/A%20-%20Beginner%20Track/Screenshots/policy_setting3.png
+)<br>
+The Auto Provisioning settings - if set to On - will take care of automatic installation of the Microsoft Monitoring Agent (MMA) for all VM's in your subscription, either existing or new.<br><br>
+**Threat detection** is the new integration with Microsoft Cloud App Security (MCAS) and Windows Defender ATP (WDATP):
+
+
 
 ## Work in progress...
