@@ -79,12 +79,10 @@ For the first ARM deployment exercise we are going to start with configuring the
 - Use a proper email format like luke@skywalker.com
 - Use only numbers (no spaces) as a phone number
 - Fill in **On** or **Off** for alerts (case sensitive)
-- For the location pick either "**eastus2**" or "**westus2**"
 - If you receive an error running the New-AzureRmDeployment cmdlet, make sure to run this:<br> **Install-Module -Name AzureRM.Resources**<br>
 ```powershell
 New-AzureRmDeployment -TemplateFile 'https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/02%20-%20Automation/Files/configureAscEmailNotifications.json -location westus2'
 ```
-
 
 7. After a successful completion, switch to the Azure portal and **refresh** (Ctrl+F5) the ASC blade and verify that the email settings have been updated according to the values in the template.
 8. **[Optional exercise]** You can copy the template and use your own values
