@@ -47,7 +47,13 @@ The Auto Provisioning settings - if set to On - will take care of automatic inst
 
 **Email notifications** allows you to configure one or more email addresses to be used to send high severity alerts.<br><br>
 
-Pricing Tier
+Pricing Tier shows you the difference between what's offered in the Free and Standard tier (it should be set to Standard for our labs):
+![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/A%20-%20Beginner%20Track/Screenshots/policy_setting5.png
+)<br><br>
+
+Notice that there are different pricing plans for VM's, SQL servers and App Services:
+![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/A%20-%20Beginner%20Track/Screenshots/policy_setting6.png
+)<br><br>
 
 
 ## Work in progress...
