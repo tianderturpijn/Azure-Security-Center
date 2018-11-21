@@ -72,7 +72,8 @@ If so, you first need to set the workspace Pricing tier to Standard.
 You don't have to change the setting **None** to receive alerts in Security Center, change this setting only if you want to do investigations and analysis of your threats in Log Analytics.
 
 ### Secure Score
-Secure score is based on Office 365's Secure score and helps you to prioritize working on recommendations.
+Security Center mimics the work of the security analyst, reviewing your security recommendations and applying advanced algorithms to determine how crucial each recommendation is.
+
 1. Go to the Security Center Overview blade
 2. Under Resource security hygiene, observe the Secure score tile
 ![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/A%20-%20Beginner%20Track/Screenshots/secure_score1.png
