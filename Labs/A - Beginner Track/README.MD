@@ -33,10 +33,11 @@ This brings you to the **Security policy settings** for your subscription:
 Notice that you can turn on/off the different policies per subscription.<br>
 In the near future this will be fully aligned with **Azure Policy**
 
-### Edit Subscription settings
+### Edit Subscription settings (including Data Collection settings)
 1. Go back to the **Security Policy** blade and under **Policy Management** click on **Edit settings:**
 ![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/A%20-%20Beginner%20Track/Screenshots/subscription_settings.png
 )<br>
-2. 
+2. Notice the 4 options:
+3. 
 
 ## Work in progress...
