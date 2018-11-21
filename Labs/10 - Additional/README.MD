@@ -12,7 +12,11 @@ This lab contains additional exercises. <br><br>
 4. Keep the default values and click on **Enable File Integrity Monitoring**
 ![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs//10%20-%20Additional/Screenshots/fim_settings.png
 ) <br><br>
-5. Click on Settings
-
-6. Login to either your Windows or Linux VM and make some changes (e.g. for Windows, create a new registry key and value)
+5. Click on Settings: <br>
+![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs//10%20-%20Additional/Screenshots/fim_settings1.png
+) <br><br>
+6. Under Windows Files, add folder to be recursively monitored (e.g. c:\ASC-Labs): <br><br>
+![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs//10%20-%20Additional/Screenshots/windows_file_tracking.png
+) <br><br>
+6. Login to either your Windows or Linux VM and make some changes (e.g. for Windows, create the c:\asc-labs folder and create a file in that folder)
 6. Check back later to see the changes made on your system
