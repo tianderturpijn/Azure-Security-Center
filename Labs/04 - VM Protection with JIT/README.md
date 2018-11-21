@@ -2,7 +2,9 @@
 ##### Estimated lab time: 15 minutes
 
 ***Note**:*<br>
-*Make sure before continuing with this lab that the VM's that you have deployed earlier are showing as "Monitored by Azure Security Center". You can find this setting under **Security Center>Compute & Apps***
+Make sure before continuing with this lab that:
+1. The VM's that you have deployed earlier are showing as **Monitored by Azure Security Center**. You can find this setting under **Security Center>Compute & Apps***
+2. You have completed the **Policy and Compliance** lab (specifically implementing the missing NSG recommendation)
 
 In this lab you will protect your VMs with Just-In-Time (JIT) access. JIT has been released, but in this lab we will show you an additional JIT feature, showcasing the JIT integration with Azure<br>
 ***Note: the steps below are showcasing a preview feature which needs to be executed using a feature flag***
@@ -40,8 +42,12 @@ https://ms.portal.azure.com/?feature.canmodifystamps=true&feature.jitconnect=tru
 ![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/04%20-%20VM%20Protection%20with%20JIT/Screenshots/JitActiveNow.png
 )
 
-### 3 - Enable custom JIT ports with PowerShell
-In Lab 1 (Automation) we have explored the ASC PowerShell cmdlets. To enable JIT through PowerShell you can leverage the following syntax:
+### 3 - [Optional Lab] Enable custom JIT ports with PowerShell
+***Note**:*<br>
+*Make sure before continuing that you have installed the Security Center PowerShell module in your Azure VM as discussed in Lab-x (pointer here)*<br><br>
+
+
+In the Automation lab we have explored the ASC PowerShell cmdlets. To enable JIT through PowerShell you can leverage the following syntax:
 ```powershell
 $myVM = Get-AzureRmVM -Name <VMname> -ResourceGroupName <resourceGroupName>
 Set-AzureRmJitNetworkAccessPolicy -ResourceGroupName "<rescourceGroupName>" -Location "<location>" -Name "default" -VirtualMachine $myVM -Kind "Basic"

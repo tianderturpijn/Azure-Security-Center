@@ -5,6 +5,9 @@
         "username": {
             "type": "string",
             "defaultValue": "azureadmin",
+            "allowedValues": [
+                "azureadmin"
+            ],
             "metadata": {
                 "description": "User name for the OS."
             }

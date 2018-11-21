@@ -12,7 +12,15 @@ You will configure ASC with:
 #### Assumptions
 You have received an Azure pass or you have a test environment available. Please don't use these lab exercises in a production environment (or at your own risk) <br>
 
-For using these labs in combination with Labs On Demand (LOD), open an incognito/inprivate browser session on your laptop and login to the Azure portal leveraging the LOD account (like for example admin@ems123456.onmicrosoft.com)<br><br>
+For using these labs in combination with Labs On Demand (LOD), open an incognito/in-private browser session on your laptop and login to the Azure portal leveraging the LOD account (like for example admin@ems123456.onmicrosoft.com)<br><br>
+
+## AzureRm PowerShell cmdlets installation
+1. Navigate to the Azure portal and click on **Virtual machines**
+2. Click on your Windows virtual machine (Win-0)
+3. Under **Overview** copy the **Public IP address** of your VM
+4. Start a remote desktop session (RDP) and login to your VM, your default administrator account is is **azureadmin**
+5. Open an administrator PowerShell session
+5. Install the AzureRm modules by typing in ***Install-Module -Name AzureRM -Verbose***
 
  
 ##  ARM Template deployment
