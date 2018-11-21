@@ -80,9 +80,11 @@ Secure score is based on Office 365's Secure score and helps you to prioritize w
 3. Click on the Secure score tile
 ![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/A%20-%20Beginner%20Track/Screenshots/secure_score2.png
 )<br><br>
-4. Observe to the number under the **Secure score impact column** and the affected **Resource** column. This helps in prioritizing working on the recommendations, the higher the number, the greater the impact
+4. Observe to the number under the **Secure score impact column** and the affected **Resource** column. This helps in prioritizing working on the recommendations, the higher the number, the greater the impact <br><br>
 5. Click on a recommendation
-6. 
-5. 
+![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/A%20-%20Beginner%20Track/Screenshots/secure_score3.png
+)<br><br>
+
+The example above is based on Container security monitoring (you have a lab that deploys a docker container). It shows the **Recommendation impact**, the **Threats** found and the **Remediation steps**
 
 ## Work in progress...
