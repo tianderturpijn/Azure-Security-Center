@@ -29,7 +29,8 @@ The ASC PowerShell cmdlets can be downloaded from <a href="https://www.powershel
 
 In the same administrator PowerShell session which you have already open on the Win-0 VM, install the ASC cmdlets by typing in the following commands and confirm all with "yes" if prompted:<br>
 
-***Tip**: copy and paste the script below in a PowerShell ISE administrator session*
+***Tip**: copy and paste the script below in a PowerShell ISE administrator session* <br>
+**Important**: Before executing the last step, make sure that you close the PowerShell session and open a new one
 
 ```powershell
 #Install NuGet
