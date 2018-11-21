@@ -3,12 +3,12 @@
 ##### Estimated lab time: 15 minutes
 In this lab you are going to explore what the ASC automation options with PowerShell are.
 
-#### Assumptions
+#### Requirements
 You have received an Azure pass or you have a test environment available. Please don't use these lab exercises in a production environment (or at your own risk) <br>
 
 For using these labs in combination with Labs On Demand (LOD), open an incognito/in-private browser session on your laptop and login to the Azure portal leveraging the LOD account (like for example admin@ems123456.onmicrosoft.com)<br>
 
-## AzureRm PowerShell cmdlets installation
+## 01 - AzureRm PowerShell cmdlets installation
 1. Navigate to the Azure portal and click on **Virtual machines**
 2. Click on your Windows virtual machine (**Win-0**)
 3. Under **Overview** copy the **Public IP address** of your VM
@@ -16,7 +16,7 @@ For using these labs in combination with Labs On Demand (LOD), open an incognito
 5. Open an administrator PowerShell session
 5. Install the AzureRm modules by typing in ***Install-Module -Name AzureRM -Verbose***
 
-## Security Center PowerShell cmdlets installation
+## 02 - Security Center PowerShell cmdlets installation
 Security Center provides automation support through PowerShell as well.<br>
 The ASC PowerShell cmdlets can be downloaded from <a href="https://www.powershellgallery.com/packages/AzureRM.Security/0.2.0-preview" target="_blank">here</a>.<br>
 
@@ -45,7 +45,7 @@ Update-Module AzureRM.Profile -Force -Verbose
 Install-Module -Name AzureRM.Security -AllowPrerelease -Verbose
 ```
 
-### Exploring the Security Center cmdlets
+### 03 - Exploring the Security Center cmdlets
 ***Assumptions**:<br>
 You have installed the AzureRm and Security Center PowerShell cmdlets, as mentioned in the beginning of this lab* <br>
 
@@ -70,7 +70,7 @@ Run the following command:
 Get-AzureRmSecurityContact
 ```
 
-### Auto Provisioning settings
+### 04 - Auto Provisioning settings
 ASC's Auto Provisioning settings set to On will install the MMA VM extension automatically. Some customers prefer that to happen automatically, some customers like to control that.<br>
 
 #### 1 - Get the current Auto Provisioning settings
