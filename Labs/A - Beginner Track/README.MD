@@ -75,7 +75,14 @@ You don't have to change the setting **None** to receive alerts in Security Cent
 Secure score is based on Office 365's Secure score and helps you to prioritize working on recommendations.
 1. Go to the Security Center Overview blade
 2. Under Resource security hygiene, observe the Secure score tile
+![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/A%20-%20Beginner%20Track/Screenshots/secure_score1.png
+)<br><br>
 3. Click on the Secure score tile
-4. 
+![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/A%20-%20Beginner%20Track/Screenshots/secure_score2.png
+)<br><br>
+4. Observe to the number under the **Secure score impact column** and the affected **Resource** column. This helps in prioritizing working on the recommendations, the higher the number, the greater the impact
+5. Click on a recommendation
+6. 
+5. 
 
 ## Work in progress...
