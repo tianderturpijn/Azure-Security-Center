@@ -78,7 +78,8 @@ For the first ARM deployment exercise we are going to start with configuring the
 
 - Use a proper email format like luke@skywalker.com
 - Use only numbers (no spaces) as a phone number
-- Fill in **On** or **Off** for alerts (case sensitive)<br>
+- Fill in **On** or **Off** for alerts (case sensitive)
+- If you receive an error running the New-AzureRmDeployment cmdlet, make sure to run this:<br> **Install-Module -Name AzureRM.Resources**<br>
 ```powershell
 New-AzureRmDeployment -TemplateFile 'https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/02%20-%20Automation/Files/configureAscEmailNotifications.json'
 ```
