@@ -1,6 +1,6 @@
 # Beginner Track
 Welcome to the labs which will guide you through Azure Security Center (ASC). <br>
-The labs are intended to make you familiar with the different Security Center's features. <br><br>
+The labs are intended to make you familiar with the different Security Center's features. <br>
 
 ### Exploring the Security Center Overview blade
 1. Navigate to the Azure portal (https://portal.azure.com) and click on Security Center
@@ -47,13 +47,16 @@ The Auto Provisioning settings - if set to On - will take care of automatic inst
 
 **Email notifications** allows you to configure one or more email addresses to be used to send high severity alerts.<br><br>
 
-Pricing Tier shows you the difference between what's offered in the Free and Standard tier (it should be set to Standard for our labs):
+**Pricing Tier** shows you the difference between what's offered in the Free and Standard tier (it should be set to Standard for our labs):<br>
 ![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/A%20-%20Beginner%20Track/Screenshots/policy_setting5.png
 )<br><br>
 
-Notice that there are different pricing plans for VM's, SQL servers and App Services:
+Notice that there are different pricing plans for **VM's, SQL servers** and **App Services**:
 ![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/A%20-%20Beginner%20Track/Screenshots/policy_setting6.png
 )<br><br>
+
+### Edit workspace settings (Including Data Collection settings)
+1. Go back one more time to the **Security policy** blade, but this time click on **Edit settings** on the line where your **workspace** is listed:
 
 
 ## Work in progress...
