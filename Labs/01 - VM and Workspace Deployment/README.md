@@ -19,8 +19,8 @@ For using these labs in combination with Labs On Demand (LOD), open an incognito
 Use the **Deploy to Azure** button below to deploy the following:
 - A Log Analytics workspace (ASC-Workspace-xxxx)
 - Security Center OMS solution
-- 2 Windows VM's (*Win-x*, connected to the workspace)
-- 2 Linux Ubuntu VM's (*Linux-x*, connected to the workspace) <br><br>
+- 1 Windows VM (*Win-0*, connected to the workspace)
+- 1 Linux Ubuntu VM (*Linux-0*, connected to the workspace) <br><br>
 
 ***Note**: after clicking on the Deploy to Azure button and filling in fields, scroll down, check the box with **I agree**... and click on **Purchase** to start the deployment.*
 

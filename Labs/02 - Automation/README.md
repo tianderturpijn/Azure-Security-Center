@@ -131,7 +131,7 @@ For the next (**optional**) exercise where we deploy a more advanced ASC ARM tem
 
 ### Exploring the Security Center cmdlets
 ***Assumptions**:<br>
-You have installed the AzureRm and Security Center PowerShell cmdlets, as mentioned in the beginning of this lab* <br><br>
+You have installed the AzureRm and Security Center PowerShell cmdlets, as mentioned in the beginning of this lab* <br>
 
 Open on the **Win-0** VM an administrator PowerShell session.<br>
 Explore the Security Center cmdlets by executing:
