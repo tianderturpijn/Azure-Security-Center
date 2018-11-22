@@ -1,5 +1,5 @@
 ﻿# Preview Features
-##### Estimated lab time: 
+##### Estimated lab time: 15 minutes
 This optional lab points you to a number of preview features for you to explore.
 
 #### 1 - Container Security Monitoring
@@ -8,6 +8,9 @@ This optional lab points you to a number of preview features for you to explore.
 1. In the Azure portal click on the **Cloud Shell** icon in the upper right, next to your account, as shown below <br><br>
 ![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs//07%20-%20Preview%20Features/Screenshots/Azure_cli.png
 ) <br><br>
+2. If you are prompted for selecting Bash or PowerShell, select **Bash**
+3. If you are receiving a message that you have no storage mounted, click on Create storage
+4. 
 2. This creates a cloud shell session: <br><br>
 ![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs//07%20-%20Preview%20Features/Screenshots/bash_cloudshell.png
 ) <br><br>
