@@ -6,10 +6,10 @@ This optional lab points you to a number of preview features for you to explore.
 *Note: This exercise also shows you how to use Azure CLI straight from the Azure portal*
 
 1. In the Azure portal click on the **Cloud Shell** icon in the upper right, next to your account, as shown below <br><br>
-![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs//02%20-%20Automation/Screenshots/Azure_cli.png
+![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs//07%20-%20Preview%20Features/Screenshots/Azure_cli.png
 ) <br><br>
 2. This creates a cloud shell session: <br><br>
-![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs//02%20-%20Automation/Screenshots/bash_cloudshell.png
+![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs//07%20-%20Preview%20Features/Screenshots/bash_cloudshell.png
 ) <br><br>
 
 3. Create a new resource group for your container by typing in the following (replace **myResourceGroup** with your name of choice)
