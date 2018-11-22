@@ -28,6 +28,7 @@ az group create --name <myResourceGroup> --location eastus
 <br>
 
 6. The following command creates a Docker container with a small web app written in Node.js <br>
+***Note***: The container name must be in **lowercase**
 
 ```txt
 az container create --resource-group <yourResourceGroupName> --name <yourContainerName> --image microsoft/aci-helloworld --dns-name-label <yourDnsLabel> --ports 80
