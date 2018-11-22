@@ -59,7 +59,7 @@ https:/aka.ms/asc_containers_preview
 ![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs//07%20-%20Preview%20Features/Screenshots/container_in_asc.png
 ) <br><br>
 
-**Clicking on the container shows more details:**
+2. Clicking on the container shows more details:
 ![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs//07%20-%20Preview%20Features/Screenshots/docker_details.png
 ) <br><br>
 
