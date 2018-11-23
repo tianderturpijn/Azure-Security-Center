@@ -1,4 +1,4 @@
-﻿# Automation with PowerShell
+﻿# 08 - Automation with PowerShell
 
 ##### Estimated lab time: 15 minutes
 In this lab you are going to explore what the ASC automation options with PowerShell are.

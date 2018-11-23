@@ -1,4 +1,4 @@
-﻿# Preview Features
+﻿# 07 - Preview Features
 ##### Estimated lab time: 15 minutes
 This optional lab points you to a number of preview features for you to explore.
 

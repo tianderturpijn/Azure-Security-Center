@@ -1,4 +1,4 @@
-﻿# 04 - Linux Detections
+﻿# 05 - Linux Detections
 ##### Estimated lab time: 25 minutes
 *The following lab is based on the* <a href="https://gallery.technet.microsoft.com/Azure-Security-Center-0ac8a5ef" target="_blank">Linux Detections playbook</a> *written by Yuri Diogenes. This playbook provides a more comphrensive explanation than is covered in this lab*<br>
 

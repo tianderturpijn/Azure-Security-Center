@@ -1,4 +1,4 @@
-﻿# Automation with ARM
+﻿# 09 - Automation with ARM
 
 ##### Estimated lab time: 15 minutes
 In this lab you are going to explore what the ASC automation options are leveraging Azure Resource Manager (ARM) templates
