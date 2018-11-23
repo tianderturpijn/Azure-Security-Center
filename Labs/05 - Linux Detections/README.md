@@ -79,4 +79,4 @@ wget http://XXX.XXX.XXX.XXX/download/eicar.com
 
 <br><br>
 ### Continue with the next lab
-05 - Logic Apps integration, click <a href="https://github.com/tianderturpijn/Azure-Security-Center/tree/master/Labs/06%20-%20Logic%20App%20integration" target="_blank">here</a>
+06 - Logic Apps integration, click <a href="https://github.com/tianderturpijn/Azure-Security-Center/tree/master/Labs/06%20-%20Logic%20App%20integration" target="_blank">here</a>

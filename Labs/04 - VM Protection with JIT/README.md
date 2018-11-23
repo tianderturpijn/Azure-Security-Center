@@ -1,4 +1,4 @@
-﻿# VM Protection with Just in Time (JIT) access
+﻿# 04 - VM Protection with Just in Time (JIT) access
 ##### Estimated lab time: 15 minutes
 
 ***Requirements**:*<br>

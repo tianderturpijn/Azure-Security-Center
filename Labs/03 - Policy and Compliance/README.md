@@ -1,4 +1,4 @@
-﻿# Policy and Compliance
+﻿# 03 - Policy and Compliance
 ##### Estimated lab time: 10 minutes
 
 This lab covers ASC Policy and Regulatory Compliance and guides you through some preview features.<br>
