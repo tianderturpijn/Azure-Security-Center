@@ -88,4 +88,7 @@ Security Center mimics the work of the security analyst, reviewing your security
 
 The example above is based on Container security monitoring (you have a lab that deploys a docker container). It shows the **Recommendation impact**, the **Threats** found and the **Remediation steps**
 
+From Security Center **Overview** blade, under **Resource Security Hygiene**, you can also select recommedations per resource type:
+
+
 ## Work in progress...
