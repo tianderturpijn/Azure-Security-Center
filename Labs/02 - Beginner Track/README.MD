@@ -89,15 +89,18 @@ Security Center mimics the work of the security analyst, reviewing your security
 The example above is based on Container security monitoring (you have a lab that deploys a docker container). It shows the **Recommendation impact**, the **Threats** found and the **Remediation steps**
 
 ### Explore the recommendations
-From Security Center **Overview** blade, under **Resource Security Hygiene**, you can also select recommendations per resource type: <br>
+1. From Security Center **Overview** blade, under **Resource Security Hygiene**, you can also select recommendations per resource type: <br>
 ![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/02%20-%20Beginner%20Track/Screenshots/recommendations.png
 )<br><br>
 
 ![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/02%20-%20Beginner%20Track/Screenshots/recommendations2.png
 )<br><br>
 
-Explore the different recommendations and remediation steps, for example for your Win-0 and disk encryption:
-![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/02%20-%20Beginner%20Track/Screenshots/recommendations2.png
+2. Explore the different recommendations and remediation steps, for example for your Win-0 and disk encryption:<br>
+![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/02%20-%20Beginner%20Track/Screenshots/apply_diskencryption.png
+)<br><br>
+
+![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/02%20-%20Beginner%20Track/Screenshots/apply_diskencryption2.png
 )<br><br>
 
 ## Work in progress...
