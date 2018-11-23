@@ -61,7 +61,9 @@ Set-AzureRmJitNetworkAccessPolicy -ResourceGroupName "<rescourceGroupName>" -Loc
 4. Excute the script. Make sure that you refresh the Azure portal after executing the script
 5. Explore in ASC that the custom ports have been added to your JIT enabled VM
 
+<br>
 
-
+### Continue with the next lab
+05 - Linux Detections, click <a href="https://github.com/tianderturpijn/Azure-Security-Center/tree/master/Labs/05%20-%20Linux%20Detections" target="_blank">here</a>
 
 

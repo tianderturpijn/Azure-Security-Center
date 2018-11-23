@@ -53,3 +53,5 @@ This exercise guides you through the current Security Center policies and is int
 
 6. Click on each of those to explore the difference
 
+### Continue with the next lab
+04 - VM Protection with JIT, click <a href="https://github.com/tianderturpijn/Azure-Security-Center/tree/master/Labs/04%20-%20VM%20Protection%20with%20JIT" target="_blank">here</a>

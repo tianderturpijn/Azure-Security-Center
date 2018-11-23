@@ -97,7 +97,10 @@ Set-AzureRmSecurityAutoProvisioningSetting -Name "default"
 A sample which contains how to use the AzureRm.Security module can be found <a href="https://github.com/tianderturpijn/ASC/blob/master/PowerShell/Samples/ASC-Samples.ps1" target="_blank">here</a>. <br><br>
 *In a later lab we will test drive how to configure Just-In-Time (JIT) with PowerShell.* <br><br>
 
+<br>
 
+### Continue with the next lab
+09 - Automation with ARM, click <a href="https://github.com/tianderturpijn/Azure-Security-Center/tree/master/Labs/09%20-%20Automation%20with%20ARM" target="_blank">here</a>
 
 
 

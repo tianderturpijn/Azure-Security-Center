@@ -104,4 +104,4 @@ The example above is based on Container security monitoring (you have a lab that
 )<br><br>
 
 ### Continue with the next lab
-Click <a href="https://github.com/tianderturpijn/Azure-Security-Center/tree/master/Labs/03%20-%20Policy%20and%20Compliance" target="_blank">here</a>
+03 - Policy and Compliance, click <a href="https://github.com/tianderturpijn/Azure-Security-Center/tree/master/Labs/03%20-%20Policy%20and%20Compliance" target="_blank">here</a>

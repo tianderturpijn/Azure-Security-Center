@@ -66,4 +66,8 @@ https:/aka.ms/asc_containers_preview
 ![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs//07%20-%20Preview%20Features/Screenshots/docker_details2.png
 )
 
+<br>
+
+### Continue with the next lab
+08 - Automation with PowerShell, click <a href="https://github.com/tianderturpijn/Azure-Security-Center/tree/master/Labs/08%20-%20Automation%20with%20PowerShell" target="_blank">here</a>
 

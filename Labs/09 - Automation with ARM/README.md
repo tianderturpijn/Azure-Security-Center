@@ -120,8 +120,10 @@ New-AzureRmDeployment -TemplateFile 'https://raw.githubusercontent.com/tiandertu
 ```
 *Note: it might take a couple minutes for the Azure portal to catch up and show your updated settings (like autoProvision)*
 
+<br>
 
-
+### Continue with the next lab
+10 - Additional, click <a href="https://github.com/tianderturpijn/Azure-Security-Center/tree/master/Labs/10%20-%20Additional" target="_blank">here</a>
 
 
 
