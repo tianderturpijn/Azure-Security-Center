@@ -103,4 +103,5 @@ The example above is based on Container security monitoring (you have a lab that
 ![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/02%20-%20Beginner%20Track/Screenshots/apply_diskencryption2.png
 )<br><br>
 
-## Work in progress...
+### Continue with the next lab
+Click <a href="https://github.com/tianderturpijn/Azure-Security-Center/tree/master/Labs/03%20-%20Policy%20and%20Compliance" target="_blank">here</a>
