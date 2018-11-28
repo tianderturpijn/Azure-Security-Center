@@ -27,7 +27,7 @@ The labs are intended to make you familiar with the different Security Center's 
 While still in the **Policy Management** blade, click on your subscription (Azure Pass):
 ![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/02%20-%20Beginner%20Track/Screenshots/policy_setting1.png
 )<br><br>
-This brings you to the **Security policy settings** for your subscription (if the subscription is not showing, refresh your browser):  <br>
+This brings you to the **Security policy settings** for your subscription (if the subscription is not showing, refresh your browser):  <br><br>
 ![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/02%20-%20Beginner%20Track/Screenshots/policy_setting2.png
 )<br>
 Notice the alignment with **Azure Policy**. The policies are therefore read-only in this view and need to be configured in the Azure Policy blade.
