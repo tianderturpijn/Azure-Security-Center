@@ -50,7 +50,7 @@ az container create --resource-group <yourResourceGroupName> --name <yourContain
 #### 2 - Explore the new Container tab under Compute & Apps
 1. The new container view in Security Center is accessible through a feature flag. Copy and paste the following URL in your Azure portal session:
 ```text
-https:/aka.ms/asc_containers_preview
+https://aka.ms/asc_containers_preview
 ```
 <br>
 
