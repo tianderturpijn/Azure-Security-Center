@@ -1,40 +1,23 @@
 ﻿# 03 - Policy and Compliance
 ##### Estimated lab time: 10 minutes
 
-This lab covers ASC Policy and Regulatory Compliance and guides you through some preview features.<br>
+This lab covers ASC Policy and Regulatory Compliance and guides you through the preview features.<br>
 
-### 1 - Regulatory Compliance (Preview)
-Open a new browser tab/window and copy and paste the following URL in your browser to get access to the Regulatory Compliance preview:
+### Regulatory Compliance (Preview)
+From the Azure Security Center overview blade, click on the **Least compliant regulatory standards** tile: <br><br>
+![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/03%20-%20Policy%20and%20Compliance/Screenshots/policy_compliance_dashboard.png
+)<br><br>
 
-```txt
-Ask your instructor for the link
-```
-<br>
+Explore the different Compliance Controls for every Regulatory Compliance: <br>
 
-1. Navigate to the **Security Center** blade
-2. Click on **Regulatory Compliance**
+![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/03%20-%20Policy%20and%20Compliance/Screenshots/policy_compliance_details.png
+)<br><br>
 
-![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/03%20-%20Policy%20and%20Compliance/Screenshots/regulatoryblade.png
-)<br>
+When you click on **All** you will see an overview of all the Regulatory Compliance controls per subscription:
+![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/03%20-%20Policy%20and%20Compliance/Screenshots/policy_compliance_all.png
+)<br><br>
 
-3. Explore the different regulations (like Azure CIS)
-4. Click on the different assessments
-
-#### Remediate PCI DSS 3.2
-This exercise remediates a failed assessment for PCI DSS 3.2
-1. Click on the **PCI DSS 3.2** tab
-2. Under the **Assessment** column, notice that you have a **Enable Network Security Groups on subnets** failed assessment
-
-![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/03%20-%20Policy%20and%20Compliance/Screenshots/nsg_assessment.png
-)<br>
-
-1. Click on the Assessment
-2. This shows you which subnet is at risk (subnet01), click on the subnet
-3. Remediate the failed assessment by clicking on **Create new**
-4. Give your new Network Security Group (NSG) a name and click on **OK** This adds a new NSG
-5. This will resolve your failed assessment on the next scan
-
-### 2 - Policy Management
+### Policy Management
 This exercise guides you through the current Security Center policies and is intended for exploration purposes only. <br>
 
 ***Note**: at this time we only support out-of-the-box Security Center policies. Support for custom policies is coming in the near future*
