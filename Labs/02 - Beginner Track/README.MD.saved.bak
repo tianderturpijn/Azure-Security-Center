@@ -83,9 +83,10 @@ Security Center mimics the work of the security analyst, reviewing your security
 4. Click on a recommendation, for example **Install endpoint protection solution on virtual machines**
 ![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/02%20-%20Beginner%20Track/Screenshots/install_endpoint_protection1.png
 )<br><br>
-5. Click on **Install on 1 VMs**:
+5. Click on **Install on 1 VMs**:<br><br>
 ![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/02%20-%20Beginner%20Track/Screenshots/install_endpoint_protection2.png
 )<br><br>
+6. Select **Microsoft Antimalware** and click on **Create**
 
 ![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/02%20-%20Beginner%20Track/Screenshots/secure_score3.png
 )<br><br>
