@@ -6,7 +6,7 @@
             "type": "string",
             "defaultValue": "azureadmin",
             "metadata": {
-                "description": "Admin user name."
+                "description": "User name for the OS."
             }
         },
         "pwdOrSsh": {
@@ -147,30 +147,6 @@
             }
         ]
     },
-    {
-        "type": "Microsoft.Network/networkSecurityGroups",
-        "apiVersion": "2017-03-01",
-        "name": "NSG",
-        "location": "[variables('resourceLocation')]",
-        "properties": {
-            "securityRules": [
-                {
-                    "name": "RDP",
-                    "properties": {
-                        "access": "Allow",
-                        "description": "Inbound RDP rule",
-                        "direction": "Inbound",
-                        "destinationAddressPrefix": "*",
-                        "protocol": "Tcp",
-                        "destinationPortRange": 3389,
-                        "sourcePortRange": "*",
-                        "priority": 500,
-                        "sourceAddressPrefix": "*"
-                    }
-                }
-            ]
-        }
-    },
         {
             "apiVersion": "2018-08-01",
             "type": "Microsoft.Network/publicIPAddresses",
@@ -208,7 +184,6 @@
             "type": "Microsoft.Network/virtualNetworks",
             "name": "[variables('vNetName')]",
             "location": "[variables('resourceLocation')]",
-            "dependsOn": ["[resourceId('Microsoft.Network/networkSecurityGroups/', 'NSG')]"],
             "properties": {
                 "addressSpace": {
                     "addressPrefixes": [
@@ -219,10 +194,7 @@
                     {
                         "name": "[variables('subnetName')]",
                         "properties": {
-                            "addressPrefix": "[variables('subnetAddressPrefix')]",
-                            "networkSecurityGroup": {
-                                "id": "[resourceId('Microsoft.Network/networkSecurityGroups/', 'NSG')]"
-                            }
+                            "addressPrefix": "[variables('subnetAddressPrefix')]"
                         }
                     }
                 ]
@@ -473,6 +445,7 @@
                 "workspaceResourceId": "[resourceId('Microsoft.OperationalInsights/workspaces/', variables('omsWorkspaceName'))]"
             }
         }
+    
      ],
     "outputs": {
         "workspaceName":{
@@ -488,4 +461,4 @@
             "value": "[variables('vmNameLinuxPrefix')]"
         }
     }
-}
+    }
