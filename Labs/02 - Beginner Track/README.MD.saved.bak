@@ -79,8 +79,14 @@ Security Center mimics the work of the security analyst, reviewing your security
 2. Click on the **Secure score** tile and then under **Secure score by category** click on **Compute & apps**
 ![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/02%20-%20Beginner%20Track/Screenshots/secure_score_dashboard.png
 )<br><br>
-4. Observe the number under the **Secure score impact column** and the affected **Resource** column. This helps in prioritizing working on the recommendations, the higher the number, the greater the impact <br><br>
-5. Click on a recommendation, for example **Install endpoint protection solution on virtual machines**
+3. Observe the number under the **Secure score impact column** and the affected **Resource** column. This helps in prioritizing working on the recommendations, the higher the number, the greater the impact <br><br>
+4. Click on a recommendation, for example **Install endpoint protection solution on virtual machines**
+![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/02%20-%20Beginner%20Track/Screenshots/install_endpoint_protection1.png
+)<br><br>
+5. Click on **Install on 1 VMs**:
+![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/02%20-%20Beginner%20Track/Screenshots/install_endpoint_protection2.png
+)<br><br>
+
 ![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/02%20-%20Beginner%20Track/Screenshots/secure_score3.png
 )<br><br>
 
