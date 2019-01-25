@@ -18,23 +18,26 @@ When you click on **All** you will see an overview of all the Regulatory Complia
 )<br><br>
 
 ### Policy Management
-This exercise guides you through the current Security Center policies and is intended for exploration purposes only. <br>
+This exercise guides you through the current Security Center policies, based on Azure Policy, and shows you where to enable or disable Security Center polices. <br>
 
 ***Note**: at this time we only support out-of-the-box Security Center policies. Support for custom policies is coming in the near future*
 
-1. Within the Azure portal, navigate to the **Policy** blade
-2. Click on **Definitions** (under Authoring)
-3. Under **Categories**, deselect all the categories and select only **Security Center** <br><br>
-![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/03%20-%20Policy%20and%20Compliance/Screenshots/asc_policies.png
-)<br>
+1. Within the Azure portal, navigate to the **Policy** blade <br>
+*Note: when you can't find Policy, click in the search bar on top of the Azure portal and search for **Policy**:*
+![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/03%20-%20Policy%20and%20Compliance/Screenshots/search_policy.png
+)<br><br>
 
-4. Explore the policies by clicking on them
-5. Notice the different icons as shown below, they represent a **Policy** and an **Initiative** (group of policies): <br>
+2. Click on **Assignments** (under Authoring)
+3. Notice the 80 policy definitions under that initiative. Click on the **[Preview]: Enable Monitoring in Azure Security Center** initiative:<br><br>
+![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/03%20-%20Policy%20and%20Compliance/Screenshots/policy_assignment.png
+)<br><br>
+4. Clicking on the initiative allows you to disable the definition:
+![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/03%20-%20Policy%20and%20Compliance/Screenshots/disable_definition.png
+)<br><br>
 
-![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/03%20-%20Policy%20and%20Compliance/Screenshots/initiative.png
-) <br><br>
+*Note: in the near future we will provide custom policies which will support deployIfNotExists type of policies*
 
-6. Click on each of those to explore the difference
+
 
 ### Continue with the next lab
 04 - VM Protection with JIT, click <a href="https://github.com/tianderturpijn/Azure-Security-Center/tree/master/Labs/04%20-%20VM%20Protection%20with%20JIT" target="_blank">here</a>
