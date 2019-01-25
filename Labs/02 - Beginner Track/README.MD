@@ -89,27 +89,13 @@ Security Center mimics the work of the security analyst, reviewing your security
 6. Select **Microsoft Antimalware** and click on **Create** (scroll down if you don't see the Create button):<br><br>
 ![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/02%20-%20Beginner%20Track/Screenshots/install_endpoint_protection3.png
 )<br><br>
+Provide your settings of choice, then click **OK**, this starts the endpoint protection installation.
 
 Another example which might not exist in your lab environment is a recommendation for containers:<br><br>:
 ![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/02%20-%20Beginner%20Track/Screenshots/secure_score3.png
 )<br><br>
 
 The example above is based on Container security monitoring (you have a lab that deploys a docker container). It shows the **Recommendation impact**, the **Threats** found and the **Remediation steps**
-
-### Explore the recommendations
-1. From Security Center **Overview** blade, under **Resource Security Hygiene**, you can also select recommendations per resource type: <br>
-![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/02%20-%20Beginner%20Track/Screenshots/recommendations.png
-)<br><br>
-
-![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/02%20-%20Beginner%20Track/Screenshots/recommendations2.png
-)<br><br>
-
-2. Explore the different recommendations and remediation steps, for example for your Win-0 and disk encryption:<br>
-![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/02%20-%20Beginner%20Track/Screenshots/apply_diskencryption.png
-)<br><br>
-
-![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/02%20-%20Beginner%20Track/Screenshots/apply_diskencryption2.png
-)<br><br>
 
 ### Continue with the next lab
 03 - Policy and Compliance, click <a href="https://github.com/tianderturpijn/Azure-Security-Center/tree/master/Labs/03%20-%20Policy%20and%20Compliance" target="_blank">here</a>
