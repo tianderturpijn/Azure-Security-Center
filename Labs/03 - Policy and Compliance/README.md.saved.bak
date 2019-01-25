@@ -4,13 +4,15 @@
 This lab covers ASC Policy and Regulatory Compliance and guides you through the preview features.<br>
 
 ### 1 - Regulatory Compliance (Preview)
-From the Azure Security Center overview blade, click on 
-<br>
+From the Azure Security Center overview blade, click on the **Least compliant regulatory standards** tile: <br><br>
+![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/03%20-%20Policy%20and%20Compliance/Screenshots/policy_compliance_dashboard.png
+)<br>
+
 
 1. Navigate to the **Security Center** blade
 2. Click on **Regulatory Compliance**
 
-![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/03%20-%20Policy%20and%20Compliance/Screenshots/regulatoryblade.png
+![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/03%20-%20Policy%20and%20Compliance/Screenshots/policy_compliance_dashboard.png
 )<br>
 
 3. Explore the different regulations (like Azure CIS)
