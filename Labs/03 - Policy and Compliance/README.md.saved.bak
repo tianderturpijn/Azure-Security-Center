@@ -28,17 +28,12 @@ This exercise guides you through the current Security Center policies, based on 
 )<br><br>
 
 2. Click on **Assignments** (under Authoring)
-3. Select the **[Preview]: Enable Monitoring in Azure Security Center** initiative:<br><br>
+3. Notice the 80 policy definitions under that initiative. Click on the **[Preview]: Enable Monitoring in Azure Security Center** initiative:<br><br>
 ![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/03%20-%20Policy%20and%20Compliance/Screenshots/policy_assignment.png
-)<br>
+)<br><br>
 
-4. Explore the policies by clicking on them
-5. Notice the different icons as shown below, they represent a **Policy** and an **Initiative** (group of policies): <br>
 
-![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/03%20-%20Policy%20and%20Compliance/Screenshots/initiative.png
-) <br><br>
 
-6. Click on each of those to explore the difference
 
 ### Continue with the next lab
 04 - VM Protection with JIT, click <a href="https://github.com/tianderturpijn/Azure-Security-Center/tree/master/Labs/04%20-%20VM%20Protection%20with%20JIT" target="_blank">here</a>
