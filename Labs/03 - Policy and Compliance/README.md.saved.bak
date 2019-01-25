@@ -23,13 +23,13 @@ This exercise guides you through the current Security Center policies, based on 
 ***Note**: at this time we only support out-of-the-box Security Center policies. Support for custom policies is coming in the near future*
 
 1. Within the Azure portal, navigate to the **Policy** blade <br>
-Note: when you can't find Policy, click in the search bar on top of the Azure portal and search for **Policy**:
+*Note: when you can't find Policy, click in the search bar on top of the Azure portal and search for **Policy**:*
 ![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/03%20-%20Policy%20and%20Compliance/Screenshots/search_policy.png
 )<br><br>
 
 2. Click on **Assignments** (under Authoring)
 3. Select the **[Preview]: Enable Monitoring in Azure Security Center** initiative:<br><br>
-![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/03%20-%20Policy%20and%20Compliance/Screenshots/asc_policies.png
+![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/03%20-%20Policy%20and%20Compliance/Screenshots/policy_assignment.png
 )<br>
 
 4. Explore the policies by clicking on them
