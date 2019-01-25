@@ -4,16 +4,16 @@ The labs are intended to make you familiar with the different Security Center's 
 
 ### Exploring the Security Center Overview blade
 1. Navigate to the Azure portal (https://portal.azure.com) and click on Security Center
-2. In the Overview blade note the **Policy & compliance** section. This provides an overview of the number of subscriptions and resources which are monitored by ASC
+2. In the Overview blade note the **Policy & compliance** section. This provides an overview of your secure score, based on your resources, regulatory standards and your subscription coverage: <br><br>
    ![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/02%20-%20Beginner%20Track/Screenshots/policy_compliancy_tile.png
 )<br><br>
 3. Click on the **Subscription coverage** tile
    ![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/02%20-%20Beginner%20Track/Screenshots/subscription_coverage.png
 )<br>
-4. This shows you the number of subscriptions and the coverage type.<br>
+This shows you the number of subscriptions and the coverage type.<br>
 *Note:* in this lab you will only have one subscription which should be under **Standard coverage** <br>
    This view will help you find subscriptions that are not covered by ASC to help identify "shadow IT" subscriptions <br>
-5. Go back to the overview blade and note the **Secure Score** tile under Policy & compliance. When you click on the Secure Score tile, you can explore your **Secure score by category** by clicking on each tile:<br><br>
+4. Go back to the overview blade and note the **Secure Score** tile under Policy & compliance. When you **click on the Secure Score tile**, you can explore your **Secure score by category** by clicking on each tile:<br><br>
 ![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/02%20-%20Beginner%20Track/Screenshots/secure_score_dashboard.png
 )<br><br>
 
@@ -21,10 +21,16 @@ The labs are intended to make you familiar with the different Security Center's 
 In the Security Center Overview, click on **Security policy** and then click on your subscription (Azure Pass):
 ![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/02%20-%20Beginner%20Track/Screenshots/policy_setting1.png
 )<br><br>
-This brings you to the **Security policy settings** for your subscription (if the subscription is not showing, refresh your browser):  <br><br>
-![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/02%20-%20Beginner%20Track/Screenshots/policy_setting2.png
+This brings you to the **Security policy settings** for your subscription (*note: if your subscription is not showing, refresh your browser*):  <br>
+If you click on your subscription for the first time, you will be prompted to enable Security Center's default policy iniative. Click on the button **Assign security policy** to assign it: <br><br>
+![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/02%20-%20Beginner%20Track/Screenshots/security_policy_enable.png
 )<br><br>
-Notice the alignment with **Azure Policy**. The policies are therefore read-only in this view and need to be configured in the Azure Policy blade.
+
+This brings you to the ASC policy settings - which are Azure policies - where you can set the parameters for each policy defintion. This how you can enable or disable a specific policy definition by clicking on the parameter setting:
+
+![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/02%20-%20Beginner%20Track/Screenshots/policy_settings_parameters.png
+)<br><br>
+
 
 ### Edit Subscription settings (including Data Collection settings)
 1. Go back to the **Security Policy** blade and under **Policy Management** click on **Edit settings:**
