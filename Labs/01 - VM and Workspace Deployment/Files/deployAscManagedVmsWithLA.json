@@ -167,6 +167,20 @@
                         "priority": 500,
                         "sourceAddressPrefix": "*"
                     }
+                },
+                {
+                    "name": "SSH",
+                    "properties": {
+                        "access": "Allow",
+                        "description": "Inbound SSH rule",
+                        "direction": "Inbound",
+                        "destinationAddressPrefix": "*",
+                        "protocol": "Tcp",
+                        "destinationPortRange": 22,
+                        "sourcePortRange": "*",
+                        "priority": 501,
+                        "sourceAddressPrefix": "*"
+                    }
                 }
             ]
         }
