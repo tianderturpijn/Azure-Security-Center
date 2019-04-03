@@ -21,7 +21,7 @@ ASC_AlertTest_662jfi039N.exe -foo
 6. Close the calculator window
 
 ### ServiceNow integration
-Skip the following steps if you already have a ServiceNow instance <br>
+:bulb: Skip the following steps if you already have a ServiceNow instance <br>
 
 If you don't want to create an instance of your own and want to leverage a shared environment, make a note of the following:
 ```txt
