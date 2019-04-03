@@ -28,7 +28,9 @@ If you click on your subscription for the first time, you will be prompted to en
 ![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/02%20-%20Beginner%20Track/Screenshots/security_policy_enable.png
 )<br><br>
 
-
+In the Security Center, Security policy blade, click on the default ASC assignment:
+![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/02%20-%20Beginner%20Track/Screenshots/AzPolicyAssignment.png
+)<br><br>
 
 
 This brings you to the ASC policy settings - which are Azure policies - where you can set the parameters for each policy definition. This is where you can enable or disable a specific policy definition by clicking on the parameter setting:
