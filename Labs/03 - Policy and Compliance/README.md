@@ -27,8 +27,8 @@ This exercise guides you through the current Security Center policies, based on 
 ![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/03%20-%20Policy%20and%20Compliance/Screenshots/search_policy.png
 )<br><br>
 
-2. Click on **Assignments** (under Authoring)
-3. Notice the 80 policy definitions under that initiative. Click on the **[Preview]: Enable Monitoring in Azure Security Center** initiative:<br><br>
+2. Click on **Assignments** (under **Authoring**)
+3. Notice the ~70 (or more, this is work in progress) policy definitions under the **ASC Default** initiative. Click on the initiative:<br><br>
 ![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/03%20-%20Policy%20and%20Compliance/Screenshots/policy_assignment.png
 )<br><br>
 4. Clicking on the initiative allows you to disable the definition:
