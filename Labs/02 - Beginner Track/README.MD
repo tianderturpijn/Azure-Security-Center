@@ -38,13 +38,13 @@ This brings you to the ASC policy settings - which are Azure policies - where yo
 ![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/02%20-%20Beginner%20Track/Screenshots/policy_settings_parameters.png
 )<br><br>
 
-Scroll down to the bottom and click on **Assign** to save the Policy initiative.
+Scroll down to the bottom and click on **Assign** or **Save** to save (save only in case you have made updates) the Policy initiative.
 
 ### Edit Subscription settings (including Data Collection settings)
 1. Go back to the **Security Policy** blade and under **Policy Management** click on **Edit settings:**
 ![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/02%20-%20Beginner%20Track/Screenshots/subscription_settings.png
 )<br><br>
-2. Notice the 4 options:
+2. Notice the 5 options:
 ![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/02%20-%20Beginner%20Track/Screenshots/policy_setting3.png
 )<br>
 The Auto Provisioning settings - if set to On - will take care of automatic installation of the Microsoft Monitoring Agent (MMA) for all VM's in your subscription, either existing or new.<br><br>
