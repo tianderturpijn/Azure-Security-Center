@@ -1,26 +1,19 @@
 ﻿# 04 - VM Protection with Just in Time (JIT) access
 ##### Estimated lab time: 15 minutes
 
-***Requirements**:*<br>
-Make sure before continuing with this lab that:
-1. The VM's that you have deployed earlier are showing as **Monitored by Azure Security Center**. You can find this setting under **Security Center>Compute & Apps***
-2. You have completed the **Policy and Compliance** lab (specifically implementing the missing NSG recommendation)
+:heavy_exclamation_mark:***Requirements**:*<br>
+Make sure before continuing with this lab that the VM's that you have deployed earlier are showing as **Monitored by Azure Security Center**. You can find this setting under **Security Center>Compute & Apps**
 
-In this lab you will protect your VMs with Just-In-Time (JIT) access. JIT has been released, but in this lab we will show you an additional JIT feature, showcasing the JIT integration with Azure<br>
-***Note: the steps below are showcasing a preview feature which needs to be executed using a feature flag***
+In this lab you will protect your VMs with Just-In-Time (JIT) access. We will show you an additional JIT feature, showcasing the JIT integration with the Azure Compute blade<br>
 
 ### 1 - Enable JIT on a VM in ASC
-1. Open the Azure portal using this <a href="https://ms.portal.azure.com/?feature.canmodifystamps=true&feature.jitconnect=true" target="_blank">link </a>, or copy and paste this URL:
-```html
-https://ms.portal.azure.com/?feature.canmodifystamps=true&feature.jitconnect=true
-```
-
-2. Navigate to **ASC>Just in time VM access** (under Advanced Cloud Defense)
-3. Under **Recommended** select a VM which you have deployed earlier and click on the button **Enable JIT on**..
-4. Optionally: add/delete ports by clicking on the 3 dots (...) on the right
+1. Open Security Center in the Azure portal
+2. Navigate to **Just in time VM access** (under Advanced Cloud Defense)
+3. Under **Recommended** select a VM which you have deployed earlier and click on the button **Enable JIT on x VMs**
+4. Optionally: delete ports by clicking on the 3 dots (...) on the right or add new ports by clicking on **Add**
 5. Click **Save**
 6. In the Azure portal (using the same session), navigate to **Virtual Machines**
-7. Select the VM you have enabled for JIT and in the Overview blade, click on Connect
+7. Click on the VM you have enabled for JIT and in the Overview blade, click on **Connect**
 8. On the opened blade at the right, notice the banner saying "*This VM has a just-in-time access policy*..."<br><br>
 ![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/04%20-%20VM%20Protection%20with%20JIT/Screenshots/ConnectVM_JIT_Enabled.png
 )
@@ -29,7 +22,7 @@ https://ms.portal.azure.com/?feature.canmodifystamps=true&feature.jitconnect=tru
 
 ### 2 - Enable JIT on a VM from the Virtual Machine blade
 1. In the same browser session, navigate to the **Virtual Machine** blade
-2. Select a VM for which you have not enabled JIT
+2. Select a VM for which you have **not** enabled JIT
 3. Click on **Connect** in the Overview blade
 4. Notice the banner saying "*To improve security, enable just-in-time access*"<br><br>
 ![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/04%20-%20VM%20Protection%20with%20JIT/Screenshots/EnableJITfromVMblade.png
