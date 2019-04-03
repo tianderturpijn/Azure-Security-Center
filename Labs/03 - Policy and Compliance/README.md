@@ -1,10 +1,10 @@
 ﻿# 03 - Policy and Compliance
 ##### Estimated lab time: 10 minutes
 
-This lab covers ASC Policy and Regulatory Compliance and guides you through the preview features.<br>
+This lab covers ASC Policy and Regulatory Compliance and guides you through the features.<br>
 
-### Regulatory Compliance (Preview)
-From the Azure Security Center overview blade, click on the **Least compliant regulatory standards** tile: <br><br>
+### Regulatory Compliance
+From the Azure Security Center **Overview** blade, click on the **Regulatory compliance** tile: <br><br>
 ![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/03%20-%20Policy%20and%20Compliance/Screenshots/policy_compliance_dashboard.png
 )<br><br>
 
