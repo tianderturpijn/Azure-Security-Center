@@ -21,10 +21,15 @@ This shows you the number of subscriptions and the coverage type.<br>
 In the Security Center Overview, click on **Security policy** and then click on your subscription (Azure Pass):
 ![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/02%20-%20Beginner%20Track/Screenshots/policy_setting1.png
 )<br><br>
-This brings you to the **Security policy settings** for your subscription (*note: if your subscription is not showing, refresh your browser*):  <br>
+This brings you to the **Security policy settings** for your subscription (*note: if your subscription is not showing, refresh your browser*). <br> <br>
+
+:bulb:
 If you click on your subscription for the first time, you will be prompted to enable Security Center's default policy iniative. Click on the button **Assign security policy** to assign it: <br><br>
 ![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/02%20-%20Beginner%20Track/Screenshots/security_policy_enable.png
 )<br><br>
+
+
+
 
 This brings you to the ASC policy settings - which are Azure policies - where you can set the parameters for each policy definition. This is where you can enable or disable a specific policy definition by clicking on the parameter setting:
 
