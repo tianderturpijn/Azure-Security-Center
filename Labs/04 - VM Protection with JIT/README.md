@@ -2,7 +2,7 @@
 ##### Estimated lab time: 15 minutes
 
 :heavy_exclamation_mark:***Requirements**:*<br>
-Make sure before continuing with this lab that the VM's that you have deployed earlier are showing as **Monitored by Azure Security Center**. You can find this setting under **Security Center>Compute & Apps**
+Make sure before continuing with this lab that the VM's that you have deployed earlier are showing as **Monitored by Azure Security Center**. You can find this setting under **Security Center>Compute & Apps**. Click on the VM to find this property.
 
 In this lab you will protect your VMs with Just-In-Time (JIT) access. We will show you an additional JIT feature, showcasing the JIT integration with the Azure Compute blade<br>
 
