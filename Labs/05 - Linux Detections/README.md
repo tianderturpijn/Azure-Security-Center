@@ -67,7 +67,7 @@ nslookup eicar.com
 ```text
 wget http://XXX.XXX.XXX.XXX/download/eicar.com
 ```
-***Note**:<br>  if you have issues download eicar.com, try download eicar.txt (same command line, just change the extension).*
+***Note**:<br>  if you have issues download eicar.com, try download eicar.txt (same command line, just change the extension). Or alteratively, use this "wget http://213.211.198.58/download/eicar.txt"*
 
 #### 8 - Review Security Center alerts
 1. Navigate to the **Security Center>Security Alerts** blade (under Threat Protection)
