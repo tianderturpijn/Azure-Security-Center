@@ -45,7 +45,7 @@ Security Center PowerShell cmdlets installation** before proceeding with this la
 To enable JIT through PowerShell you can leverage the following syntax:
 ```powershell
 $myVM = Get-AzureRmVM -Name <VMname> -ResourceGroupName <resourceGroupName>
-Set-AzureRmJitNetworkAccessPolicy -ResourceGroupName "<rescourceGroupName>" -Location "<location>" -Name "default" -VirtualMachine $myVM -Kind "Basic"
+Set-AzJitNetworkAccessPolicy -ResourceGroupName "<rescourceGroupName>" -Location "<location>" -Name "default" -VirtualMachine $myVM -Kind "Basic"
 ```
 **In the following excercise you are going to enable JIT for a specific VM, configuring custom ports.**
 1. Copy this <a href="https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/04%20-%20VM%20Protection%20with%20JIT/Files/Enable-Custom-JIT-Ports.ps1" target="_blank">JIT sample script</a> and paste it in your favorite PowerShell editor
