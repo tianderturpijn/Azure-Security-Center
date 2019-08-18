@@ -14,7 +14,7 @@ For using these labs in combination with Labs On Demand (LOD), open an incognito
 - Provide one single password for your administrator and root account (same account name is used for both, default is azureadmin)
 - As soon as the workspace has been created, you can continue with the lab exercise
 - Click on **Start Trial**, if you are prompted for a Security Center trial
-C:\Users\yanivsh\OneDrive - Microsoft\Work\Github\Azure-Security-Center-LABS\Labs
+
 #### Deploy VMs and Create a Workspace
 Use the **Deploy to Azure** button below to deploy the following:
 - A Log Analytics workspace (ASC-Workspace-xxxx)
