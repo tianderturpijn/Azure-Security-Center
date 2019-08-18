@@ -26,7 +26,7 @@ Use the **Deploy to Azure** button below to deploy the following:
 
 Because we are deploying the Security Center solution in the workspace, the VM's will become security managed by Security Center.
 
-<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FYaniv-Shasha%2FAzure-Security-Center-1%2Fblob%2Fmaster%2FLabs%2F01%20-%20VM%20and%20Workspace%20Deployment%2FFiles%2FdeployAscManagedVmsWithLA.json" target="_blank">
+<a href="https%253A%252F%252Fportal.azure.com%252F%2523create%252FMicrosoft.Template%252Furi%252Fhttps%253A%252F%252Fraw.githubusercontent.com%252FYaniv-Shasha%252FAzure-Security-Center-1%252Fblob%252Fmaster%252FLabs%252F01%2520-%2520VM%2520and%2520Workspace%2520Deployment%252FFiles%252FdeployAscManagedVmsWithLA.json" target="_blank">
     <img src="http://azuredeploy.net/deploybutton.png"/>
 </a>
 <br><br>
