@@ -17,7 +17,7 @@
         }
     },
     "variables": {
-        "resourceLocation": "westus2",
+        "resourceLocation": "eastus",
         "omsWorkspaceName": "[concat('ASC-Workspace-',uniqueString(subscription().subscriptionId))]",
         "omsWorkspaceLocation": "eastus",
         "omsSKU": "PerGB2018",
