@@ -30,7 +30,7 @@ Because we are deploying the Security Center solution in the workspace, the VM's
     <img src="http://azuredeploy.net/deploybutton.png"/>
 </a>
 <br><br>
-
+ 
 The deployment takes about 13 minutes.<br><br>
 After the deployment of the template, you can check the progress of your deployment if you click on your created resource group details, then click on **Deployments** (*1 deploying*). <br>
 Continue with the exercise below as soon as your workspace has been created. You don't have to wait until the deployment has completed.
