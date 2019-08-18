@@ -14,7 +14,7 @@ For using these labs in combination with Labs On Demand (LOD), open an incognito
 - Provide one single password for your administrator and root account (same account name is used for both, default is azureadmin)
 - As soon as the workspace has been created, you can continue with the lab exercise
 - Click on **Start Trial**, if you are prompted for a Security Center trial
-
+C:\Users\yanivsh\OneDrive - Microsoft\Work\Github\Azure-Security-Center-LABS\Labs
 #### Deploy VMs and Create a Workspace
 Use the **Deploy to Azure** button below to deploy the following:
 - A Log Analytics workspace (ASC-Workspace-xxxx)
@@ -26,7 +26,7 @@ Use the **Deploy to Azure** button below to deploy the following:
 
 Because we are deploying the Security Center solution in the workspace, the VM's will become security managed by Security Center.
 
-<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Ftianderturpijn%2FAzure-Security-Center%2Fmaster%2FLabs%2F01%2520-%2520VM%2520and%2520Workspace%2520Deployment%2FFiles%2FdeployAscManagedVmsWithLA.json" target="_blank">
+<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FYaniv-Shasha%2FAzure-Security-Center-1%2Fblob%2Fmaster%2FLabs%2F01%20-%20VM%20and%20Workspace%20Deployment%2FFiles%2FdeployAscManagedVmsWithLA.json" target="_blank">
     <img src="http://azuredeploy.net/deploybutton.png"/>
 </a>
 <br><br>
@@ -57,6 +57,5 @@ As soon as the the workspace has been deployed (you don't have to wait for all t
 
 
 *Note: It can take some time for the VM's to become visible in Security Center*
-
 
 
