@@ -38,21 +38,20 @@ Continue with the exercise below as soon as your workspace has been created. You
 ### Configure the data collection settings in ASC
 As soon as the the workspace has been deployed (you don't have to wait for all the resources to be deployed), do the following:
 1. Navigate to the **Security Center** blade
-2. Click on **Start Trial** (if you have clicked on Skip, you can click **on Getting Started**)
+2. Click on **Getting started**, On the **Upgrade** Tab, select your subscription (Azure pass) and the workspace **ASC-Workspace-xxxx** and press **Upgrade**.
 3. Click on **Install agents**, if the button has been grayed out, then it's already set to **On**
-4. Click on **Security policy**
+4. Click on **Pricing & settings**
 5. Your subscription (Azure pass) should be listed (if it does not, close your browser session and open a new one)
-6. On the line where it lists your Azure subscription (Azure pass), click on **Edit settings**
-7. Set **Auto Provisioning** to **On** (if it's not already set to On)
-8. Select your workspace **ASC-Workspace-xxxx** (which has been created by the template) under **Use another workspace**
-9. Click on **Save**
-9. Click on **Yes** on **Would you like to reconfigure monitored VMs?**
-10. Switch back to **Security Policy** and ignore the message "Your unsaved edits will be discarded"
-11. On the line where it lists your **workspace**, click on **Edit settings**
-12. Click on **Pricing tier**, select **Standard** and click on **Save**
-13. Click on Data collection and select **All Events** and click on **Save**. <br><br>
+6. Press on your **Azure subscription** (Azure pass).
+7. Navigate to **Data Collection**
+8. Set **Auto Provisioning** to **On** (if it's not already set to On)
+9. On the workspace configuration section Select the workspace **ASC-Workspace-xxxx** (which has been created by the template) under **Use another workspace**
+10. Click on **Save**
+11. Click on **Yes** on **Would you like to reconfigure monitored VMs?**
+12. Under **Windows Security raw data** change the **Windows Security events** to **All Events** and press Save.
+ <br><br>
 
-![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/01%20-%20VM%20and%20Workspace%20Deployment/Screenshots/datacollection_settings.png
+![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/01%20-%20VM%20and%20Workspace%20Deployment/Screenshots/Workspace_config.png
 )<br>
 
 
