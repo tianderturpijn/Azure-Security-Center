@@ -1,6 +1,6 @@
 ﻿# 05 - Linux Detections
 ##### Estimated lab time: 25 minutes
-*The following lab is based on the* <a href="https://gallery.technet.microsoft.com/Azure-Security-Center-0ac8a5ef" target="_blank">Linux Detections playbook</a> *written by Yuri Diogenes. This playbook provides a more comphrensive explanation than is covered in this lab*<br>
+*The following lab is based on the* <a href="https://gallery.technet.microsoft.com/Azure-Security-Center-1-0ac8a5ef" target="_blank">Linux Detections playbook</a> *written by Yuri Diogenes. This playbook provides a more comphrensive explanation than is covered in this lab*<br>
 
 In this lab we will explore the new Linux detection's in ASC by executing attacks in a Kali Linux VM that you are going to deploy. You will connect to your deployed Linux VM (Linux-0) leveraging SSH. In case you don't have a SSH client installed, you can install the free edition of MobaXterm <a href="https://mobaxterm.mobatek.net/download.html" target="_blank">here</a>.<br>
 
@@ -8,7 +8,7 @@ In this lab we will explore the new Linux detection's in ASC by executing attack
 ***Note**: time to create the Kali Linux VM is approx 5 minutes. Make sure to add a port that enables you to connect.*
 1. In the Azure portal, click on **Create a resource** and search for **Kali Linux** and **create** the VM
 
-![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/05%20-%20Linux%20Detections/Screenshots/kali_marketplace.png)
+![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/05%20-%20Linux%20Detections/Screenshots/kali_marketplace.png)
 
 ***Note**: you don't have to wait until the deployment is complete. Proceed with the next exercise*
 
@@ -25,13 +25,13 @@ sudo adduser <userName>
 #### 4 - Executing a brute force attack
 1. Connect to the Kali Linux VM with SSH (ensure that your VM deployment in step 1 was successful)
 2. Navigate to the folder **/usr/share/wordlists**
-3. Upload the **<a href="https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/05%20-%20Linux%20Detections/Files/lab_users.txt" target="_blank">lab_users.txt</a>** and **<a href="https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/05%20-%20Linux%20Detections/Files/lab_pass.txt" target="_blank">lab_pass.txt</a>** files to this folder by executing:
+3. Upload the **<a href="https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/05%20-%20Linux%20Detections/Files/lab_users.txt" target="_blank">lab_users.txt</a>** and **<a href="https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/05%20-%20Linux%20Detections/Files/lab_pass.txt" target="_blank">lab_pass.txt</a>** files to this folder by executing:
 ```text
-sudo wget https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/05%20-%20Linux%20Detections/Files/lab_users.txt
+sudo wget https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/05%20-%20Linux%20Detections/Files/lab_users.txt
 ```
 and
 ```text
-sudo wget https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/05%20-%20Linux%20Detections/Files/lab_pass.txt
+sudo wget https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/05%20-%20Linux%20Detections/Files/lab_pass.txt
 ```
 4. Copy the IP address from the Linux Victim VM that you have deployed earlier. We are going to brute force attack this VM
 5.  Type the command below in your Kali VM, and replace "**IP**" with **yourLinuxVM** public IP address
@@ -73,10 +73,10 @@ wget http://XXX.XXX.XXX.XXX/download/eicar.com
 1. Navigate to the **Security Center>Security Alerts** blade (under Threat Protection)
 2.  Organize the alerts by date by clicking on the Date column, and review the alerts that were generated during this lab, it should look similar like this:
 
-![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/05%20-%20Linux%20Detections/Screenshots/Security_incident_detected_Linux.png)
+![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/05%20-%20Linux%20Detections/Screenshots/Security_incident_detected_Linux.png)
 
-![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/05%20-%20Linux%20Detections/Screenshots/Security_incident_detected_Linux2.png)
+![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/05%20-%20Linux%20Detections/Screenshots/Security_incident_detected_Linux2.png)
 
 <br><br>
 ### Continue with the next lab
-06 - Logic Apps integration, click <a href="https://github.com/tianderturpijn/Azure-Security-Center/tree/master/Labs/06%20-%20Logic%20App%20integration" target="_blank">here</a>
+06 - Logic Apps integration, click <a href="https://github.com/yaniv-shasha/Azure-Security-Center-1/tree/master/Labs/06%20-%20Logic%20App%20integration" target="_blank">here</a>
