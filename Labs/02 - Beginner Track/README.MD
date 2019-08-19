@@ -23,10 +23,6 @@ In the Security Center Overview, click on **Security policy** and then click on 
 )<br><br>
 This brings you to the **Security policy settings** for your subscription (*note: if your subscription is not showing, refresh your browser*). <br> <br>
 
-:bulb:
-If you click on your subscription for the first time, you will be prompted to enable Security Center's default policy iniative. Click on the button **Assign security policy** to assign it: <br><br>
-![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/02%20-%20Beginner%20Track/Screenshots/security_policy_enable.png
-)<br><br>
 
 In the Security Center, Security policy blade, click on the default ASC assignment:
 ![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/02%20-%20Beginner%20Track/Screenshots/AzPolicyAssignment.png
