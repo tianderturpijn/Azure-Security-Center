@@ -8,10 +8,10 @@ The labs are intended to make you familiar with the different Security Center's 
    ![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/02%20-%20Beginner%20Track/Screenshots/policy_compliancy_tile.png
 )<br><br>
 3. Click on the **Subscription coverage** tile
-   ![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/02%20-%20Beginner%20Track/Screenshots/subscription_coverage.png
+   ![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/02%20-%20Beginner%20Track/Screenshots/subscription_coverage.png
 )<br>
 This shows you the number of subscriptions and the coverage type.<br>
-*Note:* in this lab you will only have one subscription which should be under **Standard coverage** <br>
+*Note:* in this lab you will only have one subscription which should be under **full coverage** <br>
    This view will help you find subscriptions that are not covered by ASC to help identify "shadow IT" subscriptions <br>
 4. Go back to the overview blade and note the **Secure Score** tile under Policy & compliance. When you **click on the Secure Score tile**, you can explore your **Secure score by category** by clicking on each tile:<br><br>
 ![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/02%20-%20Beginner%20Track/Screenshots/secure_score_dashboard.png
@@ -37,30 +37,30 @@ This brings you to the ASC policy settings - which are Azure policies - where yo
 Scroll down to the bottom and click on **Assign** or **Save** to save (save only in case you have made updates) the Policy initiative.
 
 ### Edit Subscription settings (including Data Collection settings)
-1. Go back to the **Security Policy** blade and under **Policy Management** click on **Edit settings:**
-![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/02%20-%20Beginner%20Track/Screenshots/subscription_settings.png
+1. Go back to the **Pricing & settings** blade and press on your subscription 
+![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/02%20-%20Beginner%20Track/Screenshots/pricing%20and%20settings.PNG
 )<br><br>
 2. Notice the 5 options:
-![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/02%20-%20Beginner%20Track/Screenshots/policy_setting3.png
+![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/02%20-%20Beginner%20Track/Screenshots/datacollection01.PNG
 )<br>
 The Auto Provisioning settings - if set to On - will take care of automatic installation of the Microsoft Monitoring Agent (MMA) for all VM's in your subscription, either existing or new.<br><br>
 **Threat detection** is the new integration with **Microsoft Cloud App Security** (MCAS) and **Windows Defender ATP** (WDATP):
-![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/02%20-%20Beginner%20Track/Screenshots/policy_setting4.png
+![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/02%20-%20Beginner%20Track/Screenshots/threadprotection.PNG
 )<br><br>
 
 **Email notifications** allows you to configure one or more email addresses to be used to send high severity alerts.<br><br>
 
 **Pricing Tier** shows you the difference between what's offered in the Free and Standard tier (it should be set to Standard for our labs):<br>
-![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/02%20-%20Beginner%20Track/Screenshots/policy_setting5.png
+![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/02%20-%20Beginner%20Track/Screenshots/pricingtier.PNG
 )<br><br>
 
 Notice that there are different pricing plans for **VM's, SQL servers**, **App Services** and **Storage Accounts**:
-![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/02%20-%20Beginner%20Track/Screenshots/policy_setting6.png
+![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/02%20-%20Beginner%20Track/Screenshots/policy_setting6.png
 )<br><br>
 
 ### Edit workspace settings (Including Data Collection settings)
 1. Go back one more time to the **Security policy** blade, but this time click on **Edit settings** on the line where your **workspace** is listed:
-![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/02%20-%20Beginner%20Track/Screenshots/policy_setting7.png
+![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/02%20-%20Beginner%20Track/Screenshots/workspacepricing01.PNG
 )<br><br>
 This allows you to configure the Windows security events collection settings for your workspace and helps you to perform auditing, investigation and and analysis.<br>
 Notice that the options are potentially grayed out.<br>
