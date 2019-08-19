@@ -17,9 +17,19 @@ When you click on **All** you will see an overview of all the Regulatory Complia
 ![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/03%20-%20Policy%20and%20Compliance/Screenshots/ComplianceView.PNG
 )<br><br>
 
-Regulatory compliance allows you to export the compliance result into a PDF report that you can show it to the auditor.
+* Regulatory compliance allows you to export the compliance result into a **PDF report** that you can show it to the auditor.
 Press on the **Download report**
 ![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/03%20-%20Policy%20and%20Compliance/Screenshots/downloadreport.PNG
+)<br><br>
+
+* On the right pane open the drop-down menu and view all the standard that we support.
+Choice **ISO 27001** and press **download**.
+
+![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/03%20-%20Policy%20and%20Compliance/Screenshots/exportreport.PNG
+)<br><br>
+
+* Open the reprot and review the complaince status.
+
 
 ### Policy Management
 This exercise guides you through the current Security Center policies, based on Azure Policy, and shows you where to enable or disable Security Center polices. <br>
@@ -38,6 +48,7 @@ This exercise guides you through the current Security Center policies, based on 
 4. Clicking on the initiative allows you to disable the definition:
 ![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/03%20-%20Policy%20and%20Compliance/Screenshots/disable_definition.png
 )<br><br>
+
 
 *Note: in the near future we will provide custom policies which will support deployIfNotExists type of policies*
 
