@@ -54,8 +54,8 @@ https://dev12345.service-now.com
 9. Under **Actions**, select **Create Record**<br><br>
 ![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/06%20-%20Logic%20App%20integration/Screenshots/ServiceNowConnection.png)<br><br>
 10. Provide a **Connection Name** and fill in the ServiceNow **Instance Name**, **Username** and **Password** that you have captured in the previous steps and click on **Create**
-11. Click on **Show advanced options**, as shown below:<br><br>
-![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/06%20-%20Logic%20App%20integration/Screenshots/snow_advanced_options.png)<br><br>
+11. Click on **Add new parameter**, as shown below:<br><br>
+![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/06%20-%20Logic%20App%20integration/Screenshots/playbook.PNG)<br><br>
 12. Under **Record Type** dropdown box, select **Incident** (this collapses the incident options)
 13. In the **Record fields**, scroll down, click once in the fields highlighted below and select the values as shown below:<br>
 *Note: if you are using a shared ServiceNow environment, put your name in the Short description field as well*<br>
@@ -82,7 +82,7 @@ https://dev12345.service-now.com
 
 
 7. Switch to your ServiceNow developer instance and check for a new created incident record<br><br>
-![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center/master/Labs/06%20-%20Logic%20App%20integration/Screenshots/snow_record.png)
+![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/06%20-%20Logic%20App%20integration/Screenshots/snow_record.png)
 
 <br>
 
