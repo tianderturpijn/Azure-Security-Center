@@ -82,7 +82,6 @@ https://dev12345.service-now.com
 
 
 
-
 7. Switch to your ServiceNow developer instance and check for a new created incident record<br><br>
 ![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/06%20-%20Logic%20App%20integration/Screenshots/snow_record.png)
 
