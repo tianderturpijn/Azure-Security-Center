@@ -55,13 +55,14 @@ https://dev12345.service-now.com
 ![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/06%20-%20Logic%20App%20integration/Screenshots/ServiceNowConnection.png)<br><br>
 10. Provide a **Connection Name** and fill in the ServiceNow **Instance Name**, **Username** and **Password** that you have captured in the previous steps and click on **Create**
 11. Click on **Add new parameter**, as shown below:<br><br>
+
 ![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/06%20-%20Logic%20App%20integration/Screenshots/playbook.PNG)<br><br>
-12. Under **Record Type** dropdown box, select **Incident** (this collapses the incident options)
+12. Under **Record Type** dropdown box, select **Incident** (this collapses the incident options)<br><br>
 13. In the **Record fields**, scroll down, click once in the fields highlighted below and select the values as shown below:<br>
 *Note: if you are using a shared ServiceNow environment, put your name in the Short description field as well*<br>
 
 
-![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/06%20-%20Logic%20App%20integration/Screenshots/incident_fields.png)<br><br>
+![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/06%20-%20Logic%20App%20integration/Screenshots/record%20Fields.png)<br><br>
 14. Click on **Save**
 
 #### 4 - Invoke the ServiceNow playbook from an ASC alert
