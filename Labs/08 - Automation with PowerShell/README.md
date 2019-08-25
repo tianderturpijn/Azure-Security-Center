@@ -39,7 +39,7 @@ Beforee we run the commands, we need to do some house keeping in the server.
 
 ![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/08%20-%20Automation%20with%20PowerShell/IE.png)
 
-2. Run and login with your Azure Pass Account
+2. Run the above command and login with your Azure Pass Account
 
 ```powershell
 Connect-AzAccount
