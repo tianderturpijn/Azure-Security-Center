@@ -9,7 +9,7 @@ In this lab you will protect your VMs with Just-In-Time (JIT) access. We will sh
 ### 1 - Enable JIT on a VM in ASC
 1. Open Security Center in the Azure portal
 2. Navigate to **Just in time VM access** (under Advanced Cloud Defense)
-3. Under **Recommended** select a VM which you have deployed earlier and click on the button **Enable JIT on x VMs**
+3. Under **Recommended** select a only **one VM** which you have deployed earlier and click on the button **Enable JIT on x VMs**
 4. Optionally: delete ports by clicking on the 3 dots (...) on the right or add new ports by clicking on **Add**
 5. Click **Save**
 6. In the Azure portal (using the same session), navigate to **Virtual Machines**
