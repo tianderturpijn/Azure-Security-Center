@@ -67,9 +67,10 @@ $myGuid = New-Guid
 $RG = New-AzResourceGroup -Name 'ASC-Lab-2' -Location 'eastus'
 
 New-AzResourceGroupDeployment -Name myWorkspaceDeploy -ResourceGroupName $RG.ResourceGroupName `
- -TemplateFile 'https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/09%20-%20Automation%20with%20ARM/Files/createNewOmsWorkspace.json' `
+ -TemplateUri 'https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/09%20-%20Automation%20with%20ARM/Files/createNewOmsWorkspace.json' `
  -omsWorkspaceName ("ASC-workspace-$myGuid") -omsWorkspaceLocation "eastus" -Verbose
 ```
+
 3. Switch to the Azure portal and open the **Security Center** blade
 4. Click on **Security policy**
 5. Your new created workspace should be listed under the **Policy Management** view <br><br>
