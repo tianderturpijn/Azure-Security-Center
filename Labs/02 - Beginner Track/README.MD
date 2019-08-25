@@ -94,6 +94,7 @@ Security Center mimics the work of the security analyst, reviewing your security
 6. Select **Microsoft Antimalware** and click on **Create** (scroll down if you don't see the Create button):<br><br>
 ![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/02%20-%20Beginner%20Track/Screenshots/install_endpoint_protection3.png
 )<br><br>
+
 Provide your settings of choice, then click **OK**, this starts the endpoint protection installation.
 
 Another example which might not exist in your lab environment is a recommendation for containers:<br><br>:
