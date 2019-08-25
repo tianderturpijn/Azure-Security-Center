@@ -33,6 +33,17 @@ Get-Command -Module Az.Security
 ***Note**: make sure that in your favorite PowerShell editor, you are logged into Azure (using Connect-AzAccount)*<br>
 
 let's now explore how to configure ASC's email notification settings through PowerShell.<br>
+Beforee we run the commands, we need to do some house keeping in the server.
+
+1. Disable IE Enhanced Security 
+
+![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/05%20-%20Linux%20Detections/Screenshots/IE.png)
+
+2. Run and login with your Azure Pass Account
+
+```powershell
+Connect-AzAccount
+```
 Copy and paste the following script in your PowerShell editor:
 ```powershell
 #Set a security contact for the current scope. For the parameter "-Name", you need to use "default1", "default2", etc.
