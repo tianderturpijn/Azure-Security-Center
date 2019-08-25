@@ -18,7 +18,7 @@ For using these labs in combination with Labs On Demand (LOD), open an incognito
 3. Click on **Security Policy**
 4. On the line where it shows your subscription, click on **Edit settings**
 5. Explore the settings, specifically the **email notification settings**.<br><br>
-![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs//09%20-%20Automation%20with%20ARM/Screenshots/asc_emailsettings.png
+![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs//09%20-%20Automation%20with%20ARM/Screenshots/asc_emailsettings.png
 )
 
 For the first ARM deployment exercise we are going to start with configuring the **Email notification** settings
@@ -46,7 +46,8 @@ For the first ARM deployment exercise we are going to start with configuring the
 New-AzDeployment -TemplateUri "https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/09%20-%20Automation%20with%20ARM/Files/configureAscEmailNotifications.json" -location westus2
 ```
 
-![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs//09%20-%20Automation%20with%20ARM/Screenshots/PS_commands.png)
+![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/09%20-%20Automation%20with%20ARM/Screenshots/PS_commands.png
+)
 
 7. After a successful completion, switch to the Azure portal and **refresh** (Ctrl+F5) the ASC blade and verify that the email settings have been updated according to the values in the template.
 8. **[Optional exercise]** You can copy the template and use your own values
