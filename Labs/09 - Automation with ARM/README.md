@@ -123,7 +123,7 @@ New-AzDeployment -TemplateFile 'https://raw.githubusercontent.com/tianderturpijn
 <br>
 
 ### Continue with the next lab
-10 - Additional, click <a href="https://github.com/tianderturpijn/Azure-Security-Center/tree/master/Labs/10%20-%20Additional" target="_blank">here</a>
+10 - Additional, click <a href="https://github.com/yaniv-shasha/Azure-Security-Center-1/tree/master/Labs/10%20-%20Additional" target="_blank">here</a>
 
 
 
