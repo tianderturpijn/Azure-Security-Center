@@ -51,11 +51,11 @@ Validate the the files exist:
 
 
 4. Copy the IP address from the Linux Victim VM that you have deployed earlier. We are going to brute force attack this VM
-5.  Type the command below in your Kali VM, and replace "**IP**" with **yourLinuxVM** public IP address
+5.  Type the command below in your **Kali VM**, and replace "**IP**" with **yourLinuxVM** public IP address
 ```text
 hydra -I -L lab_users.txt -P lab_pass.txt <IP> -t 4 ssh
 ```
-6.  Wait until it finishes, and the result should show you the username and the password that was found
+6.  Leave the command to run until it finishes, and the result should show you the username and the password that was found.
 
 #### 5 - Simulate capturing credentials and other useful information
 1.  Run the command below in the Linux Victim VM to simulate an attacker that is trying to start logkeys to set up the system to capture credentials and other useful information: 
