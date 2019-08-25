@@ -116,7 +116,7 @@ Also we will configure ASC policies through the ARM template.
 Your are going to deploy an ARM template which will configure a number of ASC settings and you will connect ASC with your workspace.<br>
 1. Switch to the PowerShell session where you are logged into Azure, with the correct subscription selected and copy & paste the following script. Make sure to update all values with the information you have collected in the previous exercises:
 ```powershell
-New-AzDeployment -TemplateFile 'https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/09%20-%20Automation%20with%20ARM/Files/configureAscAdvanced.json' `
+New-AzDeployment -TemplateUri 'https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/09%20-%20Automation%20with%20ARM/Files/configureAscAdvanced.json' `
 -name 'AscAdvancedDeployment' -Location 'eastus' -autoProvisioning 'On' -workspaceName '<yourWorkspaceName>' `
 -workspaceSubscriptionId '<yourAzuresubscriptionID>' -workspaceResourceGroup '<resourceGroupNameOfTheWorkspace>' `
 -emailSecurityContact 'john@contoso.com' -phoneSecurityContact '12345' -alertNotifications 'On' -alertsToAdmin 'On' `
