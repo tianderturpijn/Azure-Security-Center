@@ -43,7 +43,7 @@ For the first ARM deployment exercise we are going to start with configuring the
 - Fill in **On** or **Off** for alerts (case sensitive)
 - If you receive an error running the New-AzDeployment cmdlet, make sure to run this:<br> **Install-Module -Name Az.Resources**<br>
 ```powershell
-New-AzDeployment -TemplateFile 'https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/09%20-%20Automation%20with%20ARM/Files/configureAscEmailNotifications.json -location westus2'
+New-AzDeployment -TemplateUri 'https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/09%20-%20Automation%20with%20ARM/Files/configureAscEmailNotifications.json -location westus2'
 ```
 
 7. After a successful completion, switch to the Azure portal and **refresh** (Ctrl+F5) the ASC blade and verify that the email settings have been updated according to the values in the template.
