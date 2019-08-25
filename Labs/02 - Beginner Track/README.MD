@@ -2,6 +2,7 @@
 Welcome to the labs which will guide you through Azure Security Center (ASC). <br>
 The labs are intended to make you familiar with the different Security Center's features. <br>
 
+Estimated lab time: 20 minutes
 ### Exploring the Security Center Overview blade
 1. Navigate to the Azure portal (https://portal.azure.com) and click on Security Center
 2. In the Overview blade note the **Policy & compliance** section. This provides an overview of your secure score, based on your resources, regulatory standards and your subscription coverage: <br><br>
