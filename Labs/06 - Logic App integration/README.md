@@ -6,7 +6,7 @@ In this lab you are going to explore the Security Center integration with Logic 
 The most asked automation integration use case is how Security Center integrates with ITSM solutions like ServiceNow, so in this lab we are going to explore exactly that integration.<br><br>
 
 #### 1 - Create an ASC test alert
-***Note**: if you want to run more validation steps to simulate attacks in VMs/Computers monitored by Azure Security Center (out of scope for this lab)* <a href="https://gallery.technet.microsoft.com/Azure-Security-Center-1-549aa7a4" target="_blank">go here</a><br>
+***Note**: if you want to run more validation steps to simulate attacks in VMs/Computers monitored by Azure Security Center (out of scope for this lab)* <a href="https://gallery.technet.microsoft.com/Azure-Security-Center-549aa7a4" target="_blank">go here</a><br>
 
 Before you are going to create the playbook, let's make sure that we have an ASC alert we can act upon.
 1. Login to your Windows VM that you have created earlier and is monitored by Security Center
