@@ -10,7 +10,7 @@ In this lab we will explore the new Linux detection's in ASC by executing attack
 
 ![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/05%20-%20Linux%20Detections/Screenshots/kali_marketplace.png)
 
-![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/05%20-%20Linux%20Detections/Screenshots/kali_marketplace.png)
+![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/05%20-%20Linux%20Detections/Screenshots/Kali_Config.png)
 
 
 ***Note**: you don't have to wait until the deployment is complete. Proceed with the next exercise*
