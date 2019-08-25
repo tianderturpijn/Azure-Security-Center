@@ -37,7 +37,7 @@ Beforee we run the commands, we need to do some house keeping in the server.
 
 1. Disable IE Enhanced Security 
 
-![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/05%20-%20Linux%20Detections/Screenshots/IE.png)
+![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/08%20-%20Automation%20with%20PowerShell/IE.png)
 
 2. Run and login with your Azure Pass Account
 
