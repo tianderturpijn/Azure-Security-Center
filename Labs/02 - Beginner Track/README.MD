@@ -61,7 +61,7 @@ Notice that there are different pricing plans for **VM's, SQL servers**, **App S
 )<br><br>
 
 ### Edit workspace settings (Including Data Collection settings)
-1. Go back one more time to the **Security policy** blade, but this time click on **Edit settings** on the line where your **workspace** is listed:
+1. Go back one more time to the **Pricing & Settings** blade, but this time click on the line where your **workspace** is listed:
 ![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/02%20-%20Beginner%20Track/Screenshots/workspacepricing01.PNG
 )<br><br>
 This allows you to configure the Windows security events collection settings for your workspace and helps you to perform auditing, investigation and and analysis.<br>
