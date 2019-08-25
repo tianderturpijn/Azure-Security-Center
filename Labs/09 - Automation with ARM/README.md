@@ -38,8 +38,8 @@ For the first ARM deployment exercise we are going to start with configuring the
 6. Copy and paste the below in your PowerShell session and execute it:<br><br>
 **Note**:
 
-- Use a proper email format like luke@skywalker.com
-- Use only numbers (no spaces) as a phone number
+- Use a proper email format like luke@skywalker.com.
+- Use only numbers (no spaces) as a phone number.
 - Fill in **On** or **Off** for alerts (case sensitive)
 - If you receive an error running the New-AzDeployment cmdlet, make sure to run this:<br> **Install-Module -Name Az.Resources**<br>
 ```powershell
