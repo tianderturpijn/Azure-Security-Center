@@ -18,13 +18,13 @@ This shows you the number of subscriptions and the coverage type.<br>
 )<br><br>
 
 ### Security Center Policies
-In the Security Center Overview, click on **Security policy** and then click on your subscription (Azure Pass):
+1. In the Security Center Overview, click on **Security policy** and then click on your subscription (Azure Pass):
 ![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/02%20-%20Beginner%20Track/Screenshots/policy_setting1.png
 )<br><br>
 This brings you to the **Security policy settings** for your subscription (*note: if your subscription is not showing, refresh your browser*). <br> <br>
 
 
-In the Security Center, Security policy blade, click on the default ASC assignment:
+2. In the Security Center, Security policy blade, click on the default ASC assignment:
 ![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/02%20-%20Beginner%20Track/Screenshots/AzPolicyAssignment.png
 )<br><br>
 
@@ -34,7 +34,7 @@ This brings you to the ASC policy settings - which are Azure policies - where yo
 ![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/02%20-%20Beginner%20Track/Screenshots/policy_settings_parameters.png
 )<br><br>
 
-Scroll down to the bottom and click on **Assign** or **Save** to save (save only in case you have made updates) the Policy initiative.
+3. Scroll down to the bottom and click on **Assign** or **Save** to save (save only in case you have made updates) the Policy initiative.
 
 ### Edit Subscription settings (including Data Collection settings)
 1. Go back to the **Pricing & settings** blade and press on your subscription 
