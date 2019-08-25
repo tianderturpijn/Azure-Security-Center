@@ -17,7 +17,8 @@ When you click on **All** you will see an overview of all the Regulatory Complia
 ![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/03%20-%20Policy%20and%20Compliance/Screenshots/ComplianceView.PNG
 )<br><br>
 
-* Regulatory compliance allows you to export the compliance result into a **PDF report** that you can show it to the auditor.
+* Regulatory compliance allows you to export the compliance results into a **PDF report** that you can presnt to the auditor.
+
 Press on the **Download report**
 ![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/03%20-%20Policy%20and%20Compliance/Screenshots/downloadreport.PNG
 )<br><br>
