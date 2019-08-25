@@ -29,8 +29,13 @@ sudo adduser <userName>
 ![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/05%20-%20Linux%20Detections/Screenshots/adduser_example.PNG)
 
 #### 4 - Executing a brute force attack
-1. Connect to the Kali Linux VM with SSH (ensure that your VM deployment in step 1 was successful)
+1. Connect to the **Kali Linux VM** with SSH (ensure that your VM deployment in step 1 was successful)
 2. Navigate to the folder **/usr/share/wordlists**
+
+```powershell
+cd /usr/share/wordlists
+```
+
 3. Upload the **<a href="https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/05%20-%20Linux%20Detections/Files/lab_users.txt" target="_blank">lab_users.txt</a>** and **<a href="https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/05%20-%20Linux%20Detections/Files/lab_pass.txt" target="_blank">lab_pass.txt</a>** files to this folder by executing:
 ```text
 sudo wget https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/05%20-%20Linux%20Detections/Files/lab_users.txt
@@ -38,7 +43,13 @@ sudo wget https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1
 and
 ```text
 sudo wget https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/05%20-%20Linux%20Detections/Files/lab_pass.txt
+
 ```
+Validate the the files exist:
+
+![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/05%20-%20Linux%20Detections/Screenshots/ls_users.png)
+
+
 4. Copy the IP address from the Linux Victim VM that you have deployed earlier. We are going to brute force attack this VM
 5.  Type the command below in your Kali VM, and replace "**IP**" with **yourLinuxVM** public IP address
 ```text
