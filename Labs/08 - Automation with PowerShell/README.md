@@ -73,7 +73,7 @@ A sample which contains how to use the Az.Security module can be found <a href="
 <br>
 
 ### Continue with the next lab
-09 - Automation with ARM, click <a href="https://github.com/tianderturpijn/Azure-Security-Center/tree/master/Labs/09%20-%20Automation%20with%20ARM" target="_blank">here</a>
+09 - Automation with ARM, click <a href="https://github.com/yaniv-shasha/Azure-Security-Center-1/tree/master/Labs/09%20-%20Automation%20with%20ARM" target="_blank">here</a>
 
 
 
