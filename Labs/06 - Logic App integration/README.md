@@ -9,7 +9,7 @@ The most asked automation integration use case is how Security Center integrates
 ***Note**: if you want to run more validation steps to simulate attacks in VMs/Computers monitored by Azure Security Center (out of scope for this lab)* <a href="https://gallery.technet.microsoft.com/Azure-Security-Center-549aa7a4" target="_blank">go here</a><br>
 
 Before you are going to create the playbook, let's make sure that we have an ASC alert we can act upon.
-1. Login to your Windows VM that you have created earlier and is monitored by Security Center
+1. Login to your **Windows VM** that you have created earlier and is monitored by Security Center (Ask for JIT time slot)
 2. Create a temp folder on c: (c:\temp)
 3. Copy **calc.exe** from **c:\windows\system32** to **c:\temp**
 4. Rename **calc.exe** to **ASC_AlertTest_662jfi039N.exe**
@@ -47,15 +47,16 @@ https://dev12345.service-now.com
 3. Give your playbook a name like "ASC-Alert-To-ServiceNow", choose your **subscription**, create or choose your **resource group**, select a location and click on **Create**
 4. When the playbook has been created, select the playbook. This should bring you to the **Logic Apps Designer** (if that does not happen, click on your playbook and click on **Edit**)
 5. Under Templates, select the **Blank Logic App**
-6. In the **Seach connectors and triggers field**, type in security center and select **When a response to an Azure Security Center alert is triggered** <br>
-*Note: be aware **Not** to select the connector with the Preview tag.<br><br>
+6. In the **Serach connectors and triggers field**, type in security center and select **When a response to an Azure Security Center alert is triggered**.
+ <br>
+**Note**: be aware **Not** to select the connector with the Preview tag.<br><br>
 ![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/06%20-%20Logic%20App%20integration/Screenshots/asc_trigger.png)
 7. Click on **+ New Step**
 8. In the **Seach connectors and triggers field** search for **ServiceNow**
 9. Under **Actions**, select **Create Record**<br><br>
 ![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/06%20-%20Logic%20App%20integration/Screenshots/ServiceNowConnection.png)<br><br>
 10. Provide a **Connection Name** and fill in the ServiceNow **Instance Name**, **Username** and **Password** that you have captured in the previous steps and click on **Create**
-11. Click on **Add new parameter**, as shown below:<br><br>
+11. In the record type select **Incident** and Click on **Add new parameter**, as shown below:<br><br>
 
 ![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/06%20-%20Logic%20App%20integration/Screenshots/playbook.PNG)<br><br>
 12. Under **Record Type** dropdown box, select **Incident** (this collapses the incident options)<br><br>
@@ -76,8 +77,9 @@ https://dev12345.service-now.com
 
 5. Click on **Run playbook**<br><br>
 ![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/06%20-%20Logic%20App%20integration/Screenshots/run_playbook.png)
-6. Switch to the playbook history and notice the status, but you can also click on the playbook to see details and even runtime information <br><br>
-![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/06%20-%20Logic%20App%20integration/Screenshots/playbook_history.png) <br><br>
+6. Switch to the playbook history by drill shown on the playbook name and notice the status, but you can also click on the playbook to see details and even runtime information <br><br>
+![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/06%20-%20Logic%20App%20integration/Screenshots/showHistory.png) 
+![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/06%20-%20Logic%20App%20integration/Screenshots/showHistory02.png) <br><br>
 ![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/06%20-%20Logic%20App%20integration/Screenshots/playbook_history_details.png)<br><br>
 
 
