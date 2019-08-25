@@ -88,5 +88,5 @@ https://dev12345.service-now.com
 <br>
 
 ### Continue with the next lab
-07 - Preview Features, click <a href="https://github.com/yaniv-shasha/Azure-Security-Center/tree/master/Labs/07%20-%20Preview%20Features" target="_blank">here</a>
+07 - Preview Features, click <a href="https://github.com/yaniv-shasha/Azure-Security-Center-1/tree/master/Labs/07%20-%20Preview%20Features" target="_blank">here</a>
 
