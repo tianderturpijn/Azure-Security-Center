@@ -29,7 +29,9 @@ This brings you to the **Security policy settings** for your subscription (*note
 )<br><br>
 
 
-This brings you to the ASC policy settings - which are Azure policies - where you can set the parameters for each policy definition. This is where you can enable or disable a specific policy definition by clicking on the parameter setting:
+This brings you to the ASC policy settings - which are Azure policies - where you can set the parameters for each policy definition. This is where you can enable or disable a specific policy definition by clicking on the parameter setting.
+
+3. Lets disable the the **Monitor system updates** policy, by changing the parameter to disable  
 
 ![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/02%20-%20Beginner%20Track/Screenshots/policy_settings_parameters.png
 )<br><br>
