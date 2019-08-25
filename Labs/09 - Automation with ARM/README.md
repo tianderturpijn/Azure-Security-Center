@@ -24,7 +24,7 @@ For using these labs in combination with Labs On Demand (LOD), open an incognito
 For the first ARM deployment exercise we are going to start with configuring the **Email notification** settings
 
 #### 2 - Explore the Email Notifications ARM template
-1. Open the <a href="https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/09%20-%20Automation%20with%20ARM/Files/configureAscEmailNotifications.json" target="_blank">ARM template</a> for email notifications in a new browser window
+1. Open the <a href="https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/09%20-%20Automation%20with%20ARM/Files/configureAscEmailNotifications.json" target="_blank">ARM template</a> for email notifications in a new browser window
 2. Notice the ARM template **parameter** allowed values. These values are case sensitive and are mandatory.
 3. Under the ARM resources section  (**Microsoft.Security/securityContacts**), use "default1", "default2", etc. as value for the field name. These are mandatory fields and can only be used in this format
 
@@ -43,7 +43,7 @@ For the first ARM deployment exercise we are going to start with configuring the
 - Fill in **On** or **Off** for alerts (case sensitive)
 - If you receive an error running the New-AzDeployment cmdlet, make sure to run this:<br> **Install-Module -Name Az.Resources**<br>
 ```powershell
-New-AzDeployment -TemplateFile 'https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/09%20-%20Automation%20with%20ARM/Files/configureAscEmailNotifications.json -location westus2'
+New-AzDeployment -TemplateFile 'https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/09%20-%20Automation%20with%20ARM/Files/configureAscEmailNotifications.json -location westus2'
 ```
 
 7. After a successful completion, switch to the Azure portal and **refresh** (Ctrl+F5) the ASC blade and verify that the email settings have been updated according to the values in the template.
@@ -58,13 +58,13 @@ In the next exercise we will create a new workspace which will be used as your d
 
 You can either create a workspace through the Azure portal, leverage an ARM template, or use PowerShell.
 1. Navigate to the Azure portal and create a Log Analytics workspace **OR**:
-2. Copy, paste and run the following PowerShell script "as is" to deploy an ARM template which will deploy the <a href="https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/09%20-%20Automation%20with%20ARM/Files/createNewOmsWorkspace.json" target="_blank">newOmsWorkspace</a> ARM template: (optionally you can use your own values in the script below, like location, etc.) <br>
+2. Copy, paste and run the following PowerShell script "as is" to deploy an ARM template which will deploy the <a href="https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/09%20-%20Automation%20with%20ARM/Files/createNewOmsWorkspace.json" target="_blank">newOmsWorkspace</a> ARM template: (optionally you can use your own values in the script below, like location, etc.) <br>
 ```powershell
 $myGuid = New-Guid
 $RG = New-AzResourceGroup -Name 'ASC-Lab-2' -Location 'eastus'
 
 New-AzResourceGroupDeployment -Name myWorkspaceDeploy -ResourceGroupName $RG.ResourceGroupName `
- -TemplateFile 'https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/09%20-%20Automation%20with%20ARM/Files/createNewOmsWorkspace.json' `
+ -TemplateFile 'https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/09%20-%20Automation%20with%20ARM/Files/createNewOmsWorkspace.json' `
  -omsWorkspaceName ("ASC-workspace-$myGuid") -omsWorkspaceLocation "eastus" -Verbose
 ```
 3. Switch to the Azure portal and open the **Security Center** blade
@@ -76,7 +76,7 @@ New-AzResourceGroupDeployment -Name myWorkspaceDeploy -ResourceGroupName $RG.Res
 #### 2 - Change the Pricing tier and data collection settings of your workspace 
 You can set the pricing tier and data collection settings per workspace, which is often not clear to customers, therefore we are going to set it in the portal instead of through automation (although you can automate it)
 1. In the **Policy Management** view where your workspace is listed, click on **Edit settings** <br><br>
-![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/09%20-%20Automation%20with%20ARM/Screenshots/pricing_workspace1.png
+![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/09%20-%20Automation%20with%20ARM/Screenshots/pricing_workspace1.png
 )<br>
 2. Click on **Pricing tier** and note that by default it is set to **Free**
 3. Click on **Standard** and click on **Save**
@@ -98,12 +98,12 @@ Now that you have explored how to deploy an ARM template to configure an ASC set
 ASC stores MMA collected data (and more) in a Log Analytics workspace. In a more complex environment, you often will find an existing Log Analytics workspace which needs to be integrated with ASC (aka the Central Workspace scenario).<br><br>
 The following lab assumes that a (Central) Log Analytics workspace already exists (although this can be deployed with an ARM template at the same time) and you are going to configure ASC to use the existing Log Analytics workspace. In addition we are going to enable **Auto Provisioning** which will deploy the MMA extension automatically, as you would configure it in the portal, like this:<br><br>
 
-![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/09%20-%20Automation%20with%20ARM/Screenshots/autoProvisioning_custom_%20Workspace.png)
+![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/09%20-%20Automation%20with%20ARM/Screenshots/autoProvisioning_custom_%20Workspace.png)
 
 Also we will configure ASC policies through the ARM template.
 
 #### 2 - Explore the ASC advanced ARM template
-1. Open the <a href="https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/09%20-%20Automation%20with%20ARM/Files/configureAscAdvanced.json" target="_blank">ASC Advanced ARM template</a> in a new browser window and explore it.
+1. Open the <a href="https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/09%20-%20Automation%20with%20ARM/Files/configureAscAdvanced.json" target="_blank">ASC Advanced ARM template</a> in a new browser window and explore it.
 2. Look closely at the **parameters** and their allowed values
 3. Under **resources**, observe the several settings that we will configure like autoProvisioning, workspace settings, etc. The recommendation policies can be configured one by one, but in this lab we will set the value to **On** or **Off** for all of them.
 4. For ARM templates, it is recommended that you use a parameter file to pass values during a deployment if you don't want to type them in. In this lab we will just type them in and paste some values
@@ -112,7 +112,7 @@ Also we will configure ASC policies through the ARM template.
 Your are going to deploy an ARM template which will configure a number of ASC settings and you will connect ASC with your workspace.<br>
 1. Switch to the PowerShell session where you are logged into Azure, with the correct subscription selected and copy & paste the following script. Make sure to update all values with the information you have collected in the previous exercises:
 ```powershell
-New-AzDeployment -TemplateFile 'https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/09%20-%20Automation%20with%20ARM/Files/configureAscAdvanced.json' `
+New-AzDeployment -TemplateFile 'https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/09%20-%20Automation%20with%20ARM/Files/configureAscAdvanced.json' `
 -name 'AscAdvancedDeployment' -Location 'eastus' -autoProvisioning 'On' -workspaceName '<yourWorkspaceName>' `
 -workspaceSubscriptionId '<yourAzuresubscriptionID>' -workspaceResourceGroup '<resourceGroupNameOfTheWorkspace>' `
 -emailSecurityContact 'john@contoso.com' -phoneSecurityContact '12345' -alertNotifications 'On' -alertsToAdmin 'On' `
