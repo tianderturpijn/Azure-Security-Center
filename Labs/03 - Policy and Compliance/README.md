@@ -24,12 +24,12 @@ Press on the **Download report**
 )<br><br>
 
 * On the right pane open the drop-down menu and view all the standard that we support.
-Choice **ISO 27001** and press **download**.
+Select **ISO 27001** and press **download**.
 
 ![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/03%20-%20Policy%20and%20Compliance/Screenshots/exportreport.PNG
 )<br><br>
 
-* Open the reprot and review the complaince status.
+* Review the reprot and the complaince status.
 
 
 ### Policy Management
@@ -49,6 +49,8 @@ This exercise guides you through the current Security Center policies, based on 
 4. Clicking on the initiative allows you to disable the definition:
 ![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/03%20-%20Policy%20and%20Compliance/Screenshots/disable_definition.png
 )<br><br>
+
+5. It can take up to 12 hr' till the recommendation remove from Azure security Center Dashboard.
 
 
 *Note: in the near future we will provide custom policies which will support deployIfNotExists type of policies*
