@@ -1,7 +1,7 @@
 ﻿# 06 - Logic Apps integration
 ##### Estimated lab time: 25 minutes
 In this lab you are going to explore the Security Center integration with Logic Apps.<br>
-***Note**: More comprehensive guidance can be found* <a href="https://techcommunity.microsoft.com/t5/Security-Identity/Automate-Azure-Security-Center-1-actions-with-Playbooks-and/td-p/264843" target="_blank">here</a>.
+***Note**: More comprehensive guidance can be found* <a href="https://techcommunity.microsoft.com/t5/Security-Identity/Automate-Azure-Security-Center-actions-with-Playbooks-and/td-p/264843" target="_blank">here</a>.
 
 The most asked automation integration use case is how Security Center integrates with ITSM solutions like ServiceNow, so in this lab we are going to explore exactly that integration.<br><br>
 
