@@ -511,7 +511,7 @@
                 "displayName": "storage"
             },
             "properties": {
-                "accountType": "[parameters('Storage Type')]"
+                "accountType": "[parameters('StorageType')]"
             }
         }
     ],
