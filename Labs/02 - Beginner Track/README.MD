@@ -85,11 +85,14 @@ Security Center mimics the work of the security analyst, reviewing your security
 ![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/02%20-%20Beginner%20Track/Screenshots/secure_score_dashboard.png
 )<br><br>
 3. Observe the number under the **Secure score impact column** and the affected **Resource** column. This helps in prioritizing working on the recommendations, the higher the number, the greater the impact <br><br>
-4. Click on a recommendation, and notice that on one recoemdnation we added the option to **1-Click-Fix**
-![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/02%20-%20Beginner%20Track/Screenshots/SotrageFixIT.png.png
-)<br><br>
-5. Click on **Install on 1 VMs**:<br><br>
-![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/02%20-%20Beginner%20Track/Screenshots/install_endpoint_protection2.png
+4. Click on  **recommendation**, and notice that on one of the recoemdnation we added the option to **1-Click-Fix**
+![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/02%20-%20Beginner%20Track/Screenshots/SotrageFixIT.png)<br><br>
+
+One-click fix enables you to remediate a recommendation on a bulk of resources, with a single click. It is an option only available for specific recommendations. One-click fix simplifies remediation and enables you to quickly improve your secure score and increase the security in your environment.
+
+5. Click on **Secure transfer to storage accounts should be enabled** recommendation.
+notice for the Secure Score impact :<br><br>
+![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/02%20-%20Beginner%20Track/Screenshots/storageScore.png
 )<br><br>
 6. Select **Microsoft Antimalware** and click on **Create** (scroll down if you don't see the Create button):<br><br>
 ![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/02%20-%20Beginner%20Track/Screenshots/install_endpoint_protection3.png
