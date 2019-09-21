@@ -91,9 +91,15 @@ Security Center mimics the work of the security analyst, reviewing your security
 One-click fix enables you to remediate a recommendation on a bulk of resources, with a single click. It is an option only available for specific recommendations. One-click fix simplifies remediation and enables you to quickly improve your secure score and increase the security in your environment.
 
 5. Click on **Secure transfer to storage accounts should be enabled** recommendation.
-notice for the Secure Score impact :<br><br>
+Notice for the Secure Score impact :<br><br>
 ![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/02%20-%20Beginner%20Track/Screenshots/storageScore.png
 )<br><br>
+
+We also presnt the remidation logic (ARM teamplte Artifact or the REST API call)
+
+![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/02%20-%20Beginner%20Track/Screenshots/remediationLogic.png
+)<br><br
+
 6. Select **Microsoft Antimalware** and click on **Create** (scroll down if you don't see the Create button):<br><br>
 ![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/02%20-%20Beginner%20Track/Screenshots/install_endpoint_protection3.png
 )<br><br>
