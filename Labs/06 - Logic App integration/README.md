@@ -65,7 +65,7 @@ https://dev12345.service-now.com
 11. In the record type select **Incident** and Click on **Add new parameter**, as shown below:<br><br>
 
 
-![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/06%20-%20Logic%20App%20integration/Screenshots/playbook.png
+![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/06%20-%20Logic%20App%20integration/Screenshots/playbook.PNG
 )<br><br>
 
 12. Under **Record Type** dropdown box, select **Incident** (this collapses the incident options)<br><br>
