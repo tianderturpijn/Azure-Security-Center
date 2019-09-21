@@ -10,7 +10,7 @@ From the Azure Security Center **Overview** blade, click on the **Regulatory com
 
 Explore the different Compliance Controls for every Regulatory Compliance: <br>
 
-![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/03%20-%20Policy%20and%20Compliance/Screenshots/policy_compliance_details.png
+![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/03%20-%20Policy%20and%20Compliance/Screenshots/policy_complince_new.png
 )<br><br>
 
 When you click on **All** you will see an overview of all the Regulatory Compliance controls per subscription:
