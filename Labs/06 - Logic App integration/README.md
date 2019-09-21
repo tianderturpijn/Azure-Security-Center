@@ -64,8 +64,10 @@ https://dev12345.service-now.com
 10. Provide a **Connection Name** and fill in the ServiceNow **Instance Name**, **Username** and **Password** that you have captured in the previous steps and click on **Create**
 11. In the record type select **Incident** and Click on **Add new parameter**, as shown below:<br><br>
 
+
 ![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/06%20-%20Logic%20App%20integration/Screenshots/playbook.png
 )<br><br>
+
 12. Under **Record Type** dropdown box, select **Incident** (this collapses the incident options)<br><br>
 13. In the **Record fields**, scroll down, click once in the fields highlighted below and select the values as shown below:<br>
 *Note: if you are using a shared ServiceNow environment, put your name in the Short description field as well*<br>
