@@ -18,13 +18,13 @@ You can press on the menu bar and see Azure security center controls that map to
 ![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/03%20-%20Policy%20and%20Compliance/Screenshots/stand_drill.png
 )<br><br>
 
-The resons for the greyed out control is:
 
-1. Azure security center is still dont support this control.
-2. The control is not not somthing that can be track by security product(we are planning to add a way for adding evidence link that can presnt the audince).
+The reasons for the greyed out control is:
+1. Azure security center is still don't support this control.
+2. The control is not something that can be tracked by security product(we are planning to add a way for adding evidence link that can present to the auditor).<br><br>
 
 
-* Regulatory compliance allows you to export the compliance results into a **PDF report** that you can presnt to the auditor.
+Regulatory compliance allows you to export the compliance results into a **PDF report** that you can presnt to the auditor.
 
 Press on the **Download report**
 ![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/03%20-%20Policy%20and%20Compliance/Screenshots/downloadreport.PNG
@@ -33,7 +33,7 @@ Press on the **Download report**
 * On the right pane open the drop-down menu and view all the standard that we support.
 Select **ISO 27001** and press **download**.
 
-![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/03%20-%20Policy%20and%20Compliance/Screenshots/exportreport.PNG
+![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/03%20-%20Policy%20and%20Compliance/Screenshots/export_report_new.PNG
 )<br><br>
 
 * Review the reprot and the complaince status.
