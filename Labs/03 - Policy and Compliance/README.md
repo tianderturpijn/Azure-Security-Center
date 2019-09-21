@@ -13,9 +13,16 @@ Explore the different Compliance Controls for every Regulatory Compliance: <br>
 ![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/03%20-%20Policy%20and%20Compliance/Screenshots/policy_complince_new.png
 )<br><br>
 
-When you click on **All** you will see an overview of all the Regulatory Compliance controls per subscription:
-![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/03%20-%20Policy%20and%20Compliance/Screenshots/ComplianceView.PNG
+
+You can press on the menu bar and see Azure security center controls that map to each standard:
+![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/03%20-%20Policy%20and%20Compliance/Screenshots/stand_drill.png
 )<br><br>
+
+The resons for the greyed out control is:
+
+1. Azure security center is still dont support this control.
+2. The control is not not somthing that can be track by security product(we are planning to add a way for adding evidence link that can presnt the audince).
+
 
 * Regulatory compliance allows you to export the compliance results into a **PDF report** that you can presnt to the auditor.
 
