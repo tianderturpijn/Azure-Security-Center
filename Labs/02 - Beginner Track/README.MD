@@ -95,13 +95,15 @@ Notice for the Secure Score impact :<br><br>
 ![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/02%20-%20Beginner%20Track/Screenshots/storageScore.png
 )<br><br>
 
-We also presnt the remidation logic (ARM teamplte Artifact or the REST API call)
+6. We also presnt the remidation logic (ARM teamplte Artifact or the REST API call), press on the the **remidation logic**
+and review the properties that is going to fix.
 
 ![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/02%20-%20Beginner%20Track/Screenshots/remediationLogic.png
 )<br><br
 
-6. Select **Microsoft Antimalware** and click on **Create** (scroll down if you don't see the Create button):<br><br>
-![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/02%20-%20Beginner%20Track/Screenshots/install_endpoint_protection3.png
+7. Select the storage account and press **Remediate**.
+
+![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/02%20-%20Beginner%20Track/Screenshots/StorageRemi.png
 )<br><br>
 
 Provide your settings of choice, then click **OK**, this starts the endpoint protection installation.
