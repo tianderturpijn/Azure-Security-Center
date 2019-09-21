@@ -54,7 +54,7 @@ This exercise guides you through the current Security Center policies, based on 
 ![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/03%20-%20Policy%20and%20Compliance/Screenshots/policy_assignment.png
 )<br><br>
 4. Clicking on the initiative allows you to disable the definition:
-![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/03%20-%20Policy%20and%20Compliance/Screenshots/disable_definition.png
+![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/03%20-%20Policy%20and%20Compliance/Screenshots/policyDisable.png
 )<br><br>
 
 5. It can take up to 12 hr' till the recommendation remove from Azure security Center Dashboard.
