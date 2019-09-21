@@ -33,7 +33,7 @@ Press on the **Download report**
 * On the right pane open the drop-down menu and view all the standard that we support.
 Select **ISO 27001** and press **download**.
 
-![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/03%20-%20Policy%20and%20Compliance/Screenshots/export_report_new.PNG
+![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/03%20-%20Policy%20and%20Compliance/Screenshots/export_report_new.png
 )<br><br>
 
 * Review the reprot and the complaince status.
