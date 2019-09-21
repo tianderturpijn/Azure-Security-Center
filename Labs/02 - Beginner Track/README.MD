@@ -76,7 +76,7 @@ If so, you first need to set the workspace Pricing tier to Standard.
 **Note:**
 You don't have to change the setting **None** to receive alerts in Security Center, change this setting only if you want to do investigations and analysis of your threats in Log Analytics.
 
-### Secure Score
+### Secure Score and "One Click Fix it".
 In the beginning of this lab, you explored briefly the **Secure Score** tile. Let's look a little bit deeper into it. <br>
 Security Center mimics the work of the security analyst, reviewing your security recommendations and applying advanced algorithms to determine how crucial each recommendation is.
 
@@ -85,8 +85,8 @@ Security Center mimics the work of the security analyst, reviewing your security
 ![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/02%20-%20Beginner%20Track/Screenshots/secure_score_dashboard.png
 )<br><br>
 3. Observe the number under the **Secure score impact column** and the affected **Resource** column. This helps in prioritizing working on the recommendations, the higher the number, the greater the impact <br><br>
-4. Click on a recommendation, for example **Install endpoint protection solution on virtual machines**
-![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/02%20-%20Beginner%20Track/Screenshots/install_endpoint_protection1.png
+4. Click on a recommendation, and notice that on one recoemdnation we added the option to **1-Click-Fix**
+![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/02%20-%20Beginner%20Track/Screenshots/SotrageFixIT.png.png
 )<br><br>
 5. Click on **Install on 1 VMs**:<br><br>
 ![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/02%20-%20Beginner%20Track/Screenshots/install_endpoint_protection2.png
