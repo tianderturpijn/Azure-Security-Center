@@ -50,6 +50,7 @@ https://dev12345.service-now.com
 6. In the **Serach connectors and triggers field**, type in security center and select **When a response to an Azure Security Center alert is triggered**.
  <br>
 **Note**: be aware **Not** to select the connector with the Preview tag.<br><br>
+
 ![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/06%20-%20Logic%20App%20integration/Screenshots/asc_trigger.png
 )<br><br>
 
@@ -58,6 +59,8 @@ https://dev12345.service-now.com
 9. Under **Actions**, select **Create Record**<br><br>
 ![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/06%20-%20Logic%20App%20integration/Screenshots/ServiceNowConnection.png
 )<br><br>
+
+
 10. Provide a **Connection Name** and fill in the ServiceNow **Instance Name**, **Username** and **Password** that you have captured in the previous steps and click on **Create**
 11. In the record type select **Incident** and Click on **Add new parameter**, as shown below:<br><br>
 
