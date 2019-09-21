@@ -106,8 +106,12 @@ and review the properties that is going to fix.
 ![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/02%20-%20Beginner%20Track/Screenshots/StorageRemi.png
 )<br><br>
 
-Provide your settings of choice, then click **OK**, this starts the endpoint protection installation.
+On the right pane review the implications for this remediation.
+Press Remediate 1 resource
 
+![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/02%20-%20Beginner%20Track/Screenshots/remiclick.png
+)<br><br
+qq12
 Another example which might not exist in your lab environment is a recommendation for containers:<br><br>:
 ![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/02%20-%20Beginner%20Track/Screenshots/secure_score3.png
 )<br><br>
