@@ -88,14 +88,15 @@ Security Center mimics the work of the security analyst, reviewing your security
 4. Click on  **recommendation**, and notice that on one of the recoemdnation we added the option to **1-Click-Fix**
 ![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/02%20-%20Beginner%20Track/Screenshots/SotrageFixIT.png)<br><br>
 
-One-click fix enables you to remediate a recommendation on a bulk of resources, with a single click. It is an option only available for specific recommendations. One-click fix simplifies remediation and enables you to quickly improve your secure score and increase the security in your environment.
+**One-click fix** enables you to remediate a recommendation on a bulk of resources, with a single click. It is an option only available for specific recommendations. One-click fix simplifies remediation and enables you to quickly improve your secure score and increase the security in your environment.
 
-5. Click on **Secure transfer to storage accounts should be enabled** recommendation.
+5. Click on the rrecommendation **Secure transfer to storage accounts should be enabled**.
 Notice for the Secure Score impact :<br><br>
 ![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/02%20-%20Beginner%20Track/Screenshots/storageScore.png
 )<br><br>
 
-6. We also presnt the remidation logic (ARM teamplte Artifact or the REST API call), press on the the **remidation logic**
+6. We also present the remidation logic (ARM template artifact or REST API properties).
+press on the the **remidation logic**
 and review the properties that is going to fix.
 
 ![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/02%20-%20Beginner%20Track/Screenshots/remediationLogic.png
