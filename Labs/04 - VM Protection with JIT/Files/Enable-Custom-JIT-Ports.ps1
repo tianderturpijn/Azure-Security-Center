@@ -1,5 +1,5 @@
 # Sample script to add custom JIT rules to a VM
-# Documentation: https://docs.microsoft.com/en-us/azure/security-center/security-center-just-in-time#using-just-in-time-vm-access-via-powershell
+# Documentation: https://docs.microsoft.com/en-us/powershell/module/az.security/set-azjitnetworkaccesspolicy?view=azps-2.6.0
 # Created by Tiander Turpijn (Microsoft)
 
 #Variables
@@ -24,7 +24,7 @@ $JitPolicy = (@{
 
 $JitPolicyArray=@($JitPolicy)
 
-Set-AzureRmJitNetworkAccessPolicy -Kind "Basic" `
+Set-AzJitNetworkAccessPolicy -Kind "Basic" `
  -Location $location -Name "default" `
  -ResourceGroupName $resourceGroupName `
  -VirtualMachine $JitPolicyArray
