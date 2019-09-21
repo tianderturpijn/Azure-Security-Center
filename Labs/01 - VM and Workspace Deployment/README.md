@@ -42,19 +42,20 @@ As soon as the the workspace has been deployed (you don't have to wait for all t
 3. Click on **Install agents**, if the button has been grayed out, then it's already set to **On**
 4. Return to Azure security Center blade and Click on **Pricing & settings**.
 5. Your subscription (Azure pass) should be listed (if it does not, close your browser session and open a new one)
-6. Press on your **Azure subscription** (Azure pass).
 
 *Notice that you set pricing tier (standrd) on the subscription level, but the workspace pricing is still set on Free.
 
 ![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/01%20-%20VM%20and%20Workspace%20Deployment/Screenshots/pricingstatus.png
 )<br>
 
-7. Navigate to **Data Collection**
-8. Set **Auto Provisioning** to **On** (if it's not already set to On)
-9. On the workspace configuration section Select the workspace **ASC-Workspace-xxxx** (which has been created by the template) under **Use another workspace**
-10. Click on **Save**
-11. Click on **Yes** on **Would you like to reconfigure monitored VMs?**
-12. Under **Windows Security raw data** change the **Windows Security events** to **All Events** and press Save.
+6. Press on the Workspace **ASC-Workspace-XX** on the pricing tier secation, select **standard** and press **save**.
+7. go back to the **Pricing & Setting** and drill down into  your **Azure subscription** (Azure pass).
+8. Navigate to **Data Collection**
+9. Set **Auto Provisioning** to **On** (if it's not already set to On)
+10. On the workspace configuration section Select the workspace **ASC-Workspace-xxxx** (which has been created by the template) under **Use another workspace**
+11. Click on **Save**
+12. Click on **Yes** on **Would you like to reconfigure monitored VMs?**
+13. Under **Windows Security raw data** change the **Windows Security events** to **All Events** and press Save.
  <br><br>
 
 ![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/01%20-%20VM%20and%20Workspace%20Deployment/Screenshots/Workspace_config.png
