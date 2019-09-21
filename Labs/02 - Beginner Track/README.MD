@@ -112,6 +112,10 @@ Press Remediate 1 resource
 
 ![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/02%20-%20Beginner%20Track/Screenshots/remiclick.png
 )<br><br>
+
+The recommendation status should update after **~5min**, please validate that the above storage account become healthy.
+
+
 Another example which might not exist in your lab environment is a recommendation for containers:<br><br>:
 ![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/02%20-%20Beginner%20Track/Screenshots/secure_score3.png
 )<br><br>
