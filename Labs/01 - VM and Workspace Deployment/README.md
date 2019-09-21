@@ -38,11 +38,19 @@ Continue with the exercise below as soon as your workspace has been created. You
 ### Configure the data collection settings in ASC
 As soon as the the workspace has been deployed (you don't have to wait for all the resources to be deployed), do the following:
 1. Navigate to the **Security Center** blade
-2. Click on **Getting started**, On the **Upgrade** Tab, select your subscription (Azure pass) and the workspace **ASC-Workspace-xxxx** and press **Upgrade**.
+2. Click on **Getting started**, On the **Upgrade** Tab, select your subscription (Azure pass)  and press **Upgrade**.
 3. Click on **Install agents**, if the button has been grayed out, then it's already set to **On**
-4. Click on **Pricing & settings**
+4. Return to Azure security Center blade and Click on **Pricing & settings**.
 5. Your subscription (Azure pass) should be listed (if it does not, close your browser session and open a new one)
 6. Press on your **Azure subscription** (Azure pass).
+
+notice that you set pricing tier (standrd) on the subscription level, but the workspace is still set to free.
+<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fyaniv-shasha%2FAzure-Security-Center-1%2Fmaster%2FLabs%2F01%20-%20VM%20and%20Workspace%20Deployment%2FFiles%2FdeployAscManagedVmsWithLA.json" target="_blank">
+    <img src="http://azuredeploy.net/deploybutton.png"/>
+</a>
+<br><br>
+
+
 7. Navigate to **Data Collection**
 8. Set **Auto Provisioning** to **On** (if it's not already set to On)
 9. On the workspace configuration section Select the workspace **ASC-Workspace-xxxx** (which has been created by the template) under **Use another workspace**
