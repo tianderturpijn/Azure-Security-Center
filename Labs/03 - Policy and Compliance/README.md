@@ -20,11 +20,11 @@ You can press on the menu bar and see Azure security center controls that map to
 
 
 The reasons for the greyed out control is:
-1. Azure security center is still don't support this control.
+1. Azure security center still doesn't support the above security control.
 2. The control is not something that can be tracked by security product(we are planning to add a way for adding evidence link that can present to the auditor).<br><br>
 
 
-Regulatory compliance allows you to export the compliance results into a **PDF report** that you can presnt to the auditor.
+Regulatory compliance allows you to export the compliance results into a **PDF report** that you can present to the auditor.
 
 Press on the **Download report**
 ![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/03%20-%20Policy%20and%20Compliance/Screenshots/downloadreport.PNG
