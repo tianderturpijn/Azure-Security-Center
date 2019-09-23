@@ -20,7 +20,9 @@ Use the **Deploy to Azure** button below to deploy the following:
 - A Log Analytics workspace (ASC-Workspace-xxxx)
 - Security Center OMS solution
 - 1 Windows VM (*Win-0*, connected to the workspace)
-- 1 Linux Ubuntu VM (*Linux-0*, connected to the workspace) <br><br>
+- 1 Linux Ubuntu VM (*Linux-0*, connected to the workspace) 
+- 1 Storage account
+<br><br>
 
 ***Note**: after clicking on the Deploy to Azure button and filling in fields, scroll down, check the box with **I agree**... and click on **Purchase** to start the deployment.*
 
