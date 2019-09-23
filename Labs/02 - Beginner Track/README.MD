@@ -109,7 +109,7 @@ and review the properties that is going to fix.
 )<br><br>
 
 On the right pane, review the implications for this remediation.
-Press Remediate 1 resource
+**Press Remediate 1 resource**
 
 ![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/02%20-%20Beginner%20Track/Screenshots/remiclick.png
 )<br><br>
