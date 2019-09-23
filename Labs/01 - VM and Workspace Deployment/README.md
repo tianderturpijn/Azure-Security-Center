@@ -66,4 +66,5 @@ As soon as the the workspace has been deployed (you don't have to wait for all t
 
 *Note: It can take some time for the VM's to become visible in Security Center*
 
-
+### Continue with the next lab
+02 - cloud workload protection platform features, click <a href="https://github.com/yaniv-shasha/Azure-Security-Center-1/tree/master/Labs/02%20-%20Beginner%20Track" target="_blank">here</a>
