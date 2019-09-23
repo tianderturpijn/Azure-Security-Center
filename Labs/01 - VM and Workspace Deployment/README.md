@@ -51,7 +51,7 @@ As soon as the the workspace has been deployed (you don't have to wait for all t
 )<br>
 
 6. Press on the Workspace **ASC-Workspace-XX** on the pricing tier secation, select **standard** and press **save**.
-7. go back to the **Pricing & Setting** and drill down into  your **Azure subscription** (Azure pass).
+7. Go back to the **Pricing & Setting** and drill down into  your **Azure subscription** (Azure pass).
 8. Navigate to **Data Collection**
 9. Set **Auto Provisioning** to **On** (if it's not already set to On)
 10. On the workspace configuration section Select the workspace **ASC-Workspace-xxxx** (which has been created by the template) under **Use another workspace**
@@ -64,7 +64,7 @@ As soon as the the workspace has been deployed (you don't have to wait for all t
 )<br>
 
 
-*Note: It can take some time for the VM's to become visible in Security Center*
+*Note: It can take some time for the VM's to become visible in Security Center (not for the GBB's :-) )*
 
 ### Continue with the next lab
 02 - Cloud security posture management features, click <a href="https://github.com/yaniv-shasha/Azure-Security-Center-1/tree/master/Labs/02%20-%20Beginner%20Track" target="_blank">here</a>
