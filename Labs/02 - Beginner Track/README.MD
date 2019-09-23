@@ -1,4 +1,4 @@
-# cloud workload protection platforms (CWPP)
+# Cloud security posture management (CSPM)
 
 Welcome to the labs which will guide you through Azure Security Center (ASC). <br>
 The labs are intended to make you familiar with the different Security Center's features. <br>
