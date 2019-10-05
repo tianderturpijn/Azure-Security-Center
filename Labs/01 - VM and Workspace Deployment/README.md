@@ -64,7 +64,7 @@ As soon as the the workspace has been deployed (you don't have to wait for all t
 )<br>
 
 
-*Note: It can take some time for the VM's to become visible in Security Center (not for the GBB's :-) )*
+*Note: It can take some time for the VM's to become visible in Security Center*
 
 ### Continue with the next lab
 02 - Cloud security posture management features, click <a href="https://github.com/yaniv-shasha/Azure-Security-Center-1/tree/master/Labs/02%20-%20Beginner%20Track" target="_blank">here</a>
