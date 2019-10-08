@@ -17,7 +17,7 @@
         }
     },
     "variables": {
-        "resourceLocation": "eastus",
+        "resourceLocation": "[resourceGroup().location]",
         "omsWorkspaceName": "[concat('ASC-Workspace-',uniqueString(subscription().subscriptionId))]",
         "omsWorkspaceLocation": "eastus",
         "omsSKU": "PerGB2018",
@@ -50,7 +50,9 @@
                 "solutionName": "[concat('SecurityCenterFree', '(', variables('omsWorkspaceName'), ')')]",
                 "publisher": "Microsoft"
             }
-        }
+        },
+        "storageAccountName": "[concat('storage', uniquestring(resourceGroup().id))]",
+        "storageAccountType": "Standard_LRS"
     },
     "resources": [
         {
@@ -486,7 +488,18 @@
             "properties": {
                 "workspaceResourceId": "[resourceId('Microsoft.OperationalInsights/workspaces/', variables('omsWorkspaceName'))]"
             }
-        }
+        },
+        {
+            "type": "Microsoft.Storage/storageAccounts",
+            "name": "[variables('storageAccountName')]",
+            "location": "[variables('resourceLocation')]",
+            "apiVersion": "2018-07-01",
+            "sku": {
+                "name": "[variables('storageAccountType')]"
+            },
+            "kind": "StorageV2",
+            "properties": {}
+       }
      ],
     "outputs": {
         "workspaceName":{
@@ -500,6 +513,10 @@
         "vmNameLinuxPrefix":{
             "type": "string",
             "value": "[variables('vmNameLinuxPrefix')]"
+        },
+        "storageAccountName":{
+            "type": "string",
+            "value": "[variables('storageAccountName')]"
         }
     }
 }
