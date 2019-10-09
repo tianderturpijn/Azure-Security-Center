@@ -46,8 +46,8 @@
         "platformLinux": "Linux",
         "omsSolutions": {
             "Security": {
-                "name": "SecurityCenterFree",
-                "solutionName": "[concat('SecurityCenterFree', '(', variables('omsWorkspaceName'), ')')]",
+                "name": "Security",
+                "solutionName": "[concat('Security', '(', variables('omsWorkspaceName'), ')')]",
                 "publisher": "Microsoft"
             }
         },
