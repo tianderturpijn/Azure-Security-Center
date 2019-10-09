@@ -14,3 +14,6 @@ You have received your Azure Pass promo code<br>
 You have created a new Outlook account and have the username and password available*
 
 1. Open an incognito browser session and navigate to http://www.microsoftazurepass.com
+2. Click on **Start** <br>
+![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/00%20-%20Activate%20your%20Azure%20Pass/screenshots/start_activate.jpg
+)<br>
