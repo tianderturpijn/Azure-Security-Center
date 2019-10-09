@@ -24,13 +24,13 @@ You have created a new Outlook account and have the username and password availa
 5. Enter your promo code:
 ![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/00%20-%20Activate%20your%20Azure%20Pass/screenshots/enter_promocode.png
 )<br>
-6. Your code will be activated:
+6. Your code will be activated:<br>
 ![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/00%20-%20Activate%20your%20Azure%20Pass/screenshots/activate.png
 )<br>
 7. Re-select your Outlook account and log in
 8. Check the box **I Agree** then click on **Sign up**:<br>
 ![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/00%20-%20Activate%20your%20Azure%20Pass/screenshots/I_agree.png
 )<br>
-9. Wait for it to complete and then login again
+9. Wait for it to complete and then login again<br>
 ![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/00%20-%20Activate%20your%20Azure%20Pass/screenshots/setting_up.png
 )<br>
