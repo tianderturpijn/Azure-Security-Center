@@ -14,6 +14,23 @@ You have received your Azure Pass promo code<br>
 You have created a new Outlook account and have the username and password available*
 
 1. Open an incognito browser session and navigate to http://www.microsoftazurepass.com
-2. Click on **Start** <br>
+2. Click on **Start:** <br>
 ![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/00%20-%20Activate%20your%20Azure%20Pass/screenshots/start_activate.jpg
+)<br>
+3. Enter the username and password of the account you have created in the previous steps
+4. Confirm the account:<br>
+![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/00%20-%20Activate%20your%20Azure%20Pass/screenshots/confirm_account.png
+)<br>
+5. Enter your promo code:
+![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/00%20-%20Activate%20your%20Azure%20Pass/screenshots/enter_promocode.png
+)<br>
+6. Your code will be activated:
+![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/00%20-%20Activate%20your%20Azure%20Pass/screenshots/activate.png
+)<br>
+7. Re-select your Outlook account and log in
+8. Check the box **I Agree** then click on **Sign up**:<br>
+![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/00%20-%20Activate%20your%20Azure%20Pass/screenshots/I_agree.png
+)<br>
+9. Wait for it to complete and then login again
+![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/00%20-%20Activate%20your%20Azure%20Pass/screenshots/setting_up.png
 )<br>
