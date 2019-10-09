@@ -20,8 +20,9 @@ You can press on the menu bar and see Azure security center controls that map to
 
 
 The reasons for the greyed out control is:
-1. Azure security center still doesn't support the above security control.
-2. The control is not something that can be tracked by security product(we are planning to add a way for adding evidence link that can present to the auditor).<br><br>
+1. Azure Security Center still doesn't support the above security control.
+2. The control is not something that can be tracked by ASC.<br>
+*Note: We are planning to add a way for adding an evidence link that can be presented to an auditor.*<br><br>
 
 
 Regulatory compliance allows you to export the compliance results into a **PDF report** that you can present to the auditor.
@@ -36,7 +37,7 @@ Select **ISO 27001** and press **download**.
 ![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/03%20-%20Policy%20and%20Compliance/Screenshots/export_report_new.png
 )<br><br>
 
-* Review the reprot and the complaince status.
+* Review the report and the compliance status.
 
 
 ### Policy Management
@@ -57,7 +58,7 @@ This exercise guides you through the current Security Center policies, based on 
 ![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/03%20-%20Policy%20and%20Compliance/Screenshots/policyDisable.png
 )<br><br>
 
-5. It can take up to 12 hr' till the recommendation remove from Azure security Center Dashboard.
+5. It can take up to 12 hrs until the recommendation is removed from Azure Security Center Dashboard.
 
 
 *Note: in the near future we will provide custom policies which will support deployIfNotExists type of policies*

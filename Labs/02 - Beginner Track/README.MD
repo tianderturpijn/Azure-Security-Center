@@ -13,7 +13,7 @@ Estimated lab time: 20 minutes
    ![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/02%20-%20Beginner%20Track/Screenshots/subscription_coverage.png
 )<br>
 This shows you the number of subscriptions and the coverage type.<br>
-*Note:* in this lab you will only have one subscription which should be under **fully coverage** <br>
+*Note:* in this lab you will only have one subscription which should be listed under **Fully Covered** <br>
    This view will help you find subscriptions that are not covered by ASC to help identify **"shadow IT"** subscriptions <br>
 4. Go back to the overview blade and note the **Secure Score** tile under Policy & compliance. When you **click on the Secure Score tile**, you can explore your **Secure score by category** by clicking on each tile:<br><br>
 ![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/02%20-%20Beginner%20Track/Screenshots/secure_score_dashboard.png
@@ -96,14 +96,14 @@ Notice  the Secure Score impact :<br><br>
 ![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/02%20-%20Beginner%20Track/Screenshots/storageScore.png
 )<br><br>
 
-6. We also present the remidation logic (ARM template artifact or REST API).
-press on the the **remidation logic**
+6. We also present the remediation logic (ARM template artifact or REST API).
+press on the the **remediation logic**
 and review the properties that is going to fix.
 
 ![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/02%20-%20Beginner%20Track/Screenshots/remediationLogic.png
 )<br><br>
 
-7. Select the storage account you want to fix and press **Remediate**. (this opetion also give you to multi-select and remediate multiple storage accounts in one-click)
+7. Select the storage account you want to fix and press **Remediate**. (this option also gives you a  multi-select option and remediate multiple storage accounts in one-click)
 
 ![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/02%20-%20Beginner%20Track/Screenshots/StorageRemi.png
 )<br><br>
@@ -114,7 +114,7 @@ On the right pane, review the implications for this remediation.
 ![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/02%20-%20Beginner%20Track/Screenshots/remiclick.png
 )<br><br>
 
-The recommendation status should update after **~5min**, please validate that the above storage account become healthy.
+The recommendation status should update after **~5min**, please validate that the above storage account becomes healthy.
 
 
 Another example which might not exist in your lab environment is a recommendation for containers:<br><br>:
