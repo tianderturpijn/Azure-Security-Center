@@ -28,7 +28,7 @@ You have created a new Outlook account and have the username and password availa
 ![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/00%20-%20Activate%20your%20Azure%20Pass/screenshots/activate.png
 )<br>
 7. Re-select your Outlook account and log in
-8. Check the box **I Agree** then click on **Sign up**:<br>
+8. Check the box **I Agree** then click on **Sign up**, verify that in the upper right corner, your new Outlook account is listed:<br>
 ![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/00%20-%20Activate%20your%20Azure%20Pass/screenshots/I_agree.png
 )<br>
 9. Wait for it to complete and then login again<br>
