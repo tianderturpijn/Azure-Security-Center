@@ -35,28 +35,29 @@ Because we are deploying the Security Center solution in the workspace, the VM's
  
 The deployment takes about 13 minutes.<br><br>
 After the deployment of the template, you can check the progress of your deployment if you click on your created resource group details, then click on **Deployments** (*1 deploying*). <br>
-Continue with the exercise below as soon as your workspace has been created. You don't have to wait until the deployment has completed.
+
+**Continue with the exercise below as soon as your workspace has been created. You don't have to wait until the deployment has completed.**
 
 ### Configure the data collection settings in ASC
 As soon as the the workspace has been deployed (you don't have to wait for all the resources to be deployed), do the following:
 1. Navigate to the **Security Center** blade
-2. Click on **Getting started**, On the **Upgrade** Tab, select your subscription (Azure pass)  and press **Upgrade**.
+2. Click on **Getting started**, On the **Upgrade** Tab, select your subscription (Azure pass)  and press the **Upgrade** button (you might need to scroll down)
 3. Click on **Install agents**, if the button has been grayed out, then it's already set to **On**
 4. Return to Azure security Center blade and Click on **Pricing & settings**.
 5. Your subscription (Azure pass) should be listed (if it does not, close your browser session and open a new one)
 
-*Notice that you set pricing tier (standrd) on the subscription level, but the workspace pricing is still set on Free.
+*Notice that you set pricing tier (standard) on the subscription level, but the workspace pricing is still set on Free.
 
 ![alt text](https://raw.githubusercontent.com/yaniv-shasha/Azure-Security-Center-1/master/Labs/01%20-%20VM%20and%20Workspace%20Deployment/Screenshots/pricingstatus.png
 )<br>
 
-6. Press on the Workspace **ASC-Workspace-XX** on the pricing tier secation, select **standard** and press **save**.
+6. Click on the Workspace **ASC-Workspace-XX** on the pricing tier secation, select **standard** and press **save**.
 7. Go back to the **Pricing & Setting** and drill down into  your **Azure subscription** (Azure pass).
 8. Navigate to **Data Collection**
 9. Set **Auto Provisioning** to **On** (if it's not already set to On)
-10. On the workspace configuration section Select the workspace **ASC-Workspace-xxxx** (which has been created by the template) under **Use another workspace**
+10. On the **Workspace Configuration** section, select the workspace **ASC-Workspace-xxxx** (which has been created by the template) under **Use another workspace**
 11. Click on **Save**
-12. Click on **Yes** on **Would you like to reconfigure monitored VMs?**
+12. Click on **No** on **Would you like to reconfigure monitored VMs?**
 13. Under **Windows Security raw data** change the **Windows Security events** to **All Events** and press Save.
  <br><br>
 
